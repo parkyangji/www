@@ -5,4 +5,25 @@
 /* 본문 컨텐츠 */
 #content {width: 100%;}
 
-#content .introProduct {}
+#content .introProduct {width: 1200px; height: 950px; margin: 0 auto; 
+  background-color: aliceblue;}
+
+#content .vision {width: 100%; height: 900px;
+  background-color: aqua;}
+#content .vision>div {width: 1200px; margin: 0 auto;}
+
+#content .esg {width: 100%; height: 950px;
+  background-color: darkcyan;}
+#content .esg>div {width: 1200px; margin: 0 auto;}
+
+#content .notice {width: 1200px; height: 450px; margin: 0 auto; 
+  background-color: darksalmon;}
+
+#content .customerQA {width: 100%; height: 500px;
+    background-color: antiquewhite;}
+#content .customerQA>div {width: 1200px; margin: 0 auto;}
+
+
+
+
+
