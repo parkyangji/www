@@ -5,20 +5,126 @@
 /* 본문 컨텐츠 */
 #content {width: 100%;}
 
-#content .introProduct {width: 1200px; height: 950px; margin: 0 auto; 
-  background-color: aliceblue;}
+/* 제품소개 */
+#content .introProduct {width: 1200px; height: 950px; margin: 0 auto; padding-top: 110px;
+  overflow: hidden; box-sizing: border-box;}
+#content .introProduct h3 {text-align: center; font-size: 2.5em; font-weight: 700; margin-bottom: 90px;}
+#content .introProduct>div {float: left;}
+#content .introProduct>div h4 {font-size: 2.25em; font-weight: 500; margin-bottom: 35px; position: relative; z-index: 10;}
 
-#content .vision {width: 100%; height: 900px;
-  background-color: aqua;}
-#content .vision>div {width: 1200px; margin: 0 auto;}
+#content .introProduct>div h4::before {
+  content: 'Hydrogen Fluoride';
+  font-size: 5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #f9f9f9;
+  width: 900px;
+  position: absolute;
+  z-index: -10;
+  left: 50px;
+  top: -65px;
+}
 
-#content .esg {width: 100%; height: 950px;
-  background-color: darkcyan;}
-#content .esg>div {width: 1200px; margin: 0 auto;}
+#content .introProduct>div p {font-size: 1.25em; color: #999; margin-bottom: 50px;}
+  /* 화살표 */
+  .arrow_left {width: 60px; height: 60px;}
+  .arrow_left::before {
+    content: "\e941"; font-family: 'Material Symbols Outlined'; font-variation-settings:'FILL' 0,'wght' 200,'GRAD' 0,'opsz' 48;
+    border-radius: 50%; display: block; box-sizing: border-box; 
+    background: #1f296f; color: #fff; 
+    font-size: 40px; padding-top: 5px;
+    width: 60px; height: 60px;
+    transform: rotateY(180deg);
+  }
 
+#content .introProduct>ul.tabMenu {float: right; margin-bottom: 45px; overflow: hidden;}
+#content .introProduct>ul.tabMenu li {float: left; margin-right: 100px; position: relative; z-index: 10;}
+
+#content .introProduct>ul.products {float: right; border-radius: 30px; width: 850px; overflow: hidden;}
+#content .introProduct>ul.products li {float: left; width: 25%; position: relative;}
+#content .introProduct>ul.products img {filter: brightness(80%);}
+#content .introProduct>ul.products .info {position: absolute; left: 100px ; top: 50%}
+#content .introProduct>ul.products .info h4 {font-size: 1.5em; font-weight: 500; color: #fff;}
+#content .introProduct>ul.products .info a {opacity: 0;}
+
+/* 기업비전 */
+#content .vision {width: 100%; height: 900px; padding-top: 110px; box-sizing: border-box;
+  background: linear-gradient( rgba(0, 0, 0, .65), rgba(0, 0, 0, .65) ),url(../images/background_vision_14.jpg);}
+#content .vision>div {width: 1200px; margin: 0 auto; position: relative;}
+#content .vision>div h3 {font-size: 2.5em; font-weight: 700; color: #fff; margin-bottom: 20px;}
+#content .vision>div p {font-size: 1.5em; font-weight: 300; color: #fff;}
+
+#content .vision .list_vision {overflow: hidden; margin: 75px 30px 40px 30px;}
+#content .vision .list_vision dl {float: left; width: 350px; height: 540px;  margin-right: 45px;
+  background: linear-gradient(to bottom, rgba(31,41,111,1) 60%, rgba(31,41,111,0) 100%);}
+#content .vision .list_vision dl:nth-child(1)::before { content: ''; display: block; width: 350px; height: 309px;
+  background-image: url(../images/vision_01.jpg); opacity: .7;}
+#content .vision .list_vision dl:nth-child(2)::before { content: ''; display: block; width: 350px; height: 309px;
+    background-image: url(../images/vision_02.jpg); opacity: .7;}
+#content .vision .list_vision dl:nth-child(3)::before { content: ''; display: block; width: 350px; height: 309px;
+      background-image: url(../images/vision_03.jpg); opacity: .7;}
+#content .vision .list_vision dl:nth-child(3) {margin-right: 0;}
+#content .vision .list_vision dt {font-size: 2em; font-weight: 500; text-align: center; transform: translateY(-20px); color: #fff;}
+#content .vision .list_vision dd {font-size: 1.25em; font-weight: 300; text-align: center; color: #fff; opacity: 0;}
+  /* 화살표 */
+#content .vision .arrow_right {width: 60px; height: 60px; float: right; position: absolute; top: 0; right: 40px;}
+#content .vision .arrow_right::before {
+  content: "\e941"; font-family: 'Material Symbols Outlined'; font-variation-settings:'FILL' 0,'wght' 200,'GRAD' 0,'opsz' 48;
+  border-radius: 50%; display: block; box-sizing: border-box; 
+  background: #f7f7f7;
+  font-size: 40px; padding-top: 5px;
+  width: 60px; height: 60px;
+}
+
+/* ESG경영 */
+#content .esg {width: 100%; height: 950px; padding-top: 110px; position: relative; box-sizing: border-box;}
+#content .esg::after {content: ''; background: #f7f7f7; width: 100%; height: 295px;
+  position: absolute; bottom: 20%; z-index: -10;}
+#content .esg>div {width: 1200px; margin: 0 auto; overflow: hidden; position: relative;}
+#content .esg>div h3 {font-size: 2.5em; font-weight: 700; margin: 25px 0;}
+#content .esg>div h3::before {
+  content: 'Safety Golden Rules';
+  font-size: 5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #f9f9f9;
+  position: absolute;
+  z-index: -10;
+  right: 50px;
+  top: -30px;
+}
+  /* 화살표 */
+#content .esg>div .arrow_right {width: 60px; height: 60px; float: right; position: absolute; top: 40px; right: 40px;}
+#content .esg>div .arrow_right::before {
+  content: "\e941"; color: #fff; font-family: 'Material Symbols Outlined'; font-variation-settings:'FILL' 0,'wght' 200,'GRAD' 0,'opsz' 48;
+  border-radius: 50%; display: block; box-sizing: border-box; 
+  background: #1f296f;
+  font-size: 40px; padding-top: 5px;
+  width: 60px; height: 60px;
+}
+
+
+
+#content .esg>div p {font-size: 1.5em; font-weight: 500; color: #1f296f; margin-bottom: 60px}
+#content .esg .esg_btn {float: left; position: relative; top: 225px;}
+#content .esg .esg_btn a {float: left;}
+#content .esg .esg_btn span {font-size: 3.5em; font-weight: 100;}
+
+
+#content .esg .list_esg {overflow: hidden; float: right;}
+#content .esg .list_esg li {float: left; overflow: hidden;}
+#content .esg .list_esg li img  {border-radius: 30px; float: left; margin: 30px;}
+#content .esg .list_esg li:first-child img { box-shadow: 15px 15px 10px rgba(0, 0, 0, .2);}
+#content .esg .list_esg li dl {float: right; padding: 10px; position: relative; top: 60px;}
+#content .esg .list_esg li:nth-child(2) img { transform: scale(.85); opacity: .7;}
+#content .esg .list_esg li dt {font-size: 1.5em; font-weight: 700; margin-bottom: 80px;}
+
+
+/* 공지사항 */
 #content .notice {width: 1200px; height: 450px; margin: 0 auto; 
   background-color: darksalmon;}
 
+/* 고객문의 */
 #content .customerQA {width: 100%; height: 500px;
     background-color: antiquewhite;}
 #content .customerQA>div {width: 1200px; margin: 0 auto;}
