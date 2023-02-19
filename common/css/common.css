@@ -47,7 +47,7 @@ font-family: 'Noto Sans KR', sans-serif; */
 #headerArea #gnb {float: left; margin-top: 33px; }
 #headerArea #gnb ul {overflow: hidden;}
 #headerArea #gnb li {float: left; margin-right: 50px;}
-#headerArea #gnb a {font-family: 'Noto Sans KR', sans-serif; font-weight: 700; font-size: 1.13em;}
+#headerArea #gnb a {font-weight: 500; font-size: 1.13em;}
 #headerArea #gnb li:last-child {margin-right: 0;}
 #headerArea .topMenu{float: right; overflow: hidden; margin-top: 35px;}
 #headerArea .topMenu li {float: left; margin-right: 25px;}
