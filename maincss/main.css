@@ -85,8 +85,8 @@
 /* ESG경영 */
 #content .esg {width: 100%; height: 950px; padding-top: 110px; position: relative; box-sizing: border-box;}
 #content .esg::after {content: ''; background: #f7f7f7; width: 100%; height: 295px;
-  position: absolute; bottom: 20%; z-index: -10;}
-#content .esg>div {width: 1200px; margin: 0 auto; overflow: hidden; position: relative;}
+  position: absolute; left: 0; bottom: 20%; z-index: -10;}
+#content .esg>div {width: 1200px; margin: 0 auto; position: relative;}
 #content .esg>div h3 {font-size: 2.5em; font-weight: 700; margin: 25px 0;}
 #content .esg>div h3::before {
   content: 'Safety Golden Rules'; font-size: 5rem; font-weight: 700; font-style: italic;
@@ -98,21 +98,20 @@
 
 #content .esg>div p {font-size: 1.5em; font-weight: 500; color: #1f296f; margin-bottom: 60px}
 
-#content .esg .esg_btn {float: left; position: relative; top: 225px;}
+#content .esg .esg_btn {float: left; overflow: hidden; position: relative; top: 225px;}
 #content .esg .esg_btn a {float: left;}
 #content .esg .esg_btn span {font-size: 3.5em; font-weight: 100;}
-
-#content .esg .list_esg {overflow: hidden; float: right;}
+#content .esg .box_list_esg {width: 1000px; float: right; position: relative; left: 0; top: 0;}
+#content .esg .list_esg { width: 3000px; overflow: hidden;}
 #content .esg .list_esg li {float: left; overflow: hidden;}
-#content .esg .list_esg li .esg_img {float: left; overflow: hidden; margin: 30px; border-radius: 30px; transform: scale(.85);}
-#content .esg .list_esg li:first-child .esg_img {box-shadow: 15px 15px 10px rgba(0, 0, 0, .2); transform: scale(1) }
-#content .esg .list_esg li:first-child .esg_img img { transition: transform .5s;}
-#content .esg .list_esg li:first-child .esg_img:hover img {transform: scale(1.1)}
-#content .esg .list_esg li .esg_img img  {border-radius: 30px;}
-#content .esg .list_esg li:nth-child(2) img { opacity: .7;}
-
-#content .esg .list_esg li dl {float: right; padding: 10px; position: relative; top: 60px;}
+#content .esg .list_esg li .esg_img {float: left; overflow: hidden; border-radius: 30px; margin: 30px; background: #1f296f; transform: scale(.85);}
+#content .esg .list_esg li .esg_img img {opacity: .4;}
+#content .esg .list_esg li:first-child .esg_img {transform: scale(1); box-shadow: 15px 15px 10px rgba(0, 0, 0, .2);}
+#content .esg .list_esg li:first-child .esg_img img {transition: all .5s; opacity: 1}
+#content .esg .list_esg li:first-child .esg_img:hover img {transform: scale(1.05);}
+#content .esg .list_esg li dl {float: right; position: relative; top: 60px;}
 #content .esg .list_esg li dt {font-size: 1.5em; font-weight: 700; margin-bottom: 80px;}
+
 
 
 /* 공지사항 */
@@ -146,7 +145,7 @@
 
 /* 고객문의 */
 #content .customerQA {width: 100%; height: 500px; padding: 100px 0; position: relative; box-sizing: border-box;}
-#content .customerQA::after {content: ''; background: url(../images/QA.jpg); width: 100%; height: 300px;
+#content .customerQA::after {content: ''; background: url(../images/QA.jpg) ; width: 100%; height: 300px;
       position: absolute; bottom: 20%; z-index: -10;}
 #content .customerQA>div {width: 1200px; margin: 0 auto;}
 #content .customerQA>div h3 {font-size: 2.5em; font-weight: 700; color: #fff; margin: 100px 0 20px 0;}
