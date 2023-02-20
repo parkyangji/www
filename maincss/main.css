@@ -86,7 +86,7 @@
 #content .esg {width: 100%; height: 950px; padding-top: 110px; position: relative; box-sizing: border-box;}
 #content .esg::after {content: ''; background: #f7f7f7; width: 100%; height: 295px;
   position: absolute; left: 0; bottom: 20%; z-index: -10;}
-#content .esg>div {width: 1200px; margin: 0 auto; position: relative;}
+#content .esg>div {width: 1200px; height: 100%; margin: 0 auto; position: relative;}
 #content .esg>div h3 {font-size: 2.5em; font-weight: 700; margin: 25px 0;}
 #content .esg>div h3::before {
   content: 'Safety Golden Rules'; font-size: 5rem; font-weight: 700; font-style: italic;
