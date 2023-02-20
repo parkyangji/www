@@ -11,33 +11,41 @@
   content: "\e941"; font-family: 'Material Symbols Outlined'; font-variation-settings:'FILL' 0,'wght' 200,'GRAD' 0,'opsz' 48;
   border-radius: 50%; display: block; box-sizing: border-box;
   font-size: 40px; padding-top: 5px;
-  width: 60px; height: 60px;
-}
-#content .more_left span, .more_right span {display: none}
-#content .more_left:hover span, .more_right:hover span {display: block; width: 80px; position: absolute; cursor: default;}
-#content .QA_more {width: 150px; height: 40px; float: right;
+  width: 60px; height: 60px;}
+#content .more_right:hover::after {width: 200px;}
+#content .more_right::after {content: ''; display: block; width: 0; height: 60px;
+  position: absolute; bottom: 0; right: 28px; transition: all .5s;}
+#content .more_left span, .more_right span {visibility: hidden; opacity: 0; width: 80px; position: absolute; transition: all .5s;}
+#content .more_left:hover span, .more_right:hover span {visibility: visible; opacity: 1; width: 80px; position: absolute; cursor: default;}
+
+#content .QA_more {width: 150px; height: 40px; float: right; transition: all .5s;
   background: #f7f7f7; text-align: center; line-height: 40px; position: relative; top: -80px; right: 40px;}
+#content .QA_more:hover { background: #1f296f; color: #fff;}
+
+
 
 /* 제품소개 */
 #content .introProduct {width: 1200px; height: 950px; margin: 0 auto; padding-top: 110px;
   overflow: hidden; box-sizing: border-box;}
 #content .introProduct h3 {text-align: center; font-size: 2.5em; font-weight: 700; margin-bottom: 90px;}
 #content .introProduct>div {float: left;}
-#content .introProduct>div h4 {font-size: 2.25em; font-weight: 500; margin-bottom: 35px; position: relative; z-index: 10;}
+#content .introProduct>div h4 {font-size: 2.25em; margin-bottom: 35px; position: relative; z-index: 10;}
 #content .introProduct>div h4::before {
   content: 'Hydrogen Fluoride'; font-size: 5rem; font-weight: 700; font-style: italic; color: #f9f9f9;
   width: 900px; position: absolute; z-index: -10; left: 50px;top: -65px; }
 #content .introProduct>div p {font-size: 1.25em; color: #999; margin-bottom: 50px;}
 #content .introProduct>div .more_left {position: relative;}
 #content .introProduct>div .more_left::before {  background: #1f296f; color: #fff; transform: rotateY(180deg);}
-#content .introProduct>div .more_left:hover span {top: 30%; left: 120px;}
+#content .introProduct>div .more_left span {top: 30%; left: 100px}
+#content .introProduct>div .more_left:hover span {top: 30%; left: 120px}
+
 
 #content .introProduct>ul.tabMenu {float: right; margin-bottom: 45px; overflow: hidden;}
 #content .introProduct>ul.tabMenu li {float: left; margin-right: 100px; position: relative; z-index: 10;}
 
 #content .introProduct>ul.products {float: right; border-radius: 30px; width: 850px; overflow: hidden;}
 #content .introProduct>ul.products li {float: left; width: 25%; position: relative;}
-#content .introProduct>ul.products img {filter: brightness(80%);}
+#content .introProduct>ul.products img {filter: brightness(90%);}
 #content .introProduct>ul.products .info {position: absolute; left: 100px ; top: 50%}
 #content .introProduct>ul.products .info h4 {font-size: 1.5em; font-weight: 500; color: #fff;}
 #content .introProduct>ul.products .info a {opacity: 0;}
@@ -53,17 +61,25 @@
 #content .vision .list_vision {overflow: hidden; margin: 75px 30px 40px 30px;}
 #content .vision .list_vision dl {float: left; width: 350px; height: 540px;  margin-right: 45px;
   background: linear-gradient(to bottom, rgba(31,41,111,1) 60%, rgba(31,41,111,0) 100%);}
-#content .vision .list_vision dl:nth-child(1)::before { content: ''; display: block; width: 350px; height: 309px;
-  background-image: url(../images/vision_01.jpg); opacity: .7;}
-#content .vision .list_vision dl:nth-child(2)::before { content: ''; display: block; width: 350px; height: 309px;
-    background-image: url(../images/vision_02.jpg); opacity: .7;}
-#content .vision .list_vision dl:nth-child(3)::before { content: ''; display: block; width: 350px; height: 309px;
-      background-image: url(../images/vision_03.jpg); opacity: .7;}
+#content .vision .list_vision dl::before { content: ''; display: block; width: 350px; height: 309px; 
+  transition: all 1s; opacity: .6;}
+#content .vision .list_vision dl:nth-child(1)::before {background-image: url(../images/vision_01.jpg);}
+#content .vision .list_vision dl:nth-child(2)::before {background-image: url(../images/vision_02.jpg);}
+#content .vision .list_vision dl:nth-child(3)::before { background-image: url(../images/vision_03.jpg);}
 #content .vision .list_vision dl:nth-child(3) {margin-right: 0;}
-#content .vision .list_vision dt {font-size: 2em; font-weight: 500; text-align: center; transform: translateY(-20px); color: #fff;}
-#content .vision .list_vision dd {font-size: 1.25em; font-weight: 300; text-align: center; color: #fff; opacity: 0;}
+#content .vision .list_vision dt {font-size: 2em; font-weight: 500; text-align: center; color: #fff;
+  transition: all 1s; transform: translateY(-20px); }
+#content .vision .list_vision dd {font-size: 1.25em; font-weight: 300; text-align: center; color: #fff; 
+  transition: all 1s; opacity: 0; transform: translateY(-50px); }
+#content .vision .list_vision dl:hover dd {opacity: 1; transform: translateY(-20px); }
+#content .vision .list_vision dl:hover dt {transform: translateY(-100px);}
+#content .vision .list_vision dl:hover::before { opacity: 1 }
+
 #content .vision .more_right {float: right; top: 0; right: 40px;}
-#content .vision .more_right::before {background: #f7f7f7;}
+#content .vision .more_right::before {background: #f7f7f7; position: relative; z-index: 5;}
+#content .vision .more_right::after {background-color: #f7f7f7;;}
+#content .vision .more_right span {top: 25%; right: 100px; z-index: 10;}
+
 
 
 /* ESG경영 */
@@ -76,7 +92,10 @@
   content: 'Safety Golden Rules'; font-size: 5rem; font-weight: 700; font-style: italic;
   color: #f9f9f9; position: absolute; z-index: -10; right: 50px; top: -30px;}
 #content .esg>div .more_right {float: right; top: 40px; right: 40px;}
-#content .esg>div .more_right::before {color: #fff; background: #1f296f;}
+#content .esg>div .more_right::before {color: #fff; background: #1f296f; position: relative; z-index: 5;}
+#content .esg>div .more_right::after {background-color: #1f296f;}
+#content .esg>div .more_right span {top: 25%; right: 120px; z-index: 10; color: #fff;}
+
 #content .esg>div p {font-size: 1.5em; font-weight: 500; color: #1f296f; margin-bottom: 60px}
 
 #content .esg .esg_btn {float: left; position: relative; top: 225px;}
@@ -85,10 +104,14 @@
 
 #content .esg .list_esg {overflow: hidden; float: right;}
 #content .esg .list_esg li {float: left; overflow: hidden;}
-#content .esg .list_esg li img  {border-radius: 30px; float: left; margin: 30px;}
-#content .esg .list_esg li:first-child img { box-shadow: 15px 15px 10px rgba(0, 0, 0, .2);}
+#content .esg .list_esg li .esg_img {float: left; overflow: hidden; margin: 30px; border-radius: 30px; transform: scale(.85);}
+#content .esg .list_esg li:first-child .esg_img {box-shadow: 15px 15px 10px rgba(0, 0, 0, .2); transform: scale(1) }
+#content .esg .list_esg li:first-child .esg_img img { transition: transform .5s;}
+#content .esg .list_esg li:first-child .esg_img:hover img {transform: scale(1.1)}
+#content .esg .list_esg li .esg_img img  {border-radius: 30px;}
+#content .esg .list_esg li:nth-child(2) img { opacity: .7;}
+
 #content .esg .list_esg li dl {float: right; padding: 10px; position: relative; top: 60px;}
-#content .esg .list_esg li:nth-child(2) img { transform: scale(.85); opacity: .7;}
 #content .esg .list_esg li dt {font-size: 1.5em; font-weight: 700; margin-bottom: 80px;}
 
 
@@ -97,13 +120,28 @@
 #content .notice h3 {font-size: 2.5em; font-weight: 700;}
 #content .notice .more_right {float: right; top: 0; right: 40px;}
 #content .notice .more_right::before {  background: #f7f7f7; }
-#content .notice .more_right:hover span {top: 25%; right: 120px;}
+#content .notice .more_right span {top: 25%; right: 90px;}
+#content .notice .more_right:hover span {top: 25%; right: 110px;}
 
 #content .notice ul {margin-top: 65px; overflow: hidden;}
 #content .notice ul li {float: left; width: 580px; height: 230px; margin: 10px; padding: 40px; box-sizing: border-box; 
-  background: #f0f0f0; box-shadow: 0 3px 2px #f7f7f7;}
+  background: #f0f0f0; box-shadow: 0 3px 2px #f7f7f7; transition: bottom .5s;
+  position: relative; bottom: 0;}
+#content .notice ul li:hover { bottom: 10px;}
+#content .notice ul li:hover dt { color: #1f296f;}
 #content .notice ul dt {font-size: 1.5em; font-weight: 700; margin-bottom: 20px;}
-#content .notice ul span {display: block; color: #999; margin-top: 20px;}
+#content .notice ul dl span {display: block; color: #999; margin-top: 20px;}
+
+#content .notice ul li .motion span {position: absolute; display: block; background: #1f296f; 
+  transition-property: width, height; transition-duration: .1s;}
+#content .notice ul li .motion span:nth-child(1) {left: 0; top: 0; width: 0; height: 3px; transition-delay: .3s;}
+#content .notice ul li:hover .motion span:nth-child(1) {width: 100%; transition-delay: 0s;}
+#content .notice ul li .motion span:nth-child(2) {right: 0; top: 0; width: 3px; height: 0; transition-delay: .2s;}
+#content .notice ul li:hover .motion span:nth-child(2) {height: 100%; transition-delay: .1s;}
+#content .notice ul li .motion span:nth-child(3) {left: 0; bottom: 0; width: 0; height: 3px; transition-delay: .1s;}
+#content .notice ul li:hover .motion span:nth-child(3) {width: 100%; transition-delay: .2s;}
+#content .notice ul li .motion span:nth-child(4) {left: 0; bottom: 0; width: 3px; height: 0; transition-delay: 0s;}
+#content .notice ul li:hover .motion span:nth-child(4) {height: 100%; transition-delay: .3s;}
 
 
 /* 고객문의 */

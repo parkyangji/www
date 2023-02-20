@@ -36,7 +36,13 @@ img{border: 0; vertical-align: top}
 font-family: 'Noto Sans KR', sans-serif; */
 
   /* 전체 공통 영역 */
+
 #wrap {width: 100%; overflow: hidden; font-family: 'Noto Sans KR','Lato', sans-serif;}
+#skipNav{position:relative;width:100%;overflow:hidden; z-index: 110;}
+#skipNav a{display:block; height:1px; margin-bottom:-1px;
+   overflow:hidden; text-align:center; color:#fff; font-size:1.2em; font-weight: bold;}
+#skipNav a:hover,#skipNav a:focus,#skipNav a:active{
+  display:block;height:auto;padding:15px 0; background:#1f296f;}
 
   /* 헤더 영역 */
 #headerArea {width: 100%; position: fixed; left: 0; top: 0; z-index: 100; background: white;}
