@@ -40,15 +40,16 @@
 #content .introProduct>div .more_left:hover span {top: 30%; left: 120px}
 
 
-#content .introProduct>ul.tabMenu {float: right; margin-bottom: 45px; overflow: hidden;}
-#content .introProduct>ul.tabMenu li {float: left; margin-right: 100px; position: relative; z-index: 10;}
+#content .introProduct>ul.tabMenu {float: right; margin-bottom: 45px; text-align: center;}
+#content .introProduct>ul.tabMenu li {float: left; margin-right: 100px; position: relative; z-index: 10; cursor: pointer;}
+#content .introProduct>ul.tabMenu .tabActive::before { content: ''; width: 100%; height: 5px; position: absolute; bottom: -10px; background: #1f296f;}
 
 #content .introProduct>ul.products {float: right; border-radius: 30px; width: 850px; overflow: hidden;}
 #content .introProduct>ul.products li {float: left; width: 25%; position: relative;}
 #content .introProduct>ul.products img {filter: brightness(90%);}
 #content .introProduct>ul.products .info {position: absolute; left: 100px ; top: 50%}
 #content .introProduct>ul.products .info h4 {font-size: 1.5em; font-weight: 500; color: #fff;}
-#content .introProduct>ul.products .info a {opacity: 0;}
+#content .introProduct>ul.products .info a {visibility: hidden;}
 
 
 /* 기업비전 */
@@ -67,6 +68,7 @@
 #content .vision .list_vision dl:nth-child(2)::before {background-image: url(../images/vision_02.jpg);}
 #content .vision .list_vision dl:nth-child(3)::before { background-image: url(../images/vision_03.jpg);}
 #content .vision .list_vision dl:nth-child(3) {margin-right: 0;}
+
 #content .vision .list_vision dt {font-size: 2em; font-weight: 500; text-align: center; color: #fff;
   transition: all 1s; transform: translateY(-20px); }
 #content .vision .list_vision dd {font-size: 1.25em; font-weight: 300; text-align: center; color: #fff; 
@@ -98,9 +100,10 @@
 
 #content .esg>div p {font-size: 1.5em; font-weight: 500; color: #1f296f; margin-bottom: 60px}
 
-#content .esg .esg_btn {float: left; overflow: hidden; position: relative; top: 225px;}
+#content .esg .esg_btn {float: left; position: relative; top: 225px;}
 #content .esg .esg_btn a {float: left;}
 #content .esg .esg_btn span {font-size: 3.5em; font-weight: 100;}
+
 #content .esg .box_list_esg {width: 1000px; float: right; position: relative; left: 0; top: 0;}
 #content .esg .list_esg { width: 3000px; overflow: hidden;}
 #content .esg .list_esg li {float: left; overflow: hidden;}

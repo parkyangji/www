@@ -74,9 +74,11 @@ font-family: 'Noto Sans KR', sans-serif; */
 
 #footerArea .f_Area02 {width: 1200px; height: 100px; margin: 30px auto 0; overflow: hidden;}
 #footerArea .f_Area02>img {float: left;}
-#footerArea .f_Area02>address {float: left; margin-left: 95px; line-height: 1.5em;}
+#footerArea .f_Area02>address {float: left; margin-left: 95px;}
+#footerArea .f_Area02>p {float: left; margin-left: 95px;}
+
 #footerArea .family {width: 200px; height: 50px; padding: 0 20px; float: right; line-height: 50px;
-  background: #f0f0f0; position: relative; z-index: 9;}
+  background: #f0f0f0; position: relative; bottom: 24px; z-index: 9;}
 #footerArea .family span {font-weight: 500;}
 #footerArea .family::after { content: "\e5d2"; font-family: 'Material Symbols Outlined'; font-size: 1.5em;
   position: absolute; right: 10px;}
