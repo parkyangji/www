@@ -8,22 +8,31 @@
 #content .icon_about { clear: both; text-align: center; margin-bottom: 150px; padding: 50px;}
 #content .icon_about ul { display: inline-block;}
 #content .icon_about ul li {float: left; width: 210px; height: 210px; font-size: 1.25em;
-  border: 3px solid #348bcd; border-radius: 50%; text-align: center; line-height: 210px;
+  border: 3px solid #348bcd; border-radius: 50%; text-align: center; line-height: 300px;
   position: relative;}
 #content .icon_about ul li::before {content: ''; display: block; width: 250px; height: 250px; 
   border: 1px solid #d9d9d9; border-radius: 50%; position:absolute; left: -20px; top: -20px; }
+#content .icon_about ul li::after {font-family: 'Material Symbols Outlined'; font-variation-settings: 'FILL' 0,'wght' 100,'GRAD' 0,'opsz' 48; font-size: 4em;
+  position: absolute; top: -70px; left: 0; right: 0; transition: all .5s;}
+#content .icon_about ul li:nth-of-type(1)::after {content: "\e42e";}
+#content .icon_about ul li:nth-of-type(2)::after {content: "\f6e9";}
+#content .icon_about ul li:nth-of-type(3)::after {content: "\e473";}
+#content .icon_about ul li:hover::after {font-variation-settings: 'FILL' 1,'wght' 100,'GRAD' 0,'opsz' 48;}
+
 
 #content .about2 {border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; margin: 80px 0 180px 0}
 #content .about2 dl {display: flex; padding: 40px;}
-#content .about2 dt {width: 300px; font-size: 1.5em; font-weight: 700; color: #1f296f; padding-top: 20px;}
-#content .about2 dd { width: 840px; font-size: 1.13em; line-height: 36px;}
-#content .about2 dl:nth-of-type(2) { background: #f9f9f9;}
+#content .about2 dt {flex: 1 1 0 ; font-size: 1.5em; font-weight: 700; color: #1f296f; padding-top: 20px;}
+#content .about2 dd {flex: 3 1 0; font-size: 1.13em; line-height: 36px;}
+#content .about2 li:nth-of-type(2)::before { content: ''; width: 2000px; height: 152px; 
+  position: absolute; left: 50%; margin-left: -1000px; z-index: -10; background: #f9f9f9;}
+
 
 #content .summary {width: 2000px; height: 700px; display: flex;
   position: relative; left: 50%; top: 0; margin-left: -1000px; margin-bottom: 180px;}
-#content .summary .summary_table { width: 1000px; background: #f9f9f9; padding: 90px;}
-#content .summary .summary_table dl {display: flex;  border-bottom: 1px solid #cfcfcf; padding: 60px 0 30px 0;}
-#content .summary .summary_table dl:nth-of-type(1) {padding-top: 0;}
-#content .summary .summary_table dt {width: 145px; font-size: 1.25em; font-weight: 700;}
-#content .summary .summary_table dd { width: 400px; text-align: justify;  font-size: 1.25em; }
-#content .summary .summary_table dl:nth-of-type(2) dd {line-height: 36px;}
+#content .summary .summary_list { width: 1000px; background: #f9f9f9; padding: 90px;}
+#content .summary .summary_list dl {display: flex;  border-bottom: 1px solid #cfcfcf; padding: 60px 0 30px 0;}
+#content .summary .summary_list li:nth-of-type(1) dl {padding-top: 0;}
+#content .summary .summary_list dt {width: 145px; font-size: 1.25em; font-weight: 700;}
+#content .summary .summary_list dd {width: 400px; font-size: 1.25em; }
+#content .summary .summary_list li:nth-of-type(2) dd {line-height: 36px;}
