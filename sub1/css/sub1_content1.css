@@ -16,7 +16,7 @@
 #content .about2 {border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; margin: 80px 0 180px 0}
 #content .about2 dl {display: flex; padding: 40px;}
 #content .about2 dt {width: 300px; font-size: 1.5em; font-weight: 700; color: #1f296f; padding-top: 20px;}
-#content .about2 dd { font-size: 1.13em; line-height: 36px;}
+#content .about2 dd { width: 840px; font-size: 1.13em; line-height: 36px;}
 #content .about2 dl:nth-of-type(2) { background: #f9f9f9;}
 
 #content .summary {width: 2000px; height: 700px; display: flex;
@@ -25,5 +25,5 @@
 #content .summary .summary_table dl {display: flex;  border-bottom: 1px solid #cfcfcf; padding: 60px 0 30px 0;}
 #content .summary .summary_table dl:nth-of-type(1) {padding-top: 0;}
 #content .summary .summary_table dt {width: 145px; font-size: 1.25em; font-weight: 700;}
-#content .summary .summary_table dd { width: 500px; font-size: 1.25em; }
+#content .summary .summary_table dd { width: 400px; text-align: justify;  font-size: 1.25em; }
 #content .summary .summary_table dl:nth-of-type(2) dd {line-height: 36px;}

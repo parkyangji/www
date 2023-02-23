@@ -10,10 +10,10 @@
 .sub_nav li::after { content: ''; display: block; width: 1px; height: 25px;
   position: absolute; right: 0; top: 23px; background: #ccc;}
 .sub_nav li:nth-of-type(5):after {display: none;}
-.sub_nav li a {padding: 22px; font-size: 1.13em;}
+.sub_nav li a {padding: 22px; font-size: 1.13em; transition: all .3s ease-out;}
 
-.sub_nav li.currentTab:hover a {background: #1f296f; color: #fff; font-weight: 500;}
-.sub_nav li.currentTab::after:hover {display: none;}
+.sub_nav li:hover a {background: #1f296f; color: #fff; font-weight: 500;}
+.sub_nav li::after:hover {display: none;}
 
 #content {width: 1200px; margin: 0 auto; }
 #content .title_area {height: 370px; position: relative; overflow: hidden;}
