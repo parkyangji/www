@@ -1,12 +1,13 @@
 /* 회사소개 내용 영역 */
 
-#content .about1 p {font-size: 3.13em; float: left; margin: 100px 0 180px 0; position: relative; letter-spacing: 3px;}
+#content .slogan {height: 150px; overflow: hidden; margin: 100px 0;}
+#content .about1 p {font-size: 3.13em; position: relative; letter-spacing: 3px;}
 #content .about1 strong {font-weight: 400; color: #348bcd;}
-#content .about1 p:nth-of-type(1) { left: 25px;}
-#content .about1 p:nth-of-type(2) {position: relative;float: right; top: 50px; right:25px ;}
+#content .about1 p:nth-of-type(1) {float: left; left: 25px;}
+#content .about1 p:nth-of-type(2) {float: right; top: 50px; right:25px ;}
 
-#content .icon_about { clear: both; text-align: center; margin-bottom: 150px; padding: 50px;}
-#content .icon_about ul { display: inline-block;}
+#content .icon_about {overflow: hidden;}
+#content .icon_about ul { width: 700px; padding: 50px; overflow: hidden; margin: 0 auto;}
 #content .icon_about ul li {float: left; width: 210px; height: 210px; font-size: 1.25em;
   border: 3px solid #348bcd; border-radius: 50%; text-align: center; line-height: 300px;
   position: relative;}
@@ -20,7 +21,7 @@
 #content .icon_about ul li:hover::after {font-variation-settings: 'FILL' 1,'wght' 100,'GRAD' 0,'opsz' 48;}
 
 
-#content .about2 {border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; margin: 80px 0 180px 0}
+#content .about2 {border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; margin: 180px 0}
 #content .about2 dl {display: flex; padding: 40px;}
 #content .about2 dt {flex: 1 1 0 ; font-size: 1.5em; font-weight: 700; color: #1f296f; padding-top: 20px;}
 #content .about2 dd {flex: 3 1 0; font-size: 1.13em; line-height: 36px;}
