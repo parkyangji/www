@@ -1,0 +1,24 @@
+/* sub1 depth의 공통영역 */ 
+
+.sub_visual { width: 2000px; position: relative; left: 50%; top: 0;
+  margin-left: -1000px; margin-top: 90px;}
+.sub_visual h3 {position: absolute; top: 160px; width: 100%; text-align: center;
+  font-size: 2.5em; font-weight: 400; color: #fff;}
+.sub_nav { border-bottom: 1px solid #ccc;}
+.sub_nav ul {width: 805px; height: 70px; margin: 0 auto;  overflow: hidden;}
+.sub_nav li {float: left; width: 20%; text-align: center; position: relative;} 
+.sub_nav li::after { content: ''; display: block; width: 1px; height: 25px;
+  position: absolute; right: 0; top: 23px; background: #ccc;}
+.sub_nav li:nth-of-type(5):after {display: none;}
+.sub_nav li a {padding: 22px; font-size: 1.13em;}
+
+.sub_nav li.currentTab:hover a {background: #1f296f; color: #fff; font-weight: 500;}
+.sub_nav li.currentTab::after:hover {display: none;}
+
+#content {width: 1200px; margin: 0 auto; }
+#content .title_area {height: 370px; position: relative; overflow: hidden;}
+#content .title_area .line_map {position: absolute; right: 10px; top: 30px;
+  color: #666;}
+#content .title_area h2 {font-weight: 700; font-size: 3.13em; position: relative; text-align: center; margin-top: 170px; }
+#content .title_area h2::after {content: ''; width: 110px; height: 3px; position:absolute;
+  left: 50%; bottom: -60px; margin-left: -55px; background: #1f296f;}
