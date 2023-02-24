@@ -1,4 +1,5 @@
-/* 회사소개 내용 영역 */
+/* 기업개요 내용 영역 */
+#wrap {position: relative;}
 
 #content .slogan {height: 150px; overflow: hidden; margin: 100px 0;}
 #content .about1 p {font-size: 3.13em; position: relative; letter-spacing: 3px;}
