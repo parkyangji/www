@@ -1,14 +1,12 @@
 /* 기업개요 내용 영역 */
-#wrap {position: relative;}
-
-#content .slogan {height: 150px; overflow: hidden; margin: 100px 0;}
+#content .slogan {height: 150px; overflow: hidden; margin: 100px 0 120px;}
 #content .about1 p {font-size: 3.13em; position: relative; letter-spacing: 3px;}
 #content .about1 strong {font-weight: 400; color: #348bcd;}
 #content .about1 p:nth-of-type(1) {float: left; left: 25px;}
 #content .about1 p:nth-of-type(2) {float: right; top: 50px; right:25px ;}
 
-#content .icon_about {overflow: hidden;}
-#content .icon_about ul { width: 700px; padding: 50px; overflow: hidden; margin: 0 auto;}
+#content .icon_about {text-align: center;}
+#content .icon_about ul { display: inline-block;}
 #content .icon_about ul li {float: left; width: 210px; height: 210px; font-size: 1.25em;
   border: 3px solid #348bcd; border-radius: 50%; text-align: center; line-height: 300px;
   position: relative;}
@@ -26,8 +24,8 @@
 #content .about2 dl {display: flex; padding: 40px;}
 #content .about2 dt {flex: 1 1 0 ; font-size: 1.5em; font-weight: 700; color: #1f296f; padding-top: 20px;}
 #content .about2 dd {flex: 3 1 0; font-size: 1.13em; line-height: 36px;}
-#content .about2 li:nth-of-type(2)::before { content: ''; width: 2000px; height: 152px; 
-  position: absolute; left: 50%; margin-left: -1000px; z-index: -10; background: #f9f9f9;}
+#content .about2 li:nth-of-type(2)::before { content: ''; width: 100%; height: 152px; 
+  position: absolute; left: 0; z-index: -10; background: #f9f9f9;}
 
 
 #content .summary {width: 2000px; height: 700px; display: flex;
