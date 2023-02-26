@@ -17,11 +17,24 @@
 #content .icon_about ul li:nth-of-type(3)::after {content: "\ea3f";}
 #content .icon_about ul li:hover::after {font-variation-settings: 'FILL' 1,'wght' 100,'GRAD' 0,'opsz' 48; color: #348bcd; }
 
-#content .quality_goal {height: 500px; background-color:bisque;}
-#content .quality_goal li {float: left; width: 33.3%; padding: 40px; box-sizing: border-box;}
+#content .quality_goal {overflow: hidden;}
+#content .quality_goal ul {margin: 80px 0; overflow: hidden;}
+#content .quality_goal li {float: left; width: 33.3%; box-sizing: border-box; text-align: center;}
+#content .quality_goal p {font-size: 1.13em; text-align: center; margin-top: 30px;}
 
-#content .points {height: 750px; background-color: azure;}
+#content .points_list {width: 1000px; margin: 80px auto; overflow: hidden;}
+#content .points_list dl {float: left; width: 50%; box-sizing: border-box; padding: 25px; text-align: center; position: relative;}
+#content .points_list dt {margin-bottom: 15px; font-size: 1.25em; font-weight: 700;}
+#content .points_list dl div {width: 340px; height: 280px; margin: 0 auto; border: 1px solid #d9d9d9;
+  display: flex; flex-flow: column; justify-content: center;}
+#content .points_list dd {display: flex; font-size: 1.13em; margin: 0 30px 5px; text-align: justify;}
+#content .points_list span {margin-right: 15px; font-size: 1rem; color: #348bcd;}
 
-#content .certification {width: 2000px; position: relative; left: 50%; top: 0; margin-left: -1000px;
-  height: 700px; background-color: aqua;}
+#content .certification {width: 2000px; position: relative; left: 50%; top: 0; margin-left: -1000px; 
+  margin-bottom: 130px; background-color: #f7f7f7; overflow: hidden;}
 #content .cer_inner {width: 1200px; margin: 0 auto;}
+#content .cer_inner ul {overflow: hidden; margin: 70px 0;}
+#content .cer_inner li {float: left; width: 50%; box-sizing: border-box; text-align: center; padding: 25px; height: 420px;}
+#content .cer_inner li:nth-of-type(1) {background: url(../images/content3/certification_01.jpg) no-repeat;}
+#content .cer_inner li:nth-of-type(2) {background: url(../images/content3/certification_02.jpg) no-repeat;}
+#content .cer_inner li p {width: 430px; display: inline-block; font-size: 1.13em; text-align: center; position: relative; top: 310px;}
