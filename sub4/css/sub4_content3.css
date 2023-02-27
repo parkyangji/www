@@ -1,0 +1,10 @@
+/* 행동준칙 */
+#content ul {width: 1000px; margin: 0 auto 110px;}
+#content ul li {display: flex; align-items: center; margin: 30px 0; font-size: 1.13em; text-align: justify;}
+#content ul span { width: 30px; height: 30px; margin-right: 50px; padding: 20px; color: #348bcd;
+    border: 1px solid #d9d9d9; border-radius: 50%; font-size: 1.25rem; text-align: center;}
+#content ul li:nth-of-type(even) span {background: #f9f9f9;}
+#content ul p {flex: 1 1 0; position: relative; line-height: 2em;}
+#content ul p::before {content: ''; display: block; width: 25px; height:1px; background: #d9d9d9;
+    position: absolute; top: 50%; left: -40px;}
+
