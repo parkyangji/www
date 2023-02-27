@@ -15,7 +15,7 @@
 #content section .img_area h3 {font-size: 3em; text-align: center;}
 #content section .text_area { flex: 1 1 0;}
 #content section .text_area dl {display: flex; padding: 40px; align-items: center;}
-#content section .text_area dl:nth-of-type(even) {background: #f7f7f7;}
+#content section .text_area dl:nth-of-type(even) {background: #f9f9f9;}
 #content section .text_area dt { flex: 1 1 0; font-family: 'Lato'; font-size: 1.5em; color: #1f296f;}
 #content section .text_area span {font-size: 1.13rem; color: #666; margin-left: 15px;}
 #content section .text_area dd { flex: 3 1 0; font-size: 1.25em; }
