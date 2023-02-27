@@ -11,8 +11,13 @@
 #content section {width: 1200px; margin: 0 auto 180px;}
 #content section h3 {text-indent: -999px; overflow: hidden;}
 #content section #map1, #map2 {width: 1200px; height: 550px; margin: 50px 0;}
-#content section .info {display: flex;}
-#content section .info dl {flex: 1 1 0; text-align: center; border-right: 1px solid #d9d9d9;}
-#content section .info dl:nth-of-type(3) {border: 0;}
-#content section .info dt {font-size: 1.5em; font-weight: 700; color: #1f296f; margin-bottom: 25px;}
-#content section .info dd {font-size: 1.13em;}
+#content section .info1 {display: flex; margin-bottom: 50px;}
+#content section .info1 dl {flex: 1 1 0; text-align: center; border-right: 1px solid #d9d9d9;}
+#content section .info1 dl:nth-of-type(3) {border: 0;}
+#content section .info1 dt {font-size: 1.5em; font-weight: 700; color: #1f296f; margin-bottom: 25px;}
+#content section .info1 dd {font-size: 1.13em;}
+
+#content section .info2 {width: 1150px; margin: 0 auto; border-top: 1px solid #d9d9d9;}
+#content section .info2 dt { color: #1f296f; font-size: 1.25em; font-weight: 700; margin: 25px 0;}
+#content section .info2 dd { display: flex; font-size: 1.13em; margin-bottom: 15px;}
+#content section .info2 span {flex: 1 1 0; font-weight: 500;}
