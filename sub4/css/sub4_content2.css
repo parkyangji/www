@@ -1,0 +1,9 @@
+#content ol {list-style: decimal;}
+
+#content ul>li {font-size: 1.5em; font-weight: 700; color: #1f296f; margin: 40px 0; padding-left: 20px; position: relative;}
+#content ul>li::before {content: ''; display: block; width: 5px; height: 35px; background: #348bcd; position: absolute; left: 0;}
+#content ol { width: 1000px; margin: 0 auto; margin: 20px 100px; border-top: 1px solid #d9d9d9;}
+#content ol>li {font-size:1.13rem; line-height: 2.5rem; color: #333; font-weight: 400; text-align: justify;}
+#content ul>li:first-of-type ol, #content ul>li:last-of-type ol {list-style: none;}
+
+
