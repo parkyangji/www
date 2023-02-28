@@ -22,13 +22,12 @@
 #content .quality_goal li {float: left; width: 33.3%; box-sizing: border-box; text-align: center;}
 #content .quality_goal p {font-size: 1.13em; text-align: center; margin-top: 30px;}
 
-#content .points_list {margin: 80px auto; overflow: hidden;}
-#content .points_list dl {float: left; width: 50%; box-sizing: border-box; padding: 25px; text-align: center; position: relative;}
-#content .points_list dt {margin-bottom: 15px; font-size: 1.25em; font-weight: 700;}
-#content .points_list dl div {width: 340px; height: 280px; margin: 0 auto; border: 1px solid #d9d9d9;
-  display: flex; flex-flow: column; justify-content: center;}
-#content .points_list dd {display: flex; font-size: 1.13em; margin: 0 30px 5px; text-align: justify;}
-#content .points_list span {margin-right: 15px; font-size: 1rem; color: #348bcd;}
+#content .points div {margin: 80px auto; overflow: hidden;}
+#content .points_list li {float: left; width: 33.333%; padding: 20px; box-sizing: border-box;}
+#content .points_list li dt {color: #348bcd; font-size: 1.25em; font-weight: 500;margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #d9d9d9;}
+#content .points_list li dd {line-height: 2em; margin-left: 15px;}
+#content .points_list span {margin-right: 15px; color: #ccc;}
+#content .points_list li:nth-of-type(4), #content .points_list li:nth-of-type(5) {width: 40%;}
 
 #content .certification {width: 2000px; position: relative; left: 50%; top: 0; margin-left: -1000px; 
   margin-bottom: 130px; background-color: #f7f7f7; overflow: hidden;}
