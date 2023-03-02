@@ -7,10 +7,10 @@
 #content .tab li a {font-size: 1.13em; line-height: 2em; color: #666;}
 #content .tab li:hover, #content .tab a:hover  {color: #348bcd;}
 
+#content .ethics_conduct {margin-bottom: 110px;}
 #content .ethics_conduct ul>li {font-size: 1.5em; font-weight: 700; color: #1f296f; padding: 100px 0 0 20px; position: relative;}
 #content .ethics_conduct ul>li::before {content: ''; display: block; width: 5px; height: 35px; background: #348bcd; position: absolute; left: 0;}
-#content .ethics_conduct ol { width: 1000px; margin: 20px auto 0; border-top: 1px solid #d9d9d9;}
-#content .ethics_conduct ol>li {font-size:1.13rem; line-height: 2.5rem; color: #333; font-weight: 400; text-align: justify;}
-#content .ethics_conduct ul>li:first-of-type ol, #content ul>li:last-of-type ol {list-style: none;}
-
+#content .ethics_conduct dd {position: relative; margin: 0 80px; font-size:1.13rem; line-height: 2.5rem; color: #333; font-weight: 400; text-align: justify;}
+#content .ethics_conduct span {position: absolute; left: -25px;}
+#content .ethics_conduct dd:first-of-type {margin-top: 30px; border-top: 1px solid #d9d9d9;}
 
