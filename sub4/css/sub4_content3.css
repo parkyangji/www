@@ -1,10 +1,10 @@
 /* 행동준칙 */
-#content ul {width: 1000px; margin: 0 auto 110px;}
-#content ul li {position: relative; margin: 30px 0; padding: 20px 20px 20px 90px; font-size: 1.13em; text-align: justify;
+#content .ethics_policy {width: 1000px; margin: 0 auto 110px;}
+#content .ethics_policy li {position: relative; margin: 30px 0; padding: 20px 20px 20px 90px; font-size: 1.13em; text-align: justify;
     box-shadow: 0 0 5px #d9d9d9; line-height: 2em;}
-#content ul span {position: absolute; left: 20px;  margin: 0 40px 0 10px; color: #348bcd; font-family: 'Lato'; font-size: 1.25rem; text-align: center;}
-#content ul span::before {content: ''; display: block; width: 20px; height:1px; background: #d9d9d9;
+#content .ethics_policy span {position: absolute; left: 20px;  margin: 0 40px 0 10px; color: #348bcd; font-family: 'Lato'; font-size: 1.25rem; text-align: center;}
+#content .ethics_policy span::before {content: ''; display: block; width: 20px; height:1px; background: #d9d9d9;
     position: absolute; top: 50%; left: 25px;}
-#content ul strong {color: #1f296f; background: linear-gradient(to top, #fd7e1f40 40%, #fff 40%)}
+#content .ethics_policy strong {color: #1f296f; background: linear-gradient(to top, #fd7e1f40 40%, #fff 40%)}
 
 
