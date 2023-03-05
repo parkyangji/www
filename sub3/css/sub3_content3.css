@@ -1,0 +1,17 @@
+/* 재해예방시스템 */
+
+#content h4 {font-size: 1.88em; font-weight: 700; margin: 100px 0;}
+#content .content_area > p:nth-of-type(1) {margin: 0 auto; font-size: 1.13em; font-weight: 100; line-height: 2em; text-align: justify;}
+
+#content .prevent_disasters li {font-size: 1.25em; line-height: 2; padding-left: 50px; margin: 20px 0;}
+#content .prevent_disasters span {font-family: 'Lato'; position: relative; right: 30px;}
+#content .prevent_disasters span::before {content: ''; display: block; width: 50px; height: 50px;
+    position: absolute; left: -18px; top: -10px; z-index: -10; border-radius: 50%; background: #f7f7f7;}
+
+#content .prevent_earthquake table {text-align: center; font-size: 1.13em; margin-bottom: 100px;}
+#content .prevent_earthquake td,th {border: 1px solid #d9d9d9; padding: 20px;}
+#content .prevent_earthquake th {background: #f7f7f7; border-bottom: 0;}
+#content .prevent_earthquake thead th:nth-child(1) {width: 100px;}
+#content .prevent_earthquake thead th:nth-child(2) {width: 550px;}
+#content .prevent_earthquake thead th:nth-child(3) {width: 550px;}
+#content .prevent_earthquake ul {width: 300px; margin: 0 auto; text-align: left;}
