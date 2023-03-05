@@ -3,8 +3,6 @@
 
 #content h4 {font-size: 1.88em; font-weight: 700; margin: 100px 0;}
 
-#content .esg_goal {height: 920px;}
-
 .hex {width: 1200px; height: 480px;}
 .hex ul {width: 750px; margin: 0 auto; position: relative;}
 .hex li {width: 240px; height: 240px; background: linear-gradient(300deg, #1f296f, #2d3ca3);
@@ -21,3 +19,12 @@
     color: #fff; font-size: 1.25em; text-align: center;
     position: relative; top: 70px; left: 50px;}
 
+#content .esg_conduct {width: 2000px; position: relative; left: 50%; top: 0; margin-left: -1000px; background-color: #f7f7f7; overflow: hidden;}
+#content .conducts {width: 1200px; margin: 0 auto 100px;}
+#content .conducts li {display: flex; align-items: center; height: 325px; border-bottom: 1px solid #d9d9d9;}
+#content .conducts dl {}
+#content .conducts dt {width: 300px; float: left; margin-left: 50px; position: relative; line-height: 70px; font-size: 1.25em; font-weight: 500;}
+#content .conducts span {position: absolute; top: -30px; left: -50px; font-family: 'Lato'; font-size: 1.88em; color: #348bcd;}
+#content .conducts dd {width: 575px; float: right; font-size: 1.13em; text-align: justify;}
+#content .conducts img {transition: all .5s; position: absolute; right: 0; float: right; transform: scale(.8);}
+#content .conducts li:hover img {}
