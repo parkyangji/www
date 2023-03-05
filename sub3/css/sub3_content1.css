@@ -1,11 +1,14 @@
 /* 환경안전경영방침 */
 
-#content .content_area > p:nth-of-type(1) {font-size: 1.5em; margin-bottom: 30px; font-weight: 500; text-align: center;}
-#content .content_area > p:nth-of-type(2) {width: 890px; margin: 0 auto 50px; font-size: 1.13em; font-weight: 100; line-height: 2em; text-align: justify;}
-#content .content_area > p:nth-of-type(3) {font-size: 1.13em; text-align: end;}
-#content .content_area > p:nth-of-type(4) {font-size: 1.13em; text-align: end; margin-bottom: 110px;}
 
-#content .esg_policy {width: 2000px; position: relative; left: 50%; top: 0; margin-left: -1000px; background-color: #f7f7f7; overflow: hidden;}
+#content .content_area {width: 2000px; position: relative; left: 50%; top: 0; margin-left: -1000px;overflow: hidden;}
+
+#content .esg_info {width: 1200px; height: 446px; margin: 0 auto;}
+#content .esg_info p {float: left; width: 700px; padding: 50px; font-size: 1.13em;}
+#content .esg_info strong {display: block; font-size: 1.88rem; font-weight: 300; margin-bottom: 50px;}
+#content .esg_info img {width: 800px; float: right; position: absolute; right: 0; clip: rect(100px 800px 446px 0);}
+
+#content .esg_policy {background-color: #f7f7f7; overflow: hidden; margin: 50px 0 100px;}
 #content .esg_policy ul {width: 1200px; margin: 50px auto;}
 #content .esg_policy li {position: relative; font-size: 1.25em; padding: 20px 20px 20px 100px; margin: 30px 0;
     background: #fff; box-shadow: 0 0 5px #d9d9d9;}
@@ -13,5 +16,3 @@
 #content .esg_policy span::before {content: ''; display: block; width: 50px; height: 50px;
     position: absolute; left: -20px; top: -60%; z-index: -10; border-radius: 50%;}    
 #content .esg_policy strong {color: #1f296f; background: linear-gradient(to top, #fd7e1f40 40%, #fff 40%)}
-
-#content img {margin: 50px 0 110px;}
