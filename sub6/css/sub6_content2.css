@@ -1,0 +1,15 @@
+/* 고객문의 */
+
+#content .customer1 { height: 600px;}
+#content .customer1 ul {width: 1000px; margin: 0 auto; overflow: hidden;}
+#content .customer1 li {float: left; width: 300px; height: 400px; box-sizing: border-box; text-align: center;
+    border: 1px solid #d9d9d9; margin-right: 50px; padding: 50px 20px; position: relative; overflow: hidden;}
+#content .customer1 li:last-child {margin-right: 0;}
+#content .customer1 dt {font-size: 1.88em; font-weight: 700;}
+#content .customer1 dd {font-size: 1.13em; line-height: 2em;}
+#content .customer1 dd:nth-child(3) {margin-top: 150px;}
+#content .customer1 dd.call {text-align: end; color: #fff;}
+#content .customer1 dd.call::before {content: ''; display: block; width: 300px; height: 300px;
+    position: absolute; right: -50px; bottom: -50px; z-index: -10; border-radius: 50%; background: #1f296f;
+    box-shadow: inset 20px 20px 60px #181d5c;}
+#content .customer1 span {color: #999; margin-right: 10px;}
