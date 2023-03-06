@@ -2,12 +2,12 @@
 
 
 #content h4 {font-size: 1.88em; font-weight: 700; margin: 100px 0;}
-#content .content_area > p:nth-of-type(1) {margin: 0 auto; font-size: 1.13em; font-weight: 100; line-height: 2em; text-align: justify;}
+#content .content_area > p:nth-of-type(1) {margin: 0 auto; font-size: 1.13em; text-align: center;}
 
 .hex {width: 1200px; height: 480px;}
 .hex ul {width: 750px; margin: 0 auto; position: relative;}
 .hex li {width: 240px; height: 240px; background: linear-gradient(300deg, #1f296f, #2d3ca3);
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     transform: rotate(90deg); position: absolute;}
 .hex li:nth-of-type(1){left: 0; top: 0;}
 .hex li:nth-of-type(2){left: 250px; top: 0;}
@@ -27,7 +27,8 @@
 #content .conducts dt {width: 330px; float: left; margin-left: 50px; position: relative; line-height: 70px; font-size: 1.25em; font-weight: 700;}
 #content .conducts span {position: absolute; top: -30px; left: -50px; font-family: 'Lato'; font-size: 1.5rem; font-weight: 500; color: #348bcd;}
 #content .conducts dd {width: 575px; float: right; font-size: 1.13em; text-align: justify;}
-#content .conducts img {transition: all .5s; position: absolute; right: 0; float: right; 
-    clip: rect(0 600px 100px 0); transform: scale(.8); filter: grayscale(1);}
+#content .conducts .img_inner {transition: all .5s;  width: 600px; height: 100px; overflow: hidden; position: absolute; right: 0;}
+#content .conducts img {transform: scale(.8); filter: grayscale(1);}
 #content .conducts li:hover {height: 325px;}
-#content .conducts li:hover img {clip: rect(0 600px 325px 0); filter: grayscale(0);}
+#content .conducts li:hover .img_inner {height: 325px;}
+#content .conducts li:hover img {filter: grayscale(0);}
