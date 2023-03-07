@@ -1,15 +1,27 @@
 /* 고객문의 */
 
-#content .customer1 { height: 600px;}
+#content dt {font-size: 1.88em; font-weight: 700;}
+#content dd {font-size: 1.13em; line-height: 2em;}
+#content dd.call, dd.mail {text-align: end; font-weight: 100;}
+#content dd.call::after, dd.mail::after { font-family: 'Material Symbols Outlined'; font-variation-settings: 'FILL' 1,'wght' 700,'GRAD' 0,'opsz' 48;
+    font-size: 1.5em; color: #1f296f; position: relative; top: 5px; margin-left: 5px;}
+#content dd.call::after {content: '\f7fa';}
+#content dd.mail::after {content: '\e158';}
+
+#content .customer1 { margin-bottom: 100px;}
 #content .customer1 ul {width: 1000px; margin: 0 auto; overflow: hidden;}
 #content .customer1 li {float: left; width: 300px; height: 400px; box-sizing: border-box; text-align: center;
     border: 1px solid #d9d9d9; margin-right: 50px; padding: 50px 20px; position: relative; overflow: hidden;}
 #content .customer1 li:last-child {margin-right: 0;}
-#content .customer1 dt {font-size: 1.88em; font-weight: 700;}
-#content .customer1 dd {font-size: 1.13em; line-height: 2em;}
-#content .customer1 dd:nth-child(3) {margin-top: 150px;}
-#content .customer1 dd.call {text-align: end; color: #fff;}
-#content .customer1 dd.call::before {content: ''; display: block; width: 300px; height: 300px;
-    position: absolute; right: -50px; bottom: -50px; z-index: -10; border-radius: 50%; background: #1f296f;
-    box-shadow: inset 20px 20px 60px #181d5c;}
-#content .customer1 span {color: #999; margin-right: 10px;}
+#content .customer1 dd:nth-child(3) {margin-top: 50px;}
+/* #content .customer1 li::before {content: ''; display: block; width: 300px; height: 300px;
+    position: absolute; right: -38%; bottom: -20%; z-index: -10; border-radius: 50%; background: #1f296f;
+    box-shadow: inset 20px 20px 60px #101550;} */
+#content .customer1 span {color: #999; font-size: 1rem; margin-right: 30px;}
+
+#content .customer2 {margin-bottom: 100px;}
+#content .customer2 dl {width: 800px; margin: 0 auto; position: relative;}
+#content .customer2 dd.call {position: absolute; right: 0; top: 0;}
+#content .customer2 dd.mail {position: absolute; right: 0; top: 40px;}
+
+
