@@ -7,3 +7,22 @@
     width: 290px; text-align: center; position: absolute; left: 0; top: 133px;}
 #content .product_list span::after {content: '\2197'; display: block; width: 35px; height: 35px; background: #1f296f; border-radius: 50%;
     font-size: 1.25em; font-weight: 100; color: #fff; position: absolute; right: 20px; top: 35px;}
+
+
+.modal_box {width: 100%; height: 100%; position: fixed; top: 0; left: 0; 
+    background: rgba(0,0,0,.5); z-index: 100;}
+.modal_content {width: 800px; height: 500px; padding: 30px; box-sizing: border-box; 
+    position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    background: #fff; overflow-y: auto;}
+.modal_content img {float: left;}
+.modal_content ul {overflow: hidden;}
+.modal_content li {margin-bottom: 20px;}
+.modal_content dl {display: table;}
+.modal_content dt {display: table-cell; width: 100px; font-weight: 500;}
+.modal_content dd {}
+.modal_content div {overflow: hidden;}
+.modal_content table {}
+.modal_content th {background: #f7f7f7; border-bottom: 0;}
+.modal_content th,td {border: 1px solid #d9d9d9; padding: 5px;}
+.modal_content dd {}
+.modal_box .close_btn {color: #fff; position: absolute; top: 18%; right: 18%; font-size: 35px;}
