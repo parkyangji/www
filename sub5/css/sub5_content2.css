@@ -1,0 +1,20 @@
+/* 재무정보 */
+
+#content .tab {width: 900px; margin: 100px auto 0;}
+#content .tab li {float: left; width: 33.33%; text-align: center;}
+#content .tab li a {height: 70px; line-height: 70px; font-size: 1.13em; color: #666; border: 1px solid #ccc; border-left-width: 0;}
+#content .tab li:nth-of-type(1) a {border-left-width: 1px;}
+#content .tab li a:hover {background: #f7f7f7; color: #1f296f;}
+
+#content .tab ul::after {content: ''; display: block; clear: both;}
+
+#content table {width: 100%; border-top: 2px solid; margin-top: 90px;}
+#content table th, td {width: 16.66%; height: 70px; padding: 10px; 
+    text-align: center; box-sizing: border-box; line-height: 22px;}
+#content table thead {border-bottom: 1px solid #d9d9d9;}
+#content table td {font-size: 1.13em; color: #666; border-right: 1px solid #d9d9d9; border-bottom: 1px solid #d9d9d9;}
+#content table th {font-size: 1.25em; font-weight: 600;}
+#content table td:last-child {border-right: 0;}
+#content table span {display: block; margin-top: 10px; font-size: 1rem; color: #666; font-weight: 500;}
+
+#content #cash {margin-bottom: 110px;}

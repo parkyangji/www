@@ -1,0 +1,37 @@
+#content .tab {width: 900px; margin: 100px auto 0;}
+#content .tab li {float: left; width: 33.33%; text-align: center;}
+#content .tab li a {height: 70px; line-height: 70px; font-size: 1.13em; color: #666; border: 1px solid #ccc; border-left-width: 0;}
+#content .tab li:nth-of-type(1) a {border-left-width: 1px;}
+#content .tab li a:hover {background: #f7f7f7; color: #1f296f;}
+
+#content .tab ul::after {content: ''; display: block; clear: both;}
+
+/* 불화수소란 */
+
+section {padding: 90px 0;}
+#content #HF_define .img_box, #HF_use, #HF_danger { width: 2000px; position: relative; left: 50%; top: 0; margin-left: -1000px;}
+
+#content #HF_define>p:nth-of-type(1) {font-size: 1.13em; text-align: center; margin: 20px 0;}
+#content #HF_define dl{ float: left; width: 50%; padding: 90px 70px; box-sizing: border-box;}
+#content #HF_define dt{font-size: 1.88em; color: #348bcd; font-weight: 700; margin-bottom: 60px; text-align: center;}
+#content #HF_define dd{font-size: 1.13em; line-height: 2em; text-align: justify;}
+#content #HF_define .HF>span:nth-child(1) { clear: both; display: block; font-size: 1.88em; color: #348bcd; font-weight: 700; margin-bottom: 60px; text-align: center;}
+#content #HF_define .img_box { height: 350px; background: url(../images/content1/define_01.jpg); }
+#content #HF_define .img_box p {font-size: 4em; line-height: 350px; color: #fff; text-align: center; font-weight: 300; font-family: 'Lato';}
+#content #HF_define .HF .text_box span, .text_box p {font-size: 1.13em; color: #999; line-height: 2em;}
+#content #HF_define .HF .text_box span {display: block; margin: 20px 0;}
+
+#content #HF_use {background: #f9f9f9; height: 700px; z-index: -10;}
+#content #HF_use ul {padding: 180px 0;}
+#content #HF_use ul::before {content: ''; display: block; width: 650px; height: 650px; position: absolute; left: 50%; top: 50%;
+    background: linear-gradient(145deg, #e0e0e0, #ffffff); box-shadow:  20px 20px 60px #d4d4d4, -20px -20px 60px #ffffff;
+    margin-left: -325px; margin-top: -325px; border-radius: 50%; z-index: -5;}
+#content #HF_use li {font-size: 1.5em; text-align: center; line-height: 2em;}
+
+
+#content #HF_danger::before {content: ''; background: url(../images/content1/danger_01.jpg) right; 
+    width: 580px; height: 900px; position:absolute; right: 0; top: 150px;}
+#content #HF_danger ul {width: 1200px; margin: 0 auto 100px;}
+#content #HF_danger li {width: 1000px; padding: 30px; box-sizing: border-box;}
+#content #HF_danger dt {font-size: 1.88em; font-weight: 700; color: #348bcd; margin-bottom: 40px;}
+#content #HF_danger dd {font-size: 1.13em; line-height: 2em;}

@@ -1,0 +1,9 @@
+/* 주식정보 */
+
+span { display: block; text-align: end; margin-right: 10px; margin-bottom: 10px;}
+#content table {width: 100%; border-top: 2px solid; border-bottom: 2px solid; margin-bottom: 110px;}
+#content table th, td { height: 70px; padding: 10px; 
+    text-align: center; box-sizing: border-box; line-height: 22px;}
+#content table th ,td {font-size: 1.13em; color: #666; border-right: 1px solid #d9d9d9; border-bottom: 1px solid #d9d9d9;}
+#content table th {background: #f9f9f9;}
+#content table td:last-child {border-right: 0;}
