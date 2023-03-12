@@ -1,7 +1,7 @@
 /*윤리경영선언문*/
 #content .content_area> p:nth-child(1) {font-size: 1.5em; margin-bottom: 30px; font-weight: 500; text-align: center;}
-#content .content_area> p:nth-child(2) {font-size: 1.13em; font-weight: 100; line-height: 2.5em;}
-#content .content_area> p:nth-child(3) {text-align: end; font-weight: 100; margin-top: 30px;}
+#content .content_area> p:nth-child(2) {width: 1000px; margin: 0 auto; font-size: 1.13em; line-height: 2.5em; text-align: justify;}
+#content .content_area> p:nth-child(3) {text-align: end;  margin-top: 30px;}
 
 #content .ethics_rule {margin: 110px auto;}
 #content .ethics_rule h4 {font-size: 1.88em; font-weight: 700; padding-top: 50px; margin-bottom: 30px;}

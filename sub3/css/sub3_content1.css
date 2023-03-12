@@ -4,7 +4,7 @@
 #content .content_area {width: 2000px; position: relative; left: 50%; top: 0; margin-left: -1000px;overflow: hidden;}
 
 #content .esg_info {width: 1200px; height: 446px; margin: 0 auto;}
-#content .esg_info p {float: left; width: 700px; padding: 50px; font-size: 1.13em;}
+#content .esg_info p {float: left; width: 700px; padding: 50px; font-size: 1.13em; line-height: 2em;}
 #content .esg_info strong {display: block; font-size: 1.88rem; font-weight: 300; margin-bottom: 50px;}
 #content .esg_info img {width: 800px; float: right; position: absolute; right: 0; top: 100px;}
 

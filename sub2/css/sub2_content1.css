@@ -9,7 +9,7 @@
 /* 불화수소란 */
 
 section {padding: 90px 0;}
-#content #HF_define .img_box, #HF_use, #HF_danger { width: 2000px; position: relative; left: 50%; top: 0; margin-left: -1000px;}
+#content #HF_define .img_box, #HF_use{ width: 2000px; position: relative; left: 50%; top: 0; margin-left: -1000px;}
 
 #content #HF_define>p:nth-of-type(1) {font-size: 1.13em; text-align: center; margin: 20px 0;}
 #content #HF_define dl{ float: left; width: 50%; padding: 90px 70px; box-sizing: border-box;}
@@ -29,9 +29,10 @@ section {padding: 90px 0;}
 #content #HF_use li {font-size: 1.5em; text-align: center; line-height: 2em;}
 
 
-#content #HF_danger::before {content: ''; background: url(../images/content1/danger_01.jpg) right; 
-    width: 580px; height: 900px; position:absolute; right: 0; top: 150px;}
-#content #HF_danger ul {width: 1200px; margin: 0 auto 100px;}
-#content #HF_danger li {width: 1000px; padding: 30px; box-sizing: border-box;}
-#content #HF_danger dt {font-size: 1.88em; font-weight: 700; color: #348bcd; margin-bottom: 40px;}
-#content #HF_danger dd {font-size: 1.13em; line-height: 2em;}
+#content #HF_danger ul {overflow: hidden;}
+#content #HF_danger li {float: left; width: 400px; height: 550px; padding: 30px; box-sizing: border-box; border-right: 1px solid #d9d9d9;}
+#content #HF_danger li:last-child {border-right: 0;}
+#content #HF_danger dt {font-size: 1.88em; font-weight: 700; text-align: center; color: #348bcd; margin-bottom: 40px;}
+#content #HF_danger span {margin-right: 15px; color: #ccc;}
+#content #HF_danger dd {font-size: 1.13em; line-height: 1.8em; text-align: justify; margin-bottom: 20px;}
+

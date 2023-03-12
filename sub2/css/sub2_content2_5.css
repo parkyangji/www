@@ -1,3 +1,9 @@
+#content .content_area {position: relative;}
+#content .content_area #down {position: absolute; right: 0; top: -100px; font-size: 1.13em; font-weight: 600;}
+#content .content_area #down span::after {content: '\e9fc'; font-family: 'Material Symbols Outlined'; font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 48;
+    font-size: 2em; position: relative; top: 10px; transition: all .3s}
+#content .content_area #down:hover span::after { font-variation-settings: 'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 48;}
+
 /* 특수가스 */
 
 #content .product_list {margin: 100px 0 200px; display: flex; gap: 10px; flex-wrap: wrap;}
