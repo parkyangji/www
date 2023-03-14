@@ -1,6 +1,19 @@
 /* 메인 비주얼 */
 .main_visual {width: 2000px; height: 910px; overflow: hidden;
   position: relative; left: 50%; margin-top: 90px; margin-left: -1000px;}
+.main_visual .gallery {position: relative; left: 0; top: 0; width: 2000px; height: 910px; overflow: hidden;}
+.visual .gallery li{position: relative; display:none;}
+.visual .gallery li:nth-of-type(1) {display: block;}
+.visual .gallery li .slogan {position:absolute; left: 150px; top: 250px; color: #fff;}
+.visual .gallery li .slogan strong {display: block; font-size: 3.5em; line-height: 1.5em;}
+.visual .gallery li .slogan span {display: block; font-size: 1.5em; line-height: 3.5em;}
+
+.visual .dock {position:absolute; left:150px; bottom:40%; width: 230px;}
+.visual .dock span {display: inline-block; vertical-align: middle; font-size: 1.13em; color: #fff;}
+.visual .dock span.current {}
+.visual .dock span.total {float: right;}
+.visual .dock span.dock_bar {width: 120px; height: 3px; margin-left: 10px; background: rgba(255, 255, 255, .2);}
+.visual .dock span.ps {}
 
 /* 본문 컨텐츠 */
 #content {width: 100%;}
