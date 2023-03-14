@@ -29,7 +29,7 @@
   overflow: hidden; box-sizing: border-box;}
 #content .introProduct h3 {text-align: center; font-size: 2.5em; font-weight: 700; margin-bottom: 90px;}
 #content .introProduct>div {float: left;}
-#content .introProduct>div h4 {font-size: 2.25em; margin-bottom: 35px; position: relative; z-index: 10;}
+#content .introProduct>div h4 {font-size: 2.25em; margin-bottom: 35px; position: relative;}
 #content .introProduct>div h4::before {
   content: 'Hydrogen Fluoride'; font-size: 5rem; font-weight: 700; font-style: italic; color: #f9f9f9;
   width: 900px; position: absolute; z-index: -10; left: 50px;top: -65px; }
