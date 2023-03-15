@@ -1,5 +1,3 @@
-
-
 var timeonoff;
 var imageCount = $('.gallery li').size() //3
 var cnt = 1;
@@ -26,36 +24,35 @@ function move() {
 timeonoff = setInterval(move, 4000);
 
 /* mbutton */
-function m_click(event) {
-    var $target = $(event.target);
-    clearInterval(timeonoff);
 
-    $(".gallery li").hide();
+$('.mbutton').click(function(event){
+  var $target = $(event.target);
+  clearInterval(timeonoff);
 
-    if ($target.is(".btn1")) {
-        cnt = 1;
-      } else if ($target.is(".btn2")) {
-        cnt = 2;
-      } else if ($target.is(".btn3")) {
-        cnt = 3;
-      }
+  $(".gallery li").hide();
 
-    $(".gallery li").eq(cnt-1).fadeIn("slow");
+  if ($target.is(".btn1")) {
+      cnt = 1;
+    } else if ($target.is(".btn2")) {
+      cnt = 2;
+    } else if ($target.is(".btn3")) {
+      cnt = 3;
+    }
 
-    $('.mbutton').css('background', 'rgba(255, 255, 255, .5)').css('width', '50px');
-    $('.mbutton').eq(cnt-1).css('background', 'rgba(255, 255, 255, 1)').css('width', '130px');
-    
-    if (cnt == imageCount) cnt = 0;
+  $(".gallery li").eq(cnt-1).fadeIn("slow");
 
-    timeonoff = setInterval(move, 4000);
+  $('.mbutton').css('background', 'rgba(255, 255, 255, .5)').css('width', '50px');
+  $('.mbutton').eq(cnt-1).css('background', 'rgba(255, 255, 255, 1)').css('width', '130px');
+  
+  if (cnt == imageCount) cnt = 0;
 
-    if (onoff == false) {
-        onoff = true;
-        $(".ps").css('background','url(./images/stop.png)');
-      }
-}
+  timeonoff = setInterval(move, 4000);
 
-$('.mbutton').click(m_click);
+  if (onoff == false) {
+      onoff = true;
+      $(".ps").css('background','url(./images/stop.png)');
+    }
+});
 
 /* play/ps */
 $('.ps').click(function(){ 

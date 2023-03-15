@@ -3,18 +3,31 @@
   from{transform:scale(1);}
   to{transform:scale(1.1);}
 }
+@keyframes main_slogan{
+  from{transform:translateX(80px); opacity: 0;}
+  to{transform:translateX(0); opacity: 1;}
+}
 
-.main_visual {width: 2000px; height: 910px; overflow: hidden;
+@keyframes main_dock{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+
+.main_visual {width: 2000px; height: 910px; overflow: hidden; background: #000;
   position: relative; left: 50%; margin-top: 90px; margin-left: -1000px;}
 .main_visual .gallery {position: relative; left: 0; top: 0; width: 2000px; height: 910px; overflow: hidden;}
 .visual .gallery li{position: relative; display:none;}
-.visual .gallery li img {animation:main_visual 20s 1 ease-out alternate;}
+.visual .gallery li img {animation:main_visual 8s 1 ease-out; animation-fill-mode: forwards;}
 .visual .gallery li:nth-of-type(1) {display: block;}
-.visual .gallery li .slogan {position:absolute; left: 150px; top: 250px; color: #fff;}
-.visual .gallery li .slogan strong {display: block; font-size: 3.5em; line-height: 1.5em;}
-.visual .gallery li .slogan span {display: block; font-size: 1.5em; line-height: 3.5em;}
+.visual .gallery li .slogan {position:absolute; left: 150px; top: 220px; color: #fff;}
+.visual .gallery li .slogan strong {display: block; font-size: 3.5em; line-height: 1.5em; opacity: 0;
+  animation:main_slogan .6s 1 ease-out; animation-delay: .2s; animation-fill-mode: forwards;}
+.visual .gallery li .slogan span {display: block; font-size: 1.5em; line-height: 3.5em; opacity: 0;
+  animation:main_slogan .8s 1 ease-out; animation-delay: .7s; animation-fill-mode: forwards;}
 
-.visual .dock {position:absolute; left:150px; bottom:40%;}
+.visual .dock { animation:main_dock 1s 1 ease-out alternate; animation-delay: 1s; animation-fill-mode: forwards; 
+  position:absolute; left:150px; bottom:43%; opacity: 0;}
 .visual .dock span {display: inline-block; vertical-align: middle; cursor: pointer;}
 .visual .dock .mbutton {font-size: 1.13em; line-height: 2em; color: #fff;
   background: rgba(255, 255, 255, .2); height: 3px; width: 50px; transition: all .7s;}
