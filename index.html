@@ -13,7 +13,7 @@
   <script src="./mainjs/mainpopup.js"></script>
 </head>
 <body>
-    <? include "./common/main_header.html" ?>
+    <!-- <? include "./common/main_header.html" ?> -->
     <div class="main_visual visual">
       <div class="gallery">
         <ul>
@@ -41,10 +41,12 @@
         </ul>
       </div>
       <div class="dock">
-        <span class="current">01</span>
-        <span class="dock_bar"></span>
+        <span class="mbutton btn1">01</span>
+        <span class="mbutton btn2">02</span>
+        <span class="mbutton btn3">03</span>
         <span class="ps"></span>
-        <span class="total">03</span>
+        <span class="arrow visual_left"></span>
+        <span class="arrow visual_right"></span>
       </div>
     </div>
       <article id="content">
@@ -234,10 +236,15 @@
             </div>
           </section>
       </article>
-      <? include "./common/main_footer.html" ?>
+      <!-- <? include "./common/main_footer.html" ?> -->
+      <script src="./common/js/jquery-1.12.4.min.js"></script>
+      <script src="./common/js/jquery-migrate-1.4.1.min.js"></script>
+      <script src="./common/js/jquery.easing.1.3.js"></script>
+      <script src="./common/js/gnb.js"></script>
+      <script src="./mainjs/move.js"></script>
 
   <!-- 메인 광고 팝업 -->
-  <div id="showimage" style="z-index:90;position:absolute;width:322px;left:50%;top:300px; margin-left: -700px;">
+  <div id="showimage" style="z-index:90;position:absolute;width:322px;right:10%;top:300px; margin-left: -700px;">
   <script>
     function closeWin(){
        var chk = document.getElementById('Notice')

@@ -1,19 +1,26 @@
 /* 메인 비주얼 */
+@keyframes main_visual{
+  from{transform:scale(1);}
+  to{transform:scale(1.1);}
+}
+
 .main_visual {width: 2000px; height: 910px; overflow: hidden;
   position: relative; left: 50%; margin-top: 90px; margin-left: -1000px;}
 .main_visual .gallery {position: relative; left: 0; top: 0; width: 2000px; height: 910px; overflow: hidden;}
 .visual .gallery li{position: relative; display:none;}
+.visual .gallery li img {animation:main_visual 20s 1 ease-out alternate;}
 .visual .gallery li:nth-of-type(1) {display: block;}
 .visual .gallery li .slogan {position:absolute; left: 150px; top: 250px; color: #fff;}
 .visual .gallery li .slogan strong {display: block; font-size: 3.5em; line-height: 1.5em;}
 .visual .gallery li .slogan span {display: block; font-size: 1.5em; line-height: 3.5em;}
 
-.visual .dock {position:absolute; left:150px; bottom:40%; width: 230px;}
-.visual .dock span {display: inline-block; vertical-align: middle; font-size: 1.13em; color: #fff;}
-.visual .dock span.current {}
-.visual .dock span.total {float: right;}
-.visual .dock span.dock_bar {width: 120px; height: 3px; margin-left: 10px; background: rgba(255, 255, 255, .2);}
-.visual .dock span.ps {}
+.visual .dock {position:absolute; left:150px; bottom:40%;}
+.visual .dock span {display: inline-block; vertical-align: middle; cursor: pointer;}
+.visual .dock .mbutton {font-size: 1.13em; line-height: 2em; color: #fff;
+  background: rgba(255, 255, 255, .2); height: 3px; width: 50px; transition: all .7s;}
+.visual .dock .ps {width: 7px; height: 10px; margin-left: 10px; background: url(../images/stop.png);}
+.visual .dock .visual_right {width: 15px; height: 15px; background: url(../images/right.png);}
+.visual .dock .visual_left {width: 15px; height: 15px; margin-left: 10px; background: url(../images/left.png);}
 
 /* 본문 컨텐츠 */
 #content {width: 100%;}
