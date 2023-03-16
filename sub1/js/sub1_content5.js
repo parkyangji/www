@@ -1,25 +1,36 @@
+//탭 초기 화면//
+
+var eventstop = false;
+
+window.onscroll = function() {
+    var scroll_top = window.scrollY;
+    if (scroll_top>0 && eventstop == false) {
+        document.querySelectorAll('.cont')[1].style.display = "none"
+        eventstop = true;
+        }
+}
 
 // 지도 //
  // 공장
-window.onload = function() {
-  var container = document.getElementById('map1');
-  var options = {
-      center: new daum.maps.LatLng(35.508672, 129.377111),
-      level: 2
-  };
-
-  var map = new daum.maps.Map(container, options);
+ window.onload = function() {
+    var container = document.getElementById('map1');
+    var options = {
+        center: new daum.maps.LatLng(35.508672, 129.377111),
+        level: 2
+    };
   
-  var mapTypeControl = new daum.maps.MapTypeControl();
-  map.addControl(mapTypeControl, daum.maps.ControlPosition.TOPRIGHT);
-
-  var zoomControl = new daum.maps.ZoomControl();
-  map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+    var map = new daum.maps.Map(container, options);
+    
+    var mapTypeControl = new daum.maps.MapTypeControl();
+    map.addControl(mapTypeControl, daum.maps.ControlPosition.TOPRIGHT);
   
-  var markerPosition  = new daum.maps.LatLng(35.508672, 129.377111); 
-  var marker = new daum.maps.Marker({
-      position: markerPosition
-  });
+    var zoomControl = new daum.maps.ZoomControl();
+    map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+    
+    var markerPosition  = new daum.maps.LatLng(35.508672, 129.377111); 
+    var marker = new daum.maps.Marker({
+        position: markerPosition
+    });
 
   marker.setMap(map);
   

@@ -34,14 +34,14 @@
         <h2>불화수소란</h2>
       </div>
       <div class="content_area">
-        <div class="tab">
+        <div class="tabs">
           <ul>
-            <li><a href="#HF_define">정의</a></li>
-            <li><a href="#HF_use">용도</a></li>
-            <li><a href="#HF_danger">위험성</a></li>
+            <li><a class="tab" href="#">정의</a></li>
+            <li><a class="tab" href="#">용도</a></li>
+            <li><a class="tab" href="#">위험성</a></li>
           </ul>
         </div>
-        <section id="HF_define">
+        <section class="cont" id="HF_define">
           <h3 class="hidden">정의</h3>
           <p>불화수소(HF)는 무수불산(AHF)를 물에 녹인 액체를 말하며, 무색의 자극성 냄새가 난다.</p>
           <dl>
@@ -67,7 +67,7 @@
             </div>
           </div>
         </section>
-        <section id="HF_use">
+        <section class="cont" id="HF_use">
           <h3 class="hidden">용도</h3>
           <ul>
             <li>냉매, 반도체 소재, 2차전지 소재, 등의 원료로 이용</li>
@@ -79,7 +79,7 @@
             <li>유리공정 및 유리 세정 공업에 이용</li>
           </ul>
         </section>
-        <section id="HF_danger">
+        <section class="cont" id="HF_danger">
           <h3 class="hidden">위험성</h3>
           <ul>
             <li>
@@ -112,5 +112,6 @@
       </div>
     </article>
     <? include "../common/sub_footer.html" ?>
+    <script src="../common/js/tab.js"></script>
 </body>
 </html>

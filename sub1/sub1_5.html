@@ -36,13 +36,13 @@
         <h2>사업장</h2>
       </div>
       <div class="content_area">
-        <div class="tab">
+        <div class="tabs">
           <ul>
-            <li><a href="#map1">공장</a></li>
-            <li><a href="#map2">분당</a></li>
+            <li><a class="tab" href="#">공장</a></li>
+            <li><a class="tab" href="#">분당</a></li>
           </ul>
         </div>
-        <section>
+        <section class="cont">
           <h3>공장</h3>
           <div id="map1"></div>
             <div class="info1">
@@ -69,7 +69,7 @@
               </dl>
             </div>
         </section>
-        <section>
+        <section class="cont">
           <h3>분당</h3>
           <div id="map2"></div>
           <div class="info1">
@@ -101,5 +101,6 @@
       </div>
     </article>
     <? include "../common/sub_footer.html" ?>
+    <script src="../common/js/tab.js"></script>
 </body>
 </html>

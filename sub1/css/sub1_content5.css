@@ -1,12 +1,12 @@
 /* 사업장 내용 영역 */
 
-#content .tab {width: 600px; margin: 100px auto 0;}
-#content .tab li {float: left; width: 50%; text-align: center;}
-#content .tab li a {height: 70px; line-height: 70px; font-size: 1.13em; color: #666; border: 1px solid #ccc; border-left-width: 0;}
-#content .tab li:nth-of-type(1) a {border-left-width: 1px;}
-#content .tab li a:hover {background: #f7f7f7; color: #1f296f;}
+#content .tabs {width: 600px; margin: 100px auto 0;}
+#content .tabs li {float: left; width: 50%; text-align: center;}
+#content .tabs li a {height: 70px; line-height: 70px; font-size: 1.13em; color: #666; border: 1px solid #ccc; border-left-width: 0;}
+#content .tabs li:nth-of-type(1) a {border-left-width: 1px;}
+#content .tabs li a:hover {background: #f7f7f7; color: #1f296f;}
 
-#content .tab ul::after {content: ''; display: block; clear: both;}
+#content .tabs ul::after {content: ''; display: block; clear: both;}
 
 #content section {width: 1200px; margin: 0 auto 180px;}
 #content section h3 {text-indent: -999px; overflow: hidden;}

@@ -32,14 +32,14 @@
         <h2>재무정보</h2>
       </div>
       <div class="content_area">
-        <div class="tab">
+        <div class="tabs">
           <ul>
-            <li><a href="#financial">재무상태표</a></li>
-            <li><a href="#income">손익계산서</a></li>
-            <li><a href="#cash">현금흐름표</a></li>
+            <li><a class="tab" href="#">재무상태표</a></li>
+            <li><a class="tab" href="#">손익계산서</a></li>
+            <li><a class="tab" href="#">현금흐름표</a></li>
           </ul>
         </div>
-        <section id="financial">
+        <section class="cont" id="financial">
           <h3 class="hidden">재무상태표</h3>
           <table>
             <thead>
@@ -80,7 +80,7 @@
             </tbody>
           </table>
         </section>
-        <section id="income">
+        <section class="cont" id="income">
           <h3 class="hidden">손익계산서</h3>
           <table>
             <thead>
@@ -121,7 +121,7 @@
             </tbody>
           </table>
         </section>
-        <section id="cash">
+        <section class="cont" id="cash">
           <h3 class="hidden">현금흐름표</h3>
           <table>
             <thead>
@@ -165,5 +165,6 @@
       </div>
     </article>
     <? include "../common/sub_footer.html" ?>
+    <script src="../common/js/tab.js"></script>
 </body>
 </html>

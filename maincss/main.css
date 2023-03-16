@@ -43,7 +43,7 @@
 #content .more_left::before, .more_right::before {
   content: "\e941"; font-family: 'Material Symbols Outlined'; font-variation-settings:'FILL' 0,'wght' 200,'GRAD' 0,'opsz' 48;
   border-radius: 50%; display: block; box-sizing: border-box;
-  font-size: 40px; padding-top: 5px;
+  font-size: 2.5em; padding-top: 5px;
   width: 60px; height: 60px;}
 #content .more_right:hover::after {width: 200px;}
 #content .more_right::after {content: ''; display: block; width: 0; height: 60px;

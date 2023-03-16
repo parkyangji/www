@@ -1,14 +1,14 @@
-#content .tab {width: 900px; margin: 100px auto 0;}
-#content .tab li {float: left; width: 33.33%; text-align: center;}
-#content .tab li a {height: 70px; line-height: 70px; font-size: 1.13em; color: #666; border: 1px solid #ccc; border-left-width: 0;}
-#content .tab li:nth-of-type(1) a {border-left-width: 1px;}
-#content .tab li a:hover {background: #f7f7f7; color: #1f296f;}
+#content .tabs {width: 900px; margin: 100px auto 0;}
+#content .tabs li {float: left; width: 33.33%; text-align: center;}
+#content .tabs li a {height: 70px; line-height: 70px; font-size: 1.13em; color: #666; border: 1px solid #ccc; border-left-width: 0;}
+#content .tabs li:nth-of-type(1) a {border-left-width: 1px;}
+#content .tabs li a:hover {background: #f7f7f7; color: #1f296f;}
 
-#content .tab ul::after {content: ''; display: block; clear: both;}
+#content .tabs ul::after {content: ''; display: block; clear: both;}
 
 /* 불화수소란 */
 
-section {padding: 90px 0;}
+section {padding: 90px 0; display: none;}
 #content #HF_define .img_box, #HF_use{ width: 2000px; position: relative; left: 50%; top: 0; margin-left: -1000px;}
 
 #content #HF_define>p:nth-of-type(1) {font-size: 1.13em; text-align: center; margin: 20px 0;}
