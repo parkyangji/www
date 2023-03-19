@@ -1,5 +1,5 @@
 var timeonoff;
-var imageCount = $('.gallery li').size() //3
+var imageCount = $('.gallery li').size()
 var cnt = 1;
 var onoff = true;
 
@@ -7,7 +7,6 @@ $('.mbutton').eq(0).css('background', 'rgba(255, 255, 255, 1)').css('width', '13
 $('.gallery li').eq(0).fadeIn('slow');
 
 
-/* 타이머 */
 function move() {
     cnt++;
 
@@ -18,12 +17,35 @@ function move() {
     $('.mbutton').eq(cnt-1).css('background', 'rgba(255, 255, 255, 1)').css('width', '130px');
 
     if(cnt==imageCount) {cnt=0};
-
 }
+
+function onoff_re() { // 정지 상태라면 다시 재생시킴
+  if (onoff == false) {
+    onoff = true;
+    $(".ps").css('background','url(./images/stop.png)');
+  }
+}
+
+/* 반복 슬라이드 */
 
 timeonoff = setInterval(move, 4000);
 
-/* mbutton */
+/* 재생,정지 */
+
+$('.ps').click(function(){ 
+  if(onoff==true){
+        clearInterval(timeonoff); 
+          $(this).css('background','url(./images/play.png)');
+      onoff=false;   
+    }else{ 
+        timeonoff= setInterval( move , 4000);
+        $(this).css('background','url(./images/stop.png)');
+        onoff=true; 
+    }
+});
+
+
+/* 슬라이드 버튼 */
 
 $('.mbutton').click(function(event){
   var $target = $(event.target);
@@ -48,38 +70,23 @@ $('.mbutton').click(function(event){
 
   timeonoff = setInterval(move, 4000);
 
-  if (onoff == false) {
-      onoff = true;
-      $(".ps").css('background','url(./images/stop.png)');
-    }
+  onoff_re();
 });
 
-/* play/ps */
-$('.ps').click(function(){ 
-    if(onoff==true){
-          clearInterval(timeonoff); 
-            $(this).css('background','url(./images/play.png)');
-        onoff=false;   
-      }else{ 
-          timeonoff= setInterval( move , 4000);
-          $(this).css('background','url(./images/stop.png)');
-          onoff=true; 
-      }
- });
 
- /* arrow */
+ /* 이동 */
 
  $('.arrow').click(function(){
 
     clearInterval(timeonoff); 
 
     if($(this).is('.visual_right')){ // 오른쪽 버튼 클릭
-        if(cnt==imageCount)cnt=0;  //카운트가 마지막 번호(5)라면 초기화 0
-        cnt++; //카운트 1씩증가
+        if(cnt==imageCount)cnt=0;  
+        cnt++; 
     }else if($(this).is('.visual_left')){  //왼쪽 버튼 클릭
-        if(cnt==1)cnt=imageCount+1;   // 1->6  최초 화면에서 left를 눌렀을때 6으로 한 후 cnt--하면 5화면이 나옴
+        if(cnt==1)cnt=imageCount+1;
         if(cnt==0)cnt=imageCount;
-        cnt--; //카운트 감소
+        cnt--;
     }
 
 
@@ -87,14 +94,11 @@ $('.ps').click(function(){
   $('.gallery li').eq(cnt-1).fadeIn('slow'); 
                       
   $('.mbutton').css('background', 'rgba(255, 255, 255, .5)').css('width', '50px');
-    $('.mbutton').eq(cnt-1).css('background', 'rgba(255, 255, 255, 1)').css('width', '130px');
+  $('.mbutton').eq(cnt-1).css('background', 'rgba(255, 255, 255, 1)').css('width', '130px');
 
 
 
   timeonoff= setInterval( move , 4000); 
 
-  if (onoff == false) {
-    onoff = true;
-    $(".ps").css('background','url(./images/stop.png)');
-  }
+  onoff_re();
 });

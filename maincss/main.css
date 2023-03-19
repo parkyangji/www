@@ -22,11 +22,11 @@
 .visual .gallery li:nth-of-type(1) {display: block;}
 .visual .gallery li .slogan {position:absolute; left: 150px; top: 220px; color: #fff;}
 .visual .gallery li .slogan strong {display: block; font-size: 3.5em; line-height: 1.5em; opacity: 0;
-  animation:main_slogan .6s 1 ease-out; animation-delay: .2s; animation-fill-mode: forwards;}
+  animation:main_slogan .6s ease-out .2s forwards}
 .visual .gallery li .slogan span {display: block; font-size: 1.5em; line-height: 3.5em; opacity: 0;
-  animation:main_slogan .8s 1 ease-out; animation-delay: .7s; animation-fill-mode: forwards;}
+  animation:main_slogan .8s ease-out .7s forwards;}
 
-.visual .dock { animation:main_dock 1s 1 ease-out alternate; animation-delay: 1s; animation-fill-mode: forwards; 
+.visual .dock { animation:main_dock 1s ease-out 1s alternate forwards;
   position:absolute; left:150px; bottom:43%; opacity: 0;}
 .visual .dock span {display: inline-block; vertical-align: middle; cursor: pointer;}
 .visual .dock .mbutton {font-size: 1.13em; line-height: 2em; color: #fff;
