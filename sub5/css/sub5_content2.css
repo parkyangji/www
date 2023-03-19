@@ -8,9 +8,9 @@
 
 #content .tabs ul::after {content: ''; display: block; clear: both;}
 
-#section {display: none;}
+section {display: none; margin: 90px 0 180px;}
 
-#content table {width: 100%; border-top: 2px solid; margin-top: 90px;}
+#content table {width: 100%; border-top: 2px solid;}
 #content table th, td {width: 16.66%; height: 70px; padding: 10px; 
     text-align: center; box-sizing: border-box; line-height: 22px;}
 #content table thead {border-bottom: 1px solid #d9d9d9;}
@@ -19,5 +19,3 @@
 #content table td:nth-child(2) {border-left: 1px solid #d9d9d9;}
 #content table td:last-child {border-right: 0;}
 #content table span {display: block; margin-top: 10px; font-size: 1rem; color: #666; font-weight: 500;}
-
-#content #cash {margin-bottom: 110px;}

@@ -8,7 +8,7 @@
 
 /* 불화수소란 */
 
-section {padding: 90px 0; display: none;}
+section {margin: 90px 0 180px; display: none;}
 #content #HF_define .img_box, #HF_use{ width: 2000px; position: relative; left: 50%; top: 0; margin-left: -1000px;}
 
 #content #HF_define>p:nth-of-type(1) {font-size: 1.13em; text-align: center; margin: 20px 0;}
