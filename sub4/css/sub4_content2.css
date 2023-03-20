@@ -1,12 +1,25 @@
 /* 윤리강령 */
 
-#content .ethics_conduct {margin-bottom: 110px;}
-#content .ethics_conduct ul>li {font-size: 1.5em; font-weight: 700; padding-left: 20px; margin-top: 30px; position: relative;}
+#content .content_area {position: relative;}
+#content .all {padding: 10px 40px; text-align: center; font-size: 1.13em; background: #348bcd; color: #fff;
+    position: absolute; right: 0; top: -100px;}
+#content .ethics_conduct {margin: 110px 0;}
+#content .ethics_conduct ul>li {font-size: 1.5em; font-weight: 500; padding-left: 20px; margin-top: 30px; position: relative;}
 #content .ethics_conduct dt {padding-bottom: 10px; border-bottom: 1px solid #d9d9d9; position: relative;}
-#content .ethics_conduct dt::before {content: '\e5cf'; font-family: 'Material Symbols Outlined'; font-variation-settings: 'FILL' 0,'wght' 500,'GRAD' 0,'opsz' 48;
-    font-size: 2em; color: #1f296f; position: absolute; right: 10px; top: -10px;} 
-#content .ethics_conduct dt a {color: #1f296f;}
-#content .ethics_conduct dd {display: none; position: relative; margin: 0 80px; font-size:1.13rem; line-height: 2.5rem; font-weight: 400; text-align: justify;}
+#content .ethics_conduct dt a::before {content: '\e5cf'; transition: all .5s; font-family: 'Material Symbols Outlined'; font-variation-settings: 'FILL' 0,'wght' 500,'GRAD' 0,'opsz' 48;
+    font-size: 2em; color: #348bcd; position: absolute; right: 10px; top: -10px;}
+#content .ethics_conduct dt a.rotate::before {transform: rotate(180deg);}
+#content .ethics_conduct dd {display: none; position: relative; margin: 0 70px; font-size:1.13rem; line-height: 2.5rem; font-weight: 400; text-align: justify;}
+#content .ethics_conduct li:nth-of-type(1) dd:before {content: '';}
+#content .ethics_conduct li:nth-of-type(10) dd:before {content: '';}
+#content .ethics_conduct dd:nth-of-type(1):before {content: '1. ';}
+#content .ethics_conduct dd:nth-of-type(2):before {content: '2. ';}
+#content .ethics_conduct dd:nth-of-type(3):before {content: '3. ';}
+#content .ethics_conduct dd:nth-of-type(4):before {content: '4. ';}
+#content .ethics_conduct dd:nth-of-type(5):before {content: '5. ';}
+#content .ethics_conduct dd:nth-of-type(6):before {content: '6. ';}
+#content .ethics_conduct dd:nth-of-type(7):before {content: '7. ';}
+#content .ethics_conduct dd:nth-of-type(8):before {content: '8. ';}
 #content .ethics_conduct dd.show {display: block;}
 #content .ethics_conduct span {position: absolute; left: -25px;}
 #content .ethics_conduct dd:first-of-type {margin-top: 30px;}

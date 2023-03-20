@@ -1,7 +1,25 @@
-var article = $('.chapter');  //모든 질문 답변 리스트
-	
-	$('.chapter a').click(function(e){  // 각각의 질문을 클릭하면
-	    e.preventDefault();  //<a href="#"> 태그 링크 처리
-        var myArticle = $(this).parent().siblings('dd'); //클릭한 해당 list 
-        myArticle.slideToggle();
-  });
+// 각각 열기
+$('.chapter a').click(function(e){ 
+    e.preventDefault(); 
+    var chapterOpen = $(this).parent().siblings('dd');
+
+    $(this).toggleClass('rotate');
+    chapterOpen.slideToggle('linear');
+});
+
+// 모두 열기
+var chapter = $('.chapter a')
+var chapterAll = $('.chapter').siblings('dd');
+var allText = $('.all');
+
+$('.all').toggle(function(e){
+    e.preventDefault();
+    chapter.addClass('rotate');
+    chapterAll.slideDown('linear');
+    allText.text('모두 닫기');
+}, function(e){
+    e.preventDefault();
+    chapter.removeClass('rotate');
+    chapterAll.slideUp('linear');
+    allText.text('모두 열기');
+})
