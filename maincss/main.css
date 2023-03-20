@@ -80,7 +80,7 @@
 #content .introProduct>ul.products img { transition: all .5s; filter: brightness(70%);}
 #content .introProduct>ul.products img.effect {filter: brightness(100%);}
 #content .introProduct>ul.products .info {position: absolute; left: 100px ; top: 50%;}
-#content .introProduct>ul.products .info h4 {transition: all .5s; font-size: 1.5em; font-weight: 500; color: #fff; text-align: center;}
+#content .introProduct>ul.products .info h4 {transition: all .5s; font-size: 1.5em; font-weight: 500; color: #fff;}
 #content .introProduct>ul.products .info h4.effect {font-size: 1.88em; text-shadow: 0 0 10px rgba(0, 0, 0, .65); transform: translateY(-80px);}
 #content .introProduct>ul.products .info a {display: none; position: relative; z-index: 10; 
   background: rgba(255, 255, 255, .8); padding: 10px 20px; text-align: center;}
