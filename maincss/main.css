@@ -72,12 +72,19 @@
 #content .introProduct>div .more_left span {top: 30%; left: 100px}
 #content .introProduct>div .more_left:hover span {top: 30%; left: 120px}
 
-#content .introProduct>ul.products {float: right; border-radius: 30px; width: 850px; overflow: hidden;}
-#content .introProduct>ul.products li {float: left; width: 25%; position: relative;}
-#content .introProduct>ul.products img {filter: brightness(90%);}
-#content .introProduct>ul.products .info {position: absolute; left: 100px ; top: 50%}
-#content .introProduct>ul.products .info h4 {font-size: 1.5em; font-weight: 500; color: #fff;}
-#content .introProduct>ul.products .info a {visibility: hidden;}
+#content .introProduct>ul.products {float: right; width: 900px; height: 489px; overflow: hidden; border-radius: 30px; position: relative;}
+#content .introProduct>ul.products li {float: left; width: 347px; position: absolute; top: 0; left: 0;}
+#content .introProduct>ul.products li:nth-of-type(2) {left: 225px;} /*342 186*/
+#content .introProduct>ul.products li:nth-of-type(3) {left: 450px;}
+#content .introProduct>ul.products li:nth-of-type(4) {left: 675px;}
+#content .introProduct>ul.products img { transition: all .5s; filter: brightness(70%);}
+#content .introProduct>ul.products img.effect {filter: brightness(100%);}
+#content .introProduct>ul.products .info {position: absolute; left: 100px ; top: 50%;}
+#content .introProduct>ul.products .info h4 {transition: all .5s; font-size: 1.5em; font-weight: 500; color: #fff; text-align: center;}
+#content .introProduct>ul.products .info h4.effect {font-size: 1.88em; text-shadow: 0 0 10px rgba(0, 0, 0, .65); transform: translateY(-80px);}
+#content .introProduct>ul.products .info a {display: none; position: relative; z-index: 10; 
+  background: rgba(255, 255, 255, .8); padding: 10px 20px; text-align: center;}
+#content .introProduct>ul.products .info_btn {display: block; width: 225px; height: 489px; position: absolute; top: 0;} /*186 */
 
 
 /* 기업비전 */
