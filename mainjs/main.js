@@ -44,4 +44,57 @@ $('.products li span').mouseenter(function(event){
 
  });
 
+ //ESG 경영
+ var position = 0;
+ var list_width = $('.list_esg li').width();
+
+ $('.list_esg').after($('.list_esg').clone());
+
+// function First() {
+//    if((position==0)||(position==-2520)) {
+//       $('.list_esg li:eq(0)').children('.esg_img').addClass('First');
+//    } else if (position==-630) {
+//       $('.list_esg li:eq(1)').children('.esg_img').addClass('First');
+//    } else if (position==-1260) {
+//       $('.list_esg li:eq(2)').children('.esg_img').addClass('First');
+//    } else if (position==-1890) {
+//       $('.list_esg li:eq(3)').children('.esg_img').addClass('First');
+//    } 
+// }
+
+ $('.arrow_esg').click(function(e){
+   e.preventDefault();
+   // $('.list_esg li').children('.esg_img').removeClass('First');
+
+   if($(this).is('.left')){
+      position-=list_width;
+      $('.box_list_esg').animate({left:position},'fast',function(){
+         if(position<=-2520) {
+            position=0;
+            $('.box_list_esg').css('left',0);
+         }
+      }).clearQueue();
+
+   //   First();
+
+   }else if($(this).is('.right')){
+      if(position>=0) {
+         $('.box_list_esg').css('left',-2520);
+         position=-2520;
+      }
+      position+=list_width;
+      $('.box_list_esg').animate({left:position},'fast',function(){
+         if(position>=0) {
+            $('.box_list_esg').css('left',-2520);
+            position=-2520;
+         }
+      }).clearQueue();
+
+      // First();
+   }
+ })
+
+
+
+
  
