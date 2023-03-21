@@ -19,3 +19,28 @@ $('.tab').click(function(e){
     
 $("html,body").stop().animate({"scrollTop":value},1000);
 });
+
+// 스크롤시
+var navTop = $('.tabs').offset().top;
+var history1 = $('#history1').offset().top-300;
+var history2 = $('#history2').offset().top-300;
+var history3 = $('#history3').offset().top-300;
+var history4 = $('#history4').offset().top-300;
+
+$(window).on('scroll', function() {
+    var scroll = $(window).scrollTop();
+
+    if(navTop<scroll){
+        $('.tabs').addClass('navOn');
+        $('#headerArea').fadeOut('slow');
+        $('#history1').css('margin-top','352px')
+
+    }else {
+        $('.tabs').removeClass('navOn');
+        $('#headerArea').fadeIn('slow');
+        $('#history1').css('margin-top','0')
+    }
+
+
+
+})

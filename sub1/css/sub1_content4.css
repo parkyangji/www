@@ -1,6 +1,7 @@
 /* 연혁 내용 영역 */
 
 #content .tabs {width: 1200px; margin: 100px auto 180px;}
+#content .tabs.navOn {position: fixed; top: 0; margin: 0; background: #fff;}
 #content .tabs li {float: left; width: 25%; text-align: center;}
 #content .tabs li a {height: 70px; line-height: 70px; font-size: 1.13em; color: #666; border: 1px solid #ccc; border-left-width: 0;}
 #content .tabs li:nth-of-type(1) a {border-left-width: 1px;}
@@ -11,7 +12,8 @@
 #content section {display: flex;}
 #content section:nth-of-type(4) {margin-bottom: 180px;}
 #content section .img_area { flex: 1 1 0;}
-#content section .img_area h3 {font-size: 3em; text-align: center;}
+#content section .img_area h3 {font-size: 3em; margin-left: 160px;}
+#content section .img_area h3.textFixed {position: fixed; top: 82px;}
 #content section .text_area { flex: 1 1 0;}
 #content section .text_area dl {display: flex; padding: 40px; align-items: center;}
 #content section .text_area dl:nth-of-type(even) {background: #f9f9f9;}
