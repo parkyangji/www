@@ -104,6 +104,16 @@ font-family: 'Noto Sans KR', sans-serif; */
 /* 탭 */
 .tabs .current {background: #f7f7f7; color: #1f296f!important;}
 
+/* 애니메이션 */
+
+@keyframes showSection {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
 
 
 

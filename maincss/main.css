@@ -37,6 +37,8 @@
 
 /* 본문 컨텐츠 */
 #content {width: 100%;}
+section {opacity: 0;}
+section.scroll_ani {animation: showSection 1s forwards;}
 
 /* 더보기 */
 #content .more_left, .more_right {width: 60px; height: 60px; position: absolute;}

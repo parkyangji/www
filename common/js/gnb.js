@@ -30,7 +30,7 @@
         header_close();
     });
 
-// 스크롤이벤트
+// 헤더 스크롤 이벤트
 
 var smh=$('.visual').height();
 
@@ -77,5 +77,18 @@ $(window).on('scroll',function(){
 
 $('.topMove').click(function(e){
    e.preventDefault();
-   $("html,body").stop().animate({"scrollTop":0},500); 
+   $("html,body").stop().animate({"scrollTop":0},500);
 });
+
+// 컨텐츠 스크롤 이벤트
+
+$(window).on('scroll', function() {
+    var scroll = $(window).scrollTop();
+    var section = $('section');
+
+    for (var i=0; i<section.length; i++) {
+        if (scroll > section.eq(i).offset().top - 600) {
+            section.eq(i).addClass('scroll_ani');
+        }
+    }
+})
