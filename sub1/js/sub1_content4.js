@@ -48,7 +48,7 @@ $(window).on('scroll', function() {
     $('.tab').removeClass('current');
     $('.cont').find('h3').removeClass('textFixed');
 
-    if (scroll>=history1 && scroll<history2) {
+    if (scroll<history2) {
         $('.tab1').addClass('current');
         $('.cont').eq(0).find('h3').addClass('textFixed');
     } else if (scroll>=history2 && scroll<history3) {
