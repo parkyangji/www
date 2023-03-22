@@ -138,7 +138,10 @@ section.scroll_ani {animation: showSection 1s forwards;}
 #content .esg>div p {font-size: 1.5em; font-weight: 500; color: #1f296f; margin-bottom: 60px}
 
 #content .esg .esg_btn {position: relative; top: 225px;}
-#content .esg .esg_btn a {float: left;}
+#content .esg .esg_btn a {float: left; transition: all .3s;}
+#content .esg .esg_btn .left:hover {transform: translateX(-10px) scale(1.1);}
+#content .esg .esg_btn .right:hover {transform: translateX(10px) scale(1.1);}
+
 #content .esg .esg_btn span {font-size: 3.5em; font-weight: 100;}
 
 #content .esg .slide_esg {width: 2520px; overflow: hidden; position: relative; left: 200px; top: -35px;}
@@ -149,7 +152,6 @@ section.scroll_ani {animation: showSection 1s forwards;}
 #content .esg .list_esg li .esg_img img {opacity: .4;}
 #content .esg .list_esg li .esg_img.First {transform: scale(1); box-shadow: 15px 15px 10px rgba(0, 0, 0, .2);}
 #content .esg .list_esg li .esg_img img.First {transition: all .5s; opacity: 1}
-/* #content .esg .list_esg li:first-child .esg_img:hover img {transform: scale(1.05);} */
 #content .esg .list_esg li dl {float: right; width: 220px; position: relative; top: 60px;}
 #content .esg .list_esg li dt {font-size: 1.5em; font-weight: 700; margin-bottom: 80px;}
 

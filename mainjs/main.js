@@ -49,22 +49,18 @@ $('.products li span').mouseenter(function(event){
  var position = 0;
  var list_width = $('.list_esg li').width();
 
+ function First_add(num) {  //첫 이미지 클래스 추가 함수
+   $('.list_esg li').eq(num).find('.esg_img').addClass('First').find('img').addClass('First');
+}
+
  $('.list_esg').after($('.list_esg').clone());
  $('.list_esg li').eq(0).find('.esg_img').addClass('First').find('img').addClass('First');
 
-function First() {
-   if (position==-630) {
-      $('.list_esg li:eq(1)').find('.esg_img').addClass('First').find('img').addClass('First');
-   } else if (position==-1260) {
-      $('.list_esg li:eq(2)').find('.esg_img').addClass('First').find('img').addClass('First');
-   } else if (position==-1890) {
-      $('.list_esg li:eq(3)').find('.esg_img').addClass('First').find('img').addClass('First');
-   } 
-}
 
- $('.arrow_esg').click(function(e){
+$('.arrow_esg').click(function(e){
    e.preventDefault();
    $('.list_esg li').find('.esg_img').removeClass('First').find('img').removeClass('First');
+
 
    if($(this).is('.left')){
       if(position>=0) {
@@ -75,15 +71,12 @@ function First() {
       position+=list_width;
       $('.box_list_esg').animate({left:position},'fast',function(){
          if(position>=0) {
-            $('.list_esg li').eq(4).find('.esg_img').addClass('First').find('img').addClass('First');
             $('.box_list_esg').css('left',-2520);
             position=-2520;
          }
       }).clearQueue();
 
-     First();
    }else if($(this).is('.right')){
-      
       if(position<=-2520) {
          $('.box_list_esg').css('left',0); 
          position=0;
@@ -92,15 +85,25 @@ function First() {
       position-=list_width;
       $('.box_list_esg').animate({left:position},'fast',function(){
          if(position<=-2520) {
-            $('.list_esg li').eq(0).find('.esg_img').addClass('First').find('img').addClass('First');
             $('.box_list_esg').css('left',0);
             position=0;
          }
       }).clearQueue();
-
-      First();
    }
- })
+
+      switch(position) {
+         case 0 : First_add(4);
+            break;
+         case -630 : First_add(1);
+            break;
+         case -1260 : First_add(2);
+            break;
+         case -1890 : First_add(3);
+            break;
+         case -2520 : First_add(0);
+            break;
+      }
+});
 
 
 
