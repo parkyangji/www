@@ -50,21 +50,21 @@ $('.products li span').mouseenter(function(event){
  var list_width = $('.list_esg li').width();
 
  $('.list_esg').after($('.list_esg').clone());
- $('.list_esg li').eq(0).children('.esg_img').addClass('First');
+ $('.list_esg li').eq(0).find('.esg_img').addClass('First').find('img').addClass('First');
 
 function First() {
    if (position==-630) {
-      $('.list_esg li:eq(1)').children('.esg_img').addClass('First');
+      $('.list_esg li:eq(1)').find('.esg_img').addClass('First').find('img').addClass('First');
    } else if (position==-1260) {
-      $('.list_esg li:eq(2)').children('.esg_img').addClass('First');
+      $('.list_esg li:eq(2)').find('.esg_img').addClass('First').find('img').addClass('First');
    } else if (position==-1890) {
-      $('.list_esg li:eq(3)').children('.esg_img').addClass('First');
+      $('.list_esg li:eq(3)').find('.esg_img').addClass('First').find('img').addClass('First');
    } 
 }
 
  $('.arrow_esg').click(function(e){
    e.preventDefault();
-   $('.list_esg li').children('.esg_img').removeClass('First');
+   $('.list_esg li').find('.esg_img').removeClass('First').find('img').removeClass('First');
 
    if($(this).is('.left')){
       if(position>=0) {
@@ -75,7 +75,7 @@ function First() {
       position+=list_width;
       $('.box_list_esg').animate({left:position},'fast',function(){
          if(position>=0) {
-            $('.list_esg li').eq(4).children('.esg_img').addClass('First');
+            $('.list_esg li').eq(4).find('.esg_img').addClass('First').find('img').addClass('First');
             $('.box_list_esg').css('left',-2520);
             position=-2520;
          }
@@ -92,7 +92,7 @@ function First() {
       position-=list_width;
       $('.box_list_esg').animate({left:position},'fast',function(){
          if(position<=-2520) {
-            $('.list_esg li').eq(0).children('.esg_img').addClass('First');
+            $('.list_esg li').eq(0).find('.esg_img').addClass('First').find('img').addClass('First');
             $('.box_list_esg').css('left',0);
             position=0;
          }
