@@ -1,19 +1,33 @@
+var key, value;
+
+function getParams() {
+    var url = decodeURIComponent(location.href);
+    url = decodeURIComponent(url); // http://127.0.0.1:5500/sub2/sub2_2.htm
+
+    var params = '';
+    params = url.substring(url.indexOf("_")+1, url.indexOf("_")+2)
+
+    return params;
+}
+
+var pageNum = getParams(); // 페이지 수 뽑기 
 var products = new XMLHttpRequest();
 
 products.onload = function() {
     var productsJson = JSON.parse(products.responseText);
+    var currentKey = Object.entries(productsJson); // 객체 => 배열
     
     var creatHtml = '';
     var modalimg = '';
     var modalText = '';
     var modalTable = '';
 
-    
-    for (var i=0; i<productsJson.gas.length; i++) {
+    //pageNum과 일치하는 데이터를 찾아옴
+    for (var i=0; i<currentKey[pageNum-2][1].length; i++) {
         creatHtml += `<li>
                         <a href="#" id="click">
-                            <img src="./images/content2/${productsJson.gas[i].img}" alt="제품이미지">
-                            <span class="name">${productsJson.gas[i].name}</span>
+                            <img src="./images/content${pageNum}/${currentKey[pageNum-2][1][i].img}" alt="제품이미지">
+                            <span class="name">${currentKey[pageNum-2][1][i].name}</span>
                             <span class="more">자세히보기</span>
                         </a>
                     </li>`
@@ -35,24 +49,24 @@ products.onload = function() {
                 modal_box.style.display = "block";
                 modal_content.style.display = "block"
 
-                modalimg += `<img src="./images/content2/${productsJson.gas[i].img}" alt="제품이미지">`
+                modalimg += `<img src="./images/content${pageNum}/${currentKey[pageNum-2][1][i].img}" alt="제품이미지">`
                 modalText += `
                             <li>
                                 <dl>
                                     <dt>제품명</dt>
-                                    <dd class="name">${productsJson.gas[i].name}</dd>
+                                    <dd class="name">${currentKey[pageNum-2][1][i].name}</dd>
                                 </dl>
                             </li>
                             <li>
                                 <dl>
                                     <dt>용도</dt>
-                                    <dd>${productsJson.gas[i].applicaton}</dd>
+                                    <dd>${currentKey[pageNum-2][1][i].applicaton}</dd>
                                 </dl>
                             </li>
                             <li>
                                 <dl>
                                 <dt>PACKING</dt>
-                                <dd>${productsJson.gas[i].packing}</dd>
+                                <dd>${currentKey[pageNum-2][1][i].packing}</dd>
                                 </dl>
                             </li>`
                 modalTable += `
@@ -65,13 +79,13 @@ products.onload = function() {
                             </thead>
                             <tbody>`
 
-                for(var j=0; j<productsJson.gas[i].spec_1.length; j++) {
+                for(var j=0; j<currentKey[pageNum-2][1][i].spec_1.length; j++) {
 
                     modalTable +=
                             `<tr>
-                                <td>${productsJson.gas[i].spec_1[j]}</td>
-                                <td>${productsJson.gas[i].spec_2[j]}</td>
-                                <td>${productsJson.gas[i].spec_3[j]}</td>
+                                <td>${currentKey[pageNum-2][1][i].spec_1[j]}</td>
+                                <td>${currentKey[pageNum-2][1][i].spec_2[j]}</td>
+                                <td>${currentKey[pageNum-2][1][i].spec_3[j]}</td>
                             </tr>`
                 }
                             
@@ -101,6 +115,6 @@ products.onload = function() {
              
 }
 
-products.open('GET', './js/sub2_2.json', true);  
+products.open('GET', './js/product_data.json', true);  
 products.send(null);
 
