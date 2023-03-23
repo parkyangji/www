@@ -69,8 +69,10 @@ $('.arrow_esg').click(function(e){
       }
 
       position+=list_width;
+
       $('.box_list_esg').animate({left:position},'fast',function(){
          if(position>=0) {
+            First_add(4);
             $('.box_list_esg').css('left',-2520);
             position=-2520;
          }
@@ -83,8 +85,10 @@ $('.arrow_esg').click(function(e){
       }
 
       position-=list_width;
+      
       $('.box_list_esg').animate({left:position},'fast',function(){
          if(position<=-2520) {
+            First_add(0);
             $('.box_list_esg').css('left',0);
             position=0;
          }
@@ -92,15 +96,11 @@ $('.arrow_esg').click(function(e){
    }
 
       switch(position) {
-         case 0 : First_add(4);
-            break;
          case -630 : First_add(1);
             break;
          case -1260 : First_add(2);
             break;
          case -1890 : First_add(3);
-            break;
-         case -2520 : First_add(0);
             break;
       }
 });

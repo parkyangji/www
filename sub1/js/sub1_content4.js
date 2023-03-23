@@ -34,7 +34,7 @@ $(window).on('scroll', function() {
 
 
     //네비 고정
-    if(navTop<scroll){
+    if(navTop-200<scroll){
         $('.tabs').addClass('navOn');
         $('#headerArea').fadeOut('slow');
         $('#history1').css('margin-top','352px');
