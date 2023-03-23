@@ -32,6 +32,7 @@ $(window).on('scroll', function() {
     var scroll = $(window).scrollTop();
     var scrollEnd = $(document).height() - $(window).height()
 
+
     //네비 고정
     if(navTop<scroll){
         $('.tabs').addClass('navOn');
@@ -48,7 +49,7 @@ $(window).on('scroll', function() {
     $('.tab').removeClass('current');
     $('.cont').find('h3').removeClass('textFixed');
 
-    if (scroll<history2) {
+    if (scroll>=history1 && scroll<history2) {
         $('.tab1').addClass('current');
         $('.cont').eq(0).find('h3').addClass('textFixed');
     } else if (scroll>=history2 && scroll<history3) {
@@ -60,5 +61,7 @@ $(window).on('scroll', function() {
     } else if (scroll>=history4) {
         $('.tab4').addClass('current');
         $('.cont').eq(3).find('h3').addClass('textFixed');
+    } else if (scroll<history1) {
+        $('.tab1').addClass('current');
     }
 })
