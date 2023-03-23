@@ -1,0 +1,40 @@
+{
+    "gas" : [
+        { "name" : "C4F6",
+          "sub_name" : "Hexafluorobutadiene",
+          "img" : "gas_01.jpg",
+          "applicaton" : "반도체 식각 공정에서 사용되는 Dry etching gas",
+          "packing" : "실린더 : Cr-mo, 47L / 밸브 : DISS724, CGA350 / 충전 무게 : 25KG, 45KG",
+          "spec_1" : ["순도","OPC","N2", "O2+Ar", "HF", "H2O", "CO", "CO2"],
+          "spec_2" : ["%", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm"],
+          "spec_3" : ["99.9 이상", "700이하", "40 이하", "10 이하", "10 이하", "20 이하", "10 이하", "20 이하"]
+        },
+        { "name" : "WF6",
+          "sub_name" : "Tungsten Hexafluoride",
+          "img" : "gas_02.jpg",
+          "applicaton" : "반도체 증착 공정에서 사용되는 Deposition gas",
+          "packing" : "실린더 : SUS316L, 40L / 밸브 : DISS638, JIS22R / 충전 무게 : 50KG, 70KG",
+          "spec_1" : ["순도","O2+Ar","N2", "CO", "CO2", "SiF4", "SF6", "CF4"],
+          "spec_2" : ["%", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm"],
+          "spec_3" : ["99.9995 이상", "0.5 이하", "0.5 이하", "0.5 이하", "0.5 이하", "0.5 이하", "0.5 이하", "0.5 이하"]
+        },
+        { "name" : "CH2F2",
+          "sub_name" : "Difluoromethane",
+          "img" : "gas_03.jpg",
+          "applicaton" : "반도체 식각 공정에서 사용되는 Dry etching gas",
+          "packing" : "실린더 : Mn-Steel, 47L / 밸브 : JIS22L, DISS724 / 충전 무게 : 30KG, 35KG",
+          "spec_1" : ["순도","H2O","HF", "N2", "O2", "CO2", "OHFC"],
+          "spec_2" : ["%", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm"],
+          "spec_3" : ["99.99 이상", "10 이하", "1 이하", "20 이하", "5 이하", "1 이하", "10 이하"]
+        },
+        { "name" : "CHF3",
+          "sub_name" : "Trifluoromethane",
+          "img" : "gas_04.jpg",
+          "applicaton" : "반도체 식각 공정에서 사용되는 Dry etching gas",
+          "packing" : "실린더 : Mn-Steel, 47L / 밸브 : CGA660 / 충전 무게 : 30KG",
+          "spec_1" : ["순도","H2O","HF", "N2", "O2", "CO2", "OFC"],
+          "spec_2" : ["%", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm"],
+          "spec_3" : ["99.995 이상", "3 이하", "1 이하", "10 이하", "10 이하", "5 이하", "1 이하"]
+        }
+    ]
+    }
