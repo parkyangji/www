@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./common/css/sub5common.css">
   <link rel="stylesheet" href="./css/sub5_content2.css">
   <script src="https://kit.fontawesome.com/b0822c7a94.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <? include "../common/sub_header.html" ?>
@@ -41,6 +42,9 @@
         </div>
         <section class="cont" id="financial">
           <h3 class="hidden">재무상태표</h3>
+          <div class="chart1" style="margin: 50px 0;">
+            <canvas id="myChart1" width="1000" height="500" style="margin: 0 auto;"></canvas>
+          </div>
           <table>
             <thead>
               <tr>
@@ -81,6 +85,9 @@
           </table>
         </section>
         <section class="cont" id="income">
+          <div class="chart2" style="margin: 50px 0;">
+            <canvas id="myChart2" width="1000" height="500" style="margin: 0 auto;"></canvas>
+          </div>
           <h3 class="hidden">손익계산서</h3>
           <table>
             <thead>
@@ -123,6 +130,9 @@
         </section>
         <section class="cont" id="cash">
           <h3 class="hidden">현금흐름표</h3>
+          <div class="chart3" style="margin: 50px 0;">
+            <canvas id="myChart3" width="1000" height="500" style="margin: 0 auto;"></canvas>
+          </div>
           <table>
             <thead>
               <tr>
@@ -166,5 +176,6 @@
     </article>
     <? include "../common/sub_footer.html" ?>
     <script src="../common/js/tab.js"></script>
+    <script src="./js/sub5_content2.js"></script>
 </body>
 </html>
