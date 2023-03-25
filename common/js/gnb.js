@@ -9,7 +9,7 @@ const tab_last = document.querySelector('.m6').lastElementChild.children[1].chil
 function header_open() {
 
     for(let i=0; i<depth.length; i++) {
-        depth[i].children[1].classList.add('fadein');
+        depth[i].children[1].classList.add('fadeIn');
         depth[i].children[1].style.display = 'block';
     }
 
@@ -21,6 +21,7 @@ function header_open() {
 function header_close() {
 
     for(let i=0; i<depth.length; i++) {
+        depth[i].children[1].classList.remove('fadeIn');
         depth[i].children[1].style.display = 'none';
     }
 
@@ -73,6 +74,19 @@ dropdownmenu.addEventListener('mouseout', header_close);
 
 // 헤더 스크롤 이벤트
 
+const smh = document.querySelector('.visual').clientHeight;
+
+window.addEventListener('scroll', function() {
+    let scroll = window.scrollY;
+    
+    if(scroll<smh-90) {
+        headerArea.style.boxShadow = "none"
+    } else {
+        headerArea.style.boxShadow = "0 0 5px rgba(0,0,0,.6)"
+    }
+})
+
+
 /* JQUREY 버전
 
 var smh=$('.visual').height();
@@ -113,6 +127,21 @@ $('.family .open').toggle(family_open, family_close);
 
 // top 상단이동
 
+const topMove = document.querySelector('.topMove');
+
+window.addEventListener('scroll', function() {
+    let scroll = window.scrollY;
+    let wint = window.innerHeight/5
+    
+    if(scroll>wint) {
+        topMove.classList.add('fadeIn');
+        topMove.style.display = 'block'
+    } else {
+       topMove.classList.remove('fadeIn');
+        topMove.style.display = 'none'
+    }
+})
+
 /* JQUREY 버전
 
 $(window).on('scroll',function(){ 
@@ -134,6 +163,17 @@ $('.topMove').click(function(e){
 */
 
 // 컨텐츠 스크롤 이벤트
+
+window.addEventListener('scroll', function() {
+    let scroll = window.scrollY;
+    const section = document.querySelectorAll('section');
+    
+    for (var i=0; i<section.length; i++) {
+        if (scroll > section[i].offsetTop - 600) {
+            section[i].classList.add('scroll_ani');
+        }
+    }
+})
 
 /* JQUREY 버전
 
