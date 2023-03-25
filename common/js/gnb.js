@@ -1,6 +1,40 @@
 // 글로벌 네비게이션
+const headerArea = document.querySelector('#headerArea');
+const dropdownmenu = document.querySelector('.dropdownmenu');
+const depth = document.querySelectorAll('.menu');
+const tab_first = document.querySelectorAll('.depth1')[0];
+const tab_last = document.querySelector('.m6').lastElementChild.children[1].children[0];
 
+    // 2depth 여닫기
+function header_open() {
 
+    for(let i=0; i<depth.length; i++) {
+        depth[i].children[1].classList.add('fadein');
+        depth[i].children[1].style.display = 'block';
+    }
+
+    headerArea.classList.add('line');
+    headerArea.style.height = "350px";
+
+}
+
+function header_close() {
+
+    for(let i=0; i<depth.length; i++) {
+        depth[i].children[1].style.display = 'none';
+    }
+
+    headerArea.classList.remove('line');
+    headerArea.style.height = "90px";
+
+}
+
+dropdownmenu.addEventListener('mouseover', header_open);
+dropdownmenu.addEventListener('mouseout', header_close);
+
+        // tab키로 접근시 2depth 여닫기
+    tab_first.addEventListener('focus', header_open);
+    tab_last.addEventListener('blur', header_close);
 
 
 /* JQUREY 버전
