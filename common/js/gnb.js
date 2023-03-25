@@ -1,5 +1,10 @@
 // 글로벌 네비게이션
 
+
+
+
+/* JQUREY 버전
+
     //2depth 열기/닫기
     function header_open() {
         $('#headerArea').addClass('line');
@@ -30,7 +35,11 @@
         header_close();
     });
 
+*/
+
 // 헤더 스크롤 이벤트
+
+/* JQUREY 버전
 
 var smh=$('.visual').height();
 
@@ -44,7 +53,11 @@ $(window).on('scroll',function(){//스크롤의 거리가 발생하면
     }; 
 })
 
+*/
+
 // 패밀리사이트
+
+/* JQUREY 버전
 
 function family_open() {
     $('.family .open').addClass('on');
@@ -61,8 +74,12 @@ $('.family .open').toggle(family_open, family_close);
     $('.family .open').focus(family_open);
     $('.family li:last a').blur(family_close);
 
+*/
+
 
 // top 상단이동
+
+/* JQUREY 버전
 
 $(window).on('scroll',function(){ 
     var scroll = $(window).scrollTop();
@@ -80,7 +97,11 @@ $('.topMove').click(function(e){
    $("html,body").stop().animate({"scrollTop":0},500);
 });
 
+*/
+
 // 컨텐츠 스크롤 이벤트
+
+/* JQUREY 버전
 
 $(window).on('scroll', function() {
     var scroll = $(window).scrollTop();
@@ -92,3 +113,5 @@ $(window).on('scroll', function() {
         }
     }
 })
+
+*/

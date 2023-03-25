@@ -1,3 +1,5 @@
+/* JQUREY 버전
+
 var timeonoff;
 var imageCount = $('.gallery li').size()
 var cnt = 1;
@@ -26,11 +28,11 @@ function onoff_re() { // 정지 상태라면 다시 재생시킴
   }
 }
 
-/* 반복 슬라이드 */
+// 반복 슬라이드
 
 timeonoff = setInterval(move, 4000);
 
-/* 재생,정지 */
+// 재생,정지
 
 $('.ps').click(function(){ 
   if(onoff==true){
@@ -45,7 +47,7 @@ $('.ps').click(function(){
 });
 
 
-/* 슬라이드 버튼 */
+// 슬라이드 버튼
 
 $('.mbutton').click(function(event){
   var $target = $(event.target);
@@ -74,7 +76,7 @@ $('.mbutton').click(function(event){
 });
 
 
- /* 이동 */
+ // 이동
 
  $('.arrow').click(function(){
 
@@ -102,3 +104,5 @@ $('.mbutton').click(function(event){
 
   onoff_re();
 });
+
+*/
