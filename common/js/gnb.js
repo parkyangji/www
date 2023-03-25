@@ -76,14 +76,17 @@ dropdownmenu.addEventListener('mouseout', header_close);
 
 const smh = document.querySelector('.visual').clientHeight;
 
+
 window.addEventListener('scroll', function() {
     let scroll = window.scrollY;
-    
-    if(scroll<smh-90) {
+
+    /*if(scroll<smh-90) {
         headerArea.style.boxShadow = "none"
     } else {
         headerArea.style.boxShadow = "0 0 5px rgba(0,0,0,.6)"
-    }
+    }*/
+
+    headerArea.style.boxShadow = (scroll<smh-90) ? 'none' : '0 0 5px rgba(0,0,0,.6)';
 })
 
 
@@ -128,19 +131,31 @@ $('.family .open').toggle(family_open, family_close);
 // top 상단이동
 
 const topMove = document.querySelector('.topMove');
-
+let scroll = ''
 window.addEventListener('scroll', function() {
-    let scroll = window.scrollY;
-    let wint = window.innerHeight/5
+    let wint = window.innerHeight/5;
     
-    if(scroll>wint) {
-        topMove.classList.add('fadeIn');
-        topMove.style.display = 'block'
-    } else {
-       topMove.classList.remove('fadeIn');
-        topMove.style.display = 'none'
-    }
+    topMove.style.opacity = (scroll>wint) ? '1' : '0';
+    
+    return scroll = window.scrollY;
 })
+
+topMove.addEventListener('click', function(e){
+    e.preventDefault();
+    //window.scrollTo(0,0);
+    scrollToTop();
+})
+
+
+function scrollToTop() {
+    let scrollInterval = setInterval(function(){
+        if(scroll != 0) {
+            window.scrollBy(0, -85);
+        }else {
+            clearInterval(scrollInterval);
+        }
+    },10);
+}
 
 /* JQUREY 버전
 

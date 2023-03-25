@@ -97,11 +97,10 @@ font-family: 'Noto Sans KR', sans-serif; */
 #footerArea .family ul li:hover {background: #fff;}
 
 /* 상단이동 */
-.topMove{display:none; width: 60px; height: 60px; background: #1f296f; border-radius: 50%;
-  position: fixed; right:10%; bottom:50px; z-index: 200;}
+.topMove{width: 60px; height: 60px; background: #1f296f; border-radius: 50%;
+  position: fixed; right:10%; bottom:50px; z-index: 200; opacity: 0; transition: opacity .5s;}
 .topMove::before {content: "\f1e0"; font-family: 'Material Symbols Outlined'; font-variation-settings:'FILL' 0,'wght' 200,'GRAD' 0,'opsz' 48;
   font-size: 2.5em; display: block; color: #fff; text-align: center; }
-.topMove.fadeIn {animation: fadeIn .4s forwards;}
 
 /* 탭 */
 .tabs .current {background: #f7f7f7; color: #1f296f!important;}
