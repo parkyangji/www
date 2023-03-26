@@ -37,6 +37,8 @@
 
 /* 본문 컨텐츠 */
 #content {width: 100%;}
+
+/* 스크롤 애니메이션 */
 section {opacity: 0;}
 section.scroll_ani {animation: fadeIn 1s forwards;}
 
@@ -72,7 +74,7 @@ section.scroll_ani {animation: fadeIn 1s forwards;}
 #content .introProduct>div .more_left {position: relative;}
 #content .introProduct>div .more_left::before {  background: #1f296f; color: #fff; transform: rotateY(180deg);}
 #content .introProduct>div .more_left span {top: 30%; left: 100px}
-#content .introProduct>div .more_left:hover span {top: 30%; left: 120px}
+#content .introProduct>div .more_left:hover span {transform: translateX(20px);}
 
 #content .introProduct>ul.products {float: right; width: 900px; height: 489px; overflow: hidden; border-radius: 30px; position: relative;}
 #content .introProduct>ul.products li {float: left; width: 347px; position: absolute; top: 0; left: 0;}
@@ -161,9 +163,9 @@ section.scroll_ani {animation: fadeIn 1s forwards;}
 #content .notice {width: 1200px; height: 450px; margin: 0 auto; position: relative;}
 #content .notice h3 {font-size: 2.5em; font-weight: 700;}
 #content .notice .more_right {float: right; top: 0; right: 40px;}
-#content .notice .more_right::before {  background: #f7f7f7; }
+#content .notice .more_right::before { background: #f7f7f7; }
 #content .notice .more_right span {top: 25%; right: 90px;}
-#content .notice .more_right:hover span {top: 25%; right: 110px;}
+#content .notice .more_right:hover span {transform: translateX(-20px);}
 
 #content .notice ul {margin-top: 65px; overflow: hidden;}
 #content .notice ul li {float: left; width: 580px; height: 230px; margin: 10px; padding: 40px; box-sizing: border-box; 

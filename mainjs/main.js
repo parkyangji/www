@@ -1,3 +1,31 @@
+// 컨텐츠 스크롤 이벤트
+
+window.addEventListener('scroll', function() {
+   let scroll = window.scrollY;
+   const section = document.querySelectorAll('section');
+   
+   for (var i=0; i<section.length; i++) {
+       if (scroll > section[i].offsetTop - 600) {
+           section[i].classList.add('scroll_ani');
+       }
+   }
+})
+
+/* JQUREY 버전
+
+$(window).on('scroll', function() {
+   var scroll = $(window).scrollTop();
+   var section = $('section');
+
+   for (var i=0; i<section.length; i++) {
+       if (scroll > section.eq(i).offset().top - 600) {
+           section.eq(i).addClass('scroll_ani');
+       }
+   }
+})
+
+*/
+
 // 제품소개
 
 /* JQUREY 버전

@@ -108,6 +108,40 @@ $(window).on('scroll',function(){//스크롤의 거리가 발생하면
 
 // 패밀리사이트
 
+const family = document.querySelector('.open');
+const family_list = document.querySelector('.open').nextElementSibling;
+const family_last = family_list.lastElementChild.children[0]
+
+let click = 0; 
+
+function family_open() {
+    family.classList.add('on');
+    family_list.classList.add('on');
+}
+
+function family_close() {
+    family.classList.remove('on');
+    family_list.classList.remove('on');
+}
+
+family.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    click++; // click, focus 이벤트시 focus 이벤트 우선순위 적용으로 toggle 적용 불가
+    if (click == 1) {
+        family_open()
+    } else if (click == 2) {
+        family_close()
+        click=0
+    }
+
+})
+    // tab키로 접근시 family_list 여닫기
+    family.addEventListener('focus', family_open);
+    family_last.addEventListener('blur', family_close);
+
+
+
 /* JQUREY 버전
 
 function family_open() {
@@ -173,33 +207,5 @@ $('.topMove').click(function(e){
    e.preventDefault();
    $("html,body").stop().animate({"scrollTop":0},500);
 });
-
-*/
-
-// 컨텐츠 스크롤 이벤트
-
-window.addEventListener('scroll', function() {
-    let scroll = window.scrollY;
-    const section = document.querySelectorAll('section');
-    
-    for (var i=0; i<section.length; i++) {
-        if (scroll > section[i].offsetTop - 600) {
-            section[i].classList.add('scroll_ani');
-        }
-    }
-})
-
-/* JQUREY 버전
-
-$(window).on('scroll', function() {
-    var scroll = $(window).scrollTop();
-    var section = $('section');
-
-    for (var i=0; i<section.length; i++) {
-        if (scroll > section.eq(i).offset().top - 600) {
-            section.eq(i).addClass('scroll_ani');
-        }
-    }
-})
 
 */
