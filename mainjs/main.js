@@ -51,6 +51,104 @@
  
  //ESG 경영
 
+ let position = 0;
+ let Move = 0;
+ const box_list_esg = document.querySelector('.box_list_esg');
+ const list_esg = document.querySelector('.list_esg');
+ const list_width = list_esg.children[0].clientWidth;
+ const arrow_esg = document.querySelectorAll('.arrow_esg');
+
+ list_esg.after(list_esg.cloneNode(true));
+
+ const list_esg_clone = document.querySelectorAll('.list_esg');
+ const listArr = list_esg_clone.children;
+ const imgArr = document.querySelectorAll('.esg_img');
+
+
+function First_add(num) {
+   imgArr[num].classList.add('First');
+   imgArr[num].children[0].classList.add('First');
+}
+
+First_add(0);
+
+
+ arrow_esg.forEach(function(a, i) {
+   a.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      for (let i=0; i<imgArr.length; i++) {
+         imgArr[i].classList.remove('First');
+         imgArr[i].children[0].classList.remove('First');
+      }
+
+      if (i==0) {
+         
+         if (position == 0) {
+            position=-2520;
+            Move=-2520;
+         }
+
+         position+=list_width;
+
+         let leftinterval = setInterval(function() {
+            Move+=10;
+            box_list_esg.style.left = Move+'px';
+
+            if (Move >= position) {
+               clearInterval(leftinterval);
+               if (position == 0) {
+                  position=-2520;
+                  Move=-2520;
+               }
+            }
+         }, 1);
+
+
+      } else if (i==1) {
+
+         if (position == -2520) {
+            position=0;
+            Move=0;
+         }
+
+         position-=list_width;
+
+
+         let rightinterval = setInterval(function() {
+            Move-=10;
+            box_list_esg.style.left = Move+'px';
+            
+            if (Move <= position) { 
+               clearInterval(rightinterval);
+               if (position == -2520) {
+                  position=0;
+                  Move=0;
+               }
+            }
+         }, 1);
+
+         }
+
+      switch(position) {
+         case 0 : First_add(0);
+            break;
+         case -630 : First_add(1);
+            break;
+         case -1260 : First_add(2);
+            break;
+         case -1890 : First_add(3);
+            break;
+         case -2520 : First_add(4);
+            break;
+      }
+
+   })
+ })
+
+
+ 
+
  /* JQUERY 버전
 
    var position = 0;
