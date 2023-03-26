@@ -67,8 +67,6 @@ font-family: 'Noto Sans KR', sans-serif; */
 
 #headerArea .topMenu{float: right; overflow: hidden;}
 #headerArea .topMenu li {float: left; margin-right: 25px; line-height: 90px;}
-#headerArea .topMenu li:last-child { margin-right: 0;}
-#headerArea .topMenu li:last-child i {font-size: 1.5em;}
 
   /* 푸터 영역 */
 #footerArea {width: 100%; height: 150px;}

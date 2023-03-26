@@ -142,7 +142,6 @@ window.addEventListener('scroll', function() {
 
 topMove.addEventListener('click', function(e){
     e.preventDefault();
-    //window.scrollTo(0,0);
     scrollToTop();
 })
 
