@@ -28,7 +28,58 @@ $(window).on('scroll', function() {
 
 // 제품소개
 
+const info_btn = document.querySelector('.info_btn');
+const productsArr = Object.values(document.querySelector('.products').children);
+const infoArr = document.querySelectorAll('.info');
 
+function span_width(num) {
+   productsArr[num].firstElementChild.classList.add('active');
+   for (let i=0; i<infoArr[num].children.length; i++) {
+      infoArr[num].children[i].classList.add('active')
+   }
+}
+
+
+
+productsArr.forEach(function(a, i) {
+
+   a.addEventListener('mouseover', function() {
+      if (i==0) {
+         productsArr[1].style.left = '342px';
+         productsArr[2].style.left = '528px';
+         productsArr[3].style.left = '714px';
+         span_width(0);
+      } else if (i==1) {
+         productsArr[1].style.left = '186px';
+         productsArr[2].style.left = '528px';
+         productsArr[3].style.left = '714px';
+         span_width(1);
+      } else if (i==2) {
+         productsArr[1].style.left = '186px';
+         productsArr[2].style.left = '372px';
+         productsArr[3].style.left = '714px';
+         span_width(2);
+      } else if (i==3) {
+         productsArr[1].style.left = '186px';
+         productsArr[2].style.left = '372px';
+         productsArr[3].style.left = '558px';
+         span_width(3);
+      }
+   })
+
+   a.addEventListener('mouseout', function() {
+      productsArr[1].style.left = '225px';
+      productsArr[2].style.left = '450px';
+      productsArr[3].style.left = '675px';
+      productsArr[i].firstElementChild.classList.remove('active');
+      for (let j=0; j<infoArr[i].children.length; j++) {
+         infoArr[i].children[j].classList.remove('active')
+      }
+   })
+}) 
+
+
+/* JQUERY 버전 
 
    function span_width(num) {
       $('.products li span').not(':eq(' + num + ')').css('width', '186');
@@ -73,6 +124,8 @@ $(window).on('scroll', function() {
       $('.products .info a').hide();
 
    });
+
+*/
 
 
 
