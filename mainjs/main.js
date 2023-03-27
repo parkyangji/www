@@ -28,7 +28,7 @@ $(window).on('scroll', function() {
 
 // 제품소개
 
-/* JQUREY 버전
+
 
    function span_width(num) {
       $('.products li span').not(':eq(' + num + ')').css('width', '186');
@@ -74,7 +74,7 @@ $(window).on('scroll', function() {
 
    });
 
-*/
+
 
  
  //ESG 경영
