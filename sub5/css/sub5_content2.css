@@ -10,6 +10,8 @@
 
 section {display: none; margin: 90px 0 180px;}
 
+section>span { display: block; text-align: end; margin-right: 10px; margin-bottom: 10px;}
+
 #content table {width: 100%; border-top: 2px solid;}
 #content table th, td {width: 16.66%; height: 70px; padding: 10px; 
     text-align: center; box-sizing: border-box; line-height: 22px;}
