@@ -76,19 +76,22 @@ section.scroll_ani {animation: fadeIn 1s forwards;}
 #content .introProduct>div .more_left span {top: 30%; left: 100px}
 #content .introProduct>div .more_left:hover span {transform: translateX(20px);}
 
-#content .introProduct>ul.products {float: right; width: 900px; height: 489px; overflow: hidden; border-radius: 30px; position: relative;}
-#content .introProduct>ul.products li {float: left; width: 347px; position: absolute; top: 0; left: 0;}
-#content .introProduct>ul.products li:nth-of-type(2) {left: 225px;} /*342 186*/
-#content .introProduct>ul.products li:nth-of-type(3) {left: 450px;}
-#content .introProduct>ul.products li:nth-of-type(4) {left: 675px;}
-#content .introProduct>ul.products img { transition: all .5s; filter: brightness(70%);}
-#content .introProduct>ul.products img.effect {filter: brightness(100%);}
-#content .introProduct>ul.products .info {position: absolute; left: 80px ; top: 50%;}
-#content .introProduct>ul.products .info h4 {transition: all .5s; font-size: 1.5em; font-weight: 500; color: #fff;}
-#content .introProduct>ul.products .info h4.effect {font-size: 1.88em; text-shadow: 0 0 10px rgba(0, 0, 0, .65); transform: translateY(-80px);}
-#content .introProduct>ul.products .info a {display: none; position: relative; z-index: 10; 
-  background: rgb(31, 41, 111,.8); color: #fff; padding: 10px 20px; text-align: center;}
-#content .introProduct>ul.products .info_btn {display: block; width: 225px; height: 489px; position: absolute; top: 0;} /*186 */
+#content .introProduct .products {float: right; width: 900px; height: 489px; position: relative; overflow: hidden; border-radius: 30px;}
+#content .introProduct .products li {transition: left .3s ease-out; position: absolute; left: 0; overflow: hidden;}
+#content .introProduct .products li img {filter: brightness(.8);}
+#content .introProduct .products li .info {height: 489px; box-sizing: border-box; padding: 20px; position:absolute; top: 0; 
+  display: flex; justify-content: space-around; flex-flow: column; color: #fff;}
+#content .introProduct .products li .info h4 {font-size: 1.5em; width: 25px; text-align: center; text-shadow: 0 0 5px rgba(0, 0, 0, .8);}
+#content .introProduct .products li .info p {visibility: hidden; padding: 0 20px; line-height: 1.5em;}
+#content .introProduct .products li .info a {visibility: hidden; margin-left: 20px; width: 100px; text-align: center; padding: 10px; color: #fff; background: #1f296f; z-index: 10;}
+
+#content .introProduct .products li img.active {filter: brightness(.2);}
+#content .introProduct .products li .info h4.active {transform: translateX(30%);}
+#content .introProduct .products li .info p.active {visibility: visible;}
+#content .introProduct .products li .info a.active {visibility: visible;}
+
+#content .introProduct .products li .info_btn {position: absolute; top: 0; left: 0; width: 225px; height: 489px;}
+
 
 
 /* 기업비전 */
