@@ -5,6 +5,7 @@ $(document).ready(function(){
     $('.check_agree').on('click',check_agree);
     
     function check_agree(e){
+        e.preventDefault();
 
         var checkboxLength=$('input[type="checkbox"]').length;  //5
 			            // 체크박스의 총개수
@@ -15,7 +16,7 @@ $(document).ready(function(){
             alert("수집하는 개인정보 항목에 동의해야 가입하실 수 있습니다.");
             e.preventDefault();
         }else{  //모드 체크 되었다면
-            location.href="member_form.php";   //회원가입 폼 입력 페이지로 이동
+            location.href="./join.html";   //회원가입 폼 입력 페이지로 이동
         }
     }
 

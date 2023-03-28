@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../common/css/common.css">
+    <link rel="stylesheet" href="./css/join.css">
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">cgv로고</a></h1>
+    </header>
+    <article id="content">
+        <form action="" method="post">
+            <ul>
+                <li>
+                    <label for="memberId">아이디</label>
+                    <input type="text" id="memberId" name="memberId">
+                </li>
+                <li>
+                    <label for="memberPass">비밀번호</label>
+                    <input type="password" id="memberPass" name="memberPass">
+                </li>
+                <li>
+                    <label for="memberPass2">비밀번호확인</label>
+                    <input type="password" id="memberPass2" name="memberPass2">
+                </li>
+                <li>
+                    <label for="memberName">이름</label>
+                    <input type="text" id="memberName" name="memberName">
+                </li>
+                <li>
+                    <label for="memberNick">닉네임</label>
+                    <input type="text" id="memberNic" name="memberNic">
+                </li>
+                <li>
+                    휴대폰
+                    <label class="hidden" for="hp1">전화번호국번</label>
+                    <select name="hp1" id="hp1">
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="019">019</option>
+                    </select>-
+                    <label class="hidden" for="hp2">전화번호중간4자리</label>
+                    <input type="text" id="hp2" name="hp2">-
+                    <label class="hidden" for="hp3">전화번호끝4자리</label>
+                    <input type="text" id="hp3" name="hp3">
+                </li>
+                <li>
+                    이메일
+                    <label class="hidden" for="main1">이메일id</label>
+                    <input type="text" id="main1" name="main1">@
+                    <label class="hidden" for="main2">이메일계정</label>
+                    <input type="text" id="main2" name="main2">
+                </li>
+            </ul>
+            <input type="submit" value="회원가입">
+            <input type="reset" value="다시쓰기">
+        </form>
+    </article>
+</body>
+</html>
