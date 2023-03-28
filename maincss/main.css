@@ -78,17 +78,17 @@ section.scroll_ani {animation: fadeIn 1s forwards;}
 
 #content .introProduct .products {float: right; width: 900px; height: 489px; position: relative; overflow: hidden; border-radius: 30px;}
 #content .introProduct .products li {transition: left .3s ease-out; position: absolute; left: 0; overflow: hidden;}
-#content .introProduct .products li img {filter: brightness(.8);}
+#content .introProduct .products li img {filter: brightness(.9);}
 #content .introProduct .products li .info {height: 489px; box-sizing: border-box; padding: 20px; position:absolute; top: 0; 
   display: flex; justify-content: space-around; flex-flow: column; color: #fff;}
-#content .introProduct .products li .info h4 {font-size: 1.5em; width: 25px; text-align: center; text-shadow: 0 0 5px rgba(0, 0, 0, .8);}
-#content .introProduct .products li .info p {visibility: hidden; padding: 0 20px; line-height: 1.5em;}
-#content .introProduct .products li .info a {visibility: hidden; margin-left: 20px; width: 100px; text-align: center; padding: 10px; color: #fff; background: #1f296f; z-index: 10;}
+#content .introProduct .products li .info h4 {transition: transform .5s; font-weight: 400; font-size: 1.5em; width: 25px; text-align: center; text-shadow: 0 0 5px rgba(0, 0, 0, .5);}
+#content .introProduct .products li .info p {visibility: hidden; font-weight: 100; padding: 0 20px; line-height: 1.5em;}
+#content .introProduct .products li .info a {transition: all .3s; opacity: 0; visibility: hidden; margin-left: 20px; width: 100px; text-align: center; padding: 10px; color: #fff; background: #1f296f; z-index: 10;}
 
 #content .introProduct .products li img.active {filter: brightness(.2);}
-#content .introProduct .products li .info h4.active {transform: translateX(30%);}
+#content .introProduct .products li .info h4.active {transform: translateX(150px);}
 #content .introProduct .products li .info p.active {visibility: visible;}
-#content .introProduct .products li .info a.active {visibility: visible;}
+#content .introProduct .products li .info a.active {visibility: visible; transform: translateY(-30px); opacity: 1;}
 
 #content .introProduct .products li .info_btn {position: absolute; top: 0; left: 0; width: 225px; height: 489px;}
 

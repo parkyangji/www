@@ -1,0 +1,18 @@
+body {font-family: 'Noto Sans KR','Lato', sans-serif;}
+form input, form button {font-size: 1rem; font-family: none; border: none; background: transparent; outline: none;}
+select {border: none; outline: none; font-size: 1rem;}
+header a {width: 159px; height: 33px; background: url(../../common/images/logo_01.jpg) no-repeat; text-indent: -999px; overflow: hidden;
+    margin: 50px auto; padding-right: 20px;}
+
+#content {background: #f7f7f7; 
+    display: flex; flex-flow: column; justify-content: space-between;
+    width: 500px; height: 700px; margin: 0 auto; padding: 50px}
+#content li { display: flex; gap: 20px; justify-content: space-between; background: #fff; margin-bottom: 30px; padding: 20px;}
+
+form ul input {width: 70%;}
+#content li:nth-child(6) select, #content li:nth-child(6) input {width: 80px}
+#content li:nth-child(7) input {width: 150px;}
+
+.btn {width: 240px; background: #1f296f; box-sizing: border-box; padding: 10px; color: #fff;}
+.btn:nth-of-type(2) {float: right;}
+
