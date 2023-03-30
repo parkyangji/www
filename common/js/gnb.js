@@ -166,13 +166,16 @@ $('.family .open').toggle(family_open, family_close);
 
 const topMove = document.querySelector('.topMove');
 let scroll = ''
+
 window.addEventListener('scroll', function() {
     let wint = window.innerHeight/5;
-    
+
+    scroll = window.scrollY;
     topMove.style.opacity = (scroll>wint) ? '1' : '0';
-    
-    return scroll = window.scrollY;
+
 })
+
+
 
 topMove.addEventListener('click', function(e){
     e.preventDefault();

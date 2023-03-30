@@ -9,8 +9,74 @@ let history2 = contArr[1].offsetTop-72;
 let history3 = contArr[2].offsetTop-72;
 let history4 = contArr[3].offsetTop-72;
 
+
+//탭 클릭시
+
+
+tabArr.forEach(function(a, i) {
+    a.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        for (let j=0; j<tabArr.length; j++) {
+            tabArr[j].classList.remove('current');
+        }
+
+        tabArr[i].classList.add('current');
+
+        let value = 0;
+        
+
+        if (i==0) {
+            value = history1;
+        } else if (i==1) {
+            value = history2;
+
+        } else if (i==2) {
+            value = history3;
+        } else if (i==3) {
+            value = history4;
+        }
+
+        window.scrollTo({top:value, left:0, behavior:"smooth"});
+
+    })
+})
+
+
+
+
+/* JQUERY 버전 
+
+var history1 = $('.cont').eq(0).offset().top-72;
+var history2 = $('.cont').eq(1).offset().top-72;
+var history3 = $('.cont').eq(2).offset().top-72;
+var history4 = $('.cont').eq(3).offset().top-72;
+
+
+//탭 클릭시
+$('.tab').click(function(e){
+    e.preventDefault();
+    $('.tab').removeClass('current');
+    $(this).addClass('current');
+
+    var value=0;
+
+    if($(this).hasClass('tab1')){  
+    value= history1; 
+    }else if($(this).hasClass('tab2')){
+    value= history2; 
+    }else if($(this).hasClass('tab3')){
+    value= history3; 
+    }else if($(this).hasClass('tab4')){
+    value= history4; 
+    }
+    
+$("html,body").stop().animate({"scrollTop":value},1000);
+});
+
+*/
+
 window.addEventListener('scroll', function() {
-    let scroll = window.scrollY;
 
     //네비 고정
 
@@ -28,6 +94,11 @@ window.addEventListener('scroll', function() {
 
     //탭 스크롤시
 
+    for(let i=0; i<tabArr.length; i++) {
+        tabArr[i].classList.remove('current');
+        contArr[i].children[0].children[0].classList.remove('textFixed');
+    }
+
 
     if (scroll>=history1 && scroll<history2) {
         tabArr[0].classList.add('current');
@@ -44,6 +115,7 @@ window.addEventListener('scroll', function() {
     } else if (scroll<history1) {
         tabArr[0].classList.add('current');
     }
+
 
 
 })
@@ -91,35 +163,3 @@ $(window).on('scroll', function() {
 */
 
 
-
-
-/* JQUERY 버전 
-
-var history1 = $('.cont').eq(0).offset().top-72;
-var history2 = $('.cont').eq(1).offset().top-72;
-var history3 = $('.cont').eq(2).offset().top-72;
-var history4 = $('.cont').eq(3).offset().top-72;
-
-
-//탭 클릭시
-$('.tab').click(function(e){
-    e.preventDefault();
-    $('.tab').removeClass('current');
-    $(this).addClass('current');
-
-    var value=0;
-
-    if($(this).hasClass('tab1')){  
-    value= history1; 
-    }else if($(this).hasClass('tab2')){
-    value= history2; 
-    }else if($(this).hasClass('tab3')){
-    value= history3; 
-    }else if($(this).hasClass('tab4')){
-    value= history4; 
-    }
-    
-$("html,body").stop().animate({"scrollTop":value},1000);
-});
-
-*/
