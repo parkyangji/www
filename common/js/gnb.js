@@ -112,7 +112,8 @@ const family = document.querySelector('.open');
 const family_list = document.querySelector('.open').nextElementSibling;
 const family_last = family_list.lastElementChild.children[0]
 
-let click = 0; 
+let click = false; // click, focus 이벤트시 focus 이벤트 우선순위 적용으로 toggle 적용 불가
+               // 메뉴가 열릴때(true), 닫힐때(false)
 
 function family_open() {
     family.classList.add('on');
@@ -127,12 +128,12 @@ function family_close() {
 family.addEventListener('click', function(e) {
     e.preventDefault();
 
-    click++; // click, focus 이벤트시 focus 이벤트 우선순위 적용으로 toggle 적용 불가
-    if (click == 1) {
-        family_open()
-    } else if (click == 2) {
+    if (click) {
         family_close()
-        click=0
+        click=false;
+    } else  {
+        family_open()
+        click=true;
     }
 
 })
