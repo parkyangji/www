@@ -5,7 +5,7 @@ window.addEventListener('scroll', function() {
    const section = document.querySelectorAll('section');
    
    for (var i=0; i<section.length; i++) {
-       if (scroll > section[i].offsetTop - 600) {
+       if (scroll > section[i].offsetTop - 700) {
            section[i].classList.add('scroll_ani');
        }
    }
@@ -17,112 +17,111 @@ $(window).on('scroll', function() {
    var scroll = $(window).scrollTop();
    var section = $('section');
 
-   for (var i=0; i<section.length; i++) {
-       if (scroll > section.eq(i).offset().top - 600) {
-           section.eq(i).addClass('scroll_ani');
-       }
-   }
-})
+    for (var i=0; i<section.length; i++) {
+        if (scroll > section.eq(i).offset().top - 700) {
+            section.eq(i).addClass('scroll_ani');
+        }
+    }
+ })
 
 */
 
+
+
 // 제품소개
 
-const info_btn = document.querySelector('.info_btn');
+const open_btn = document.querySelectorAll('.open_btn');
 const productsArr = Object.values(document.querySelector('.products').children);
 const infoArr = document.querySelectorAll('.info');
 
-function span_width(num) {
-   productsArr[num].firstElementChild.classList.add('active');
-   for (let i=0; i<infoArr[num].children.length; i++) {
-      infoArr[num].children[i].classList.add('active')
+function active_class(num) {
+
+   for (j=0; j<productsArr.length; j++) {
+      productsArr[j].firstElementChild.classList.remove('active');
    }
+   productsArr[num].firstElementChild.classList.add('active');
+
+   for (k=0; k<infoArr.length; k++) {
+      if (k==(num)) {
+         for (j=0; j<infoArr[num].children.length; j++) {
+            infoArr[num].children[j].classList.add('active');
+         }
+      } else {
+         for (j=0; j<infoArr[k].children.length; j++) {
+            infoArr[k].children[j].classList.remove('active');
+         }
+      }
+   }
+
 }
 
 
-
-productsArr.forEach(function(a, i) {
+open_btn.forEach(function(a, i) {
 
    a.addEventListener('mouseover', function() {
-      if (i==0) {
-         productsArr[1].style.left = '342px';
-         productsArr[2].style.left = '528px';
-         productsArr[3].style.left = '714px';
-         span_width(0);
-      } else if (i==1) {
-         productsArr[1].style.left = '186px';
-         productsArr[2].style.left = '528px';
-         productsArr[3].style.left = '714px';
-         span_width(1);
-      } else if (i==2) {
-         productsArr[1].style.left = '186px';
-         productsArr[2].style.left = '372px';
-         productsArr[3].style.left = '714px';
-         span_width(2);
-      } else if (i==3) {
-         productsArr[1].style.left = '186px';
-         productsArr[2].style.left = '372px';
-         productsArr[3].style.left = '558px';
-         span_width(3);
-      }
-   })
 
-   a.addEventListener('mouseout', function() {
-      productsArr[1].style.left = '225px';
-      productsArr[2].style.left = '450px';
-      productsArr[3].style.left = '675px';
-      productsArr[i].firstElementChild.classList.remove('active');
-      for (let j=0; j<infoArr[i].children.length; j++) {
-         infoArr[i].children[j].classList.remove('active')
+      if (i==0) {
+         productsArr[1].style.left = '600px';
+         productsArr[2].style.left = '700px';
+         productsArr[3].style.left = '800px';
+         active_class(0);
+
+      } else if (i==1) {
+         productsArr[1].style.left = '100px';
+         productsArr[2].style.left = '700px';
+         productsArr[3].style.left = '800px';
+         active_class(1);
+
+      } else if (i==2) {
+         productsArr[1].style.left = '100px';
+         productsArr[2].style.left = '200px';
+         productsArr[3].style.left = '800px';
+         active_class(2);
+
+      } else if (i==3) {
+         productsArr[1].style.left = '100px';
+         productsArr[2].style.left = '200px';
+         productsArr[3].style.left = '300px';
+         active_class(3);
+
       }
    })
 }) 
 
-
-/* JQUERY 버전 
-
+/* JQUREY 버전
+   
    function span_width(num) {
-      $('.products li span').not(':eq(' + num + ')').css('width', '186');
-      $('.products img:eq(' + num + '), .products .info h4:eq(' + num + ')').addClass('effect');
-      $('.products .info a:eq(' + num + ')').stop().fadeIn('slow');
+      $('.products img').not(':eq('+num+')').removeClass('active');
+      $('.products img').eq(num).addClass('active');
+
+      $('.info').not(':eq('+num+')').children().removeClass('active');
+      $('.info').eq(num).children().addClass('active');
    }
 
    $('.products li span').mouseenter(function(event){
       var $target=$(event.target);
 
       if($target.is('.products li span:eq(0)')){
-         $('.products li:eq(1)').animate({left:[342,'easeOutQuad']},350).clearQueue();
-         $('.products li:eq(2)').animate({left:[528,'easeOutQuad']},350).clearQueue();
-         $('.products li:eq(3)').animate({left:[714,'easeOutQuad']},350).clearQueue();
+         $('.products li:eq(1)').animate({left:[600,'linear']},100).clearQueue();
+         $('.products li:eq(2)').animate({left:[700,'linear']},100).clearQueue();
+         $('.products li:eq(3)').animate({left:[800,'linear']},100).clearQueue();
          span_width(0);
       }else if($target.is('.products li span:eq(1)')){
-         $('.products li:eq(1)').animate({left:[186,'easeOutQuad']},350).clearQueue();
-         $('.products li:eq(2)').animate({left:[528,'easeOutQuad']},350).clearQueue();
-         $('.products li:eq(3)').animate({left:[714,'easeOutQuad']},350).clearQueue();
+         $('.products li:eq(1)').animate({left:[100,'linear']},100).clearQueue();
+         $('.products li:eq(2)').animate({left:[700,'linear']},100).clearQueue();
+         $('.products li:eq(3)').animate({left:[800,'linear']},100).clearQueue();
          span_width(1);
       }else if($target.is('.products li span:eq(2)')){
-         $('.products li:eq(1)').animate({left:[186,'easeOutQuad']},350).clearQueue();
-         $('.products li:eq(2)').animate({left:[372,'easeOutQuad']},350).clearQueue();
-         $('.products li:eq(3)').animate({left:[714,'easeOutQuad']},350).clearQueue();
+         $('.products li:eq(1)').animate({left:[100,'linear']},100).clearQueue();
+         $('.products li:eq(2)').animate({left:[200,'linear']},100).clearQueue();
+         $('.products li:eq(3)').animate({left:[800,'linear']},100).clearQueue();
          span_width(2);
       }else if($target.is('.products li span:eq(3)')){
-         $('.products li:eq(1)').animate({left:[186,'easeOutQuad']},350).clearQueue();
-         $('.products li:eq(2)').animate({left:[372,'easeOutQuad']},350).clearQueue();
-         $('.products li:eq(3)').animate({left:[558,'easeOutQuad']},350).clearQueue();
+         $('.products li:eq(1)').animate({left:[100,'linear']},100).clearQueue();
+         $('.products li:eq(2)').animate({left:[200,'linear']},100).clearQueue();
+         $('.products li:eq(3)').animate({left:[300,'linear']},100).clearQueue();
          span_width(3);
       }
-   });
-
-
-   $('.products li').mouseleave(function(){
-      $('.products li:eq(1)').animate({left:[225,'easeOutQuad']},350).clearQueue();
-      $('.products li:eq(2)').animate({left:[450,'easeOutQuad']},350).clearQueue();
-      $('.products li:eq(3)').animate({left:[675,'easeOutQuad']},350).clearQueue();
-      $('.products li span').css('width', '');
-
-      $('.products img, .products .info h4').removeClass('effect');
-      $('.products .info a').hide();
-
    });
 
 */

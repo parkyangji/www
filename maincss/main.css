@@ -42,6 +42,18 @@
 section {opacity: 0;}
 section.scroll_ani {animation: fadeIn 1s forwards;}
 
+#content .introProduct.scroll_ani .products{animation: slideInRight 1s forwards;}
+
+#content .vision .list_vision dl {opacity: 0;}
+#content .vision.scroll_ani .list_vision dl {animation: slideInUp 1s forwards;}
+#content .vision.scroll_ani .list_vision dl:nth-of-type(2) { animation-delay: .2s;}
+#content .vision.scroll_ani .list_vision dl:nth-of-type(3) { animation-delay: .4s;}
+
+#content .notice.scroll_ani ul {animation: scaleUpTop 1s forwards;}
+
+#content .esg.scroll_ani .slide_esg {animation: backInRight 1s forwards;}
+
+
 /* 더보기 */
 #content .more_left, .more_right {width: 60px; height: 60px; position: absolute;}
 #content .more_left::before, .more_right::before {
@@ -62,7 +74,7 @@ section.scroll_ani {animation: fadeIn 1s forwards;}
 
 
 /* 제품소개 */
-#content .introProduct {width: 1200px; height: 950px; margin: 0 auto; padding-top: 110px;
+#content .introProduct {width: 1200px; height: 900px; margin: 0 auto; padding-top: 110px;
   overflow: hidden; box-sizing: border-box;}
 #content .introProduct h3 {text-align: center; font-size: 2.5em; font-weight: 700; margin-bottom: 90px;}
 #content .introProduct>div {float: left;}
@@ -76,21 +88,20 @@ section.scroll_ani {animation: fadeIn 1s forwards;}
 #content .introProduct>div .more_left span {top: 30%; left: 100px}
 #content .introProduct>div .more_left:hover span {transform: translateX(20px);}
 
-#content .introProduct .products {float: right; width: 900px; height: 489px; position: relative; overflow: hidden; border-radius: 30px;}
-#content .introProduct .products li {transition: left .3s ease-out; position: absolute; left: 0; overflow: hidden;}
+#content .introProduct .products {float: right; width: 900px; height: 470px; position: relative; overflow: hidden;}
+#content .introProduct .products li {transition: left .8s; position: absolute; left: 0; overflow: hidden;}
 #content .introProduct .products li img {filter: brightness(.9);}
-#content .introProduct .products li .info {height: 489px; box-sizing: border-box; padding: 20px; position:absolute; top: 0; 
+#content .introProduct .products li .info {height: 470px; box-sizing: border-box; padding: 30px 40px; position:absolute; top: 0; 
   display: flex; justify-content: space-around; flex-flow: column; color: #fff;}
-#content .introProduct .products li .info h4 {transition: transform .5s; font-weight: 400; font-size: 1.5em; width: 25px; text-align: center; text-shadow: 0 0 5px rgba(0, 0, 0, .5);}
-#content .introProduct .products li .info p {visibility: hidden; font-weight: 100; padding: 0 20px; line-height: 1.5em;}
-#content .introProduct .products li .info a {transition: all .3s; opacity: 0; visibility: hidden; margin-left: 20px; width: 100px; text-align: center; padding: 10px; color: #fff; background: #1f296f; z-index: 10;}
+#content .introProduct .products li .info h4 {transition: transform .5s; font-weight: 500; font-size: 1.88em; width: 25px; text-align: center; text-shadow: 0 0 5px rgba(0, 0, 0, .5);}
+#content .introProduct .products li .info p {visibility: hidden; width: 550px; text-align: justify; line-height: 2em;}
+#content .introProduct .products li .info a {transition: all .8s; opacity: 0; visibility: hidden; width: 100px; text-align: center; padding: 10px; color: #fff; background: #1f296f; z-index: 10;}
 
-#content .introProduct .products li img.active {filter: brightness(.2);}
-#content .introProduct .products li .info h4.active {transform: translateX(150px);}
+#content .introProduct .products li img.active {filter: brightness(.5);}
 #content .introProduct .products li .info p.active {visibility: visible;}
-#content .introProduct .products li .info a.active {visibility: visible; transform: translateY(-30px); opacity: 1;}
+#content .introProduct .products li .info a.active {visibility: visible; opacity: 1;}
 
-#content .introProduct .products li .info_btn {position: absolute; top: 0; left: 0; width: 225px; height: 489px;}
+#content .introProduct .products li .open_btn {position: absolute; top: 0; left: 0; width: 100px; height: 470px;}
 
 
 
@@ -101,7 +112,7 @@ section.scroll_ani {animation: fadeIn 1s forwards;}
 #content .vision>div h3 {font-size: 2.5em; font-weight: 700; color: #fff; margin-bottom: 20px;}
 #content .vision>div p {font-size: 1.5em; font-weight: 300; color: #fff;}
 
-#content .vision .list_vision {overflow: hidden; margin: 75px 30px 40px 30px;}
+#content .vision .list_vision { margin: 75px 30px 40px 30px;}
 #content .vision .list_vision dl {float: left; width: 350px; height: 540px;  margin-right: 45px;
   background: linear-gradient(to bottom, rgba(31,41,111,1) 60%, rgba(31,41,111,0) 100%);}
 #content .vision .list_vision dl::before { content: ''; display: block; width: 350px; height: 309px; 
