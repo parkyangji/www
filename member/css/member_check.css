@@ -1,27 +1,25 @@
-
 .logo{margin: 50px auto 0; display: block; width: 159px; height: 33px; padding-right: 20px;}
 #content{width: 750px; margin: 30px auto; background: #f7f7f7;
      padding: 70px; font-family: 'Noto Sans KR','Lato', sans-serif;}  
 
+.member_tab{padding: 30px 0;border-top: 1px solid #333;}
+.member_tab a{font-size: 24px;padding: 10px;margin: 0 10px;color: #aaa;}
+.member_tab a.on{border-bottom: 2px solid #333;font-weight: bold}
+.member_tab span{font-size: 24px;padding: 10px;margin: 0 10px;font-weight: bold}
 
-    .member_tab{padding: 30px 0;border-top: 1px solid #333;}
-    .member_tab a{font-size: 24px;padding: 10px;margin: 0 10px;color: #aaa;}
-    .member_tab a.on{border-bottom: 2px solid #333;font-weight: bold}
-    .member_tab span{font-size: 24px;padding: 10px;margin: 0 10px;font-weight: bold}
-
-    .join{text-align: left; position: relative;}
-    .join h4{font-size: 20px;margin: 30px 0;}
-    .join h3{font-size: 28px; margin-bottom: 50px; margin-left: 10px;}
-    .join h3::before{content: ''; position: absolute; top: 4px; left: 0; width: 5px; height: 28px;
-        background: #1f296f;}
-    .join .policy{padding: 10px; overflow-y: scroll; height: 80px; margin: 20px 0;border: 1px solid #ddd;
-        background: #fff; font-size: 14px; line-height: 1.5em;}
-    .join .check{ margin: 20px 0 60px;}
-    .join .button{text-align: center;margin-top: 30px}
-    .join .button .ok,.join .button button,.join .allcheck{display: inline-block;width: 200px;line-height: 24px;padding: 8px 0;border: none;background: #1f296f;color: #fff;font-size: 14px;cursor: pointer;
-        margin: 0 5px;}
-    .join .button .cancel{display: inline-block;width: 200px;line-height: 24px;padding: 8px 0;border: none;background: #999;;font-size: 14px;cursor: pointer}
-    .join .allcheck{background: #fff; color: #000;}
+.join{text-align: left; position: relative;}
+.join h4{font-size: 20px;margin: 30px 0;}
+.join h3{font-size: 28px; margin-bottom: 50px; margin-left: 10px;}
+.join h3::before{content: ''; position: absolute; top: 4px; left: 0; width: 5px; height: 28px;
+    background: #1f296f;}
+.join .policy{padding: 10px; overflow-y: scroll; height: 80px; margin: 20px 0;border: 1px solid #ddd;
+    background: #fff; font-size: 14px; line-height: 1.5em;}
+.join .check{ margin: 20px 0 60px;}
+.join .button{text-align: center;margin-top: 30px}
+.join .button .ok,.join .button button,.join .allcheck{display: inline-block;width: 200px;line-height: 24px;padding: 8px 0;border: none;background: #1f296f;color: #fff;font-size: 14px;cursor: pointer;
+    margin: 0 5px;}
+.join .button .cancel{display: inline-block;width: 200px;line-height: 24px;padding: 8px 0;border: none;background: #999;;font-size: 14px;cursor: pointer}
+.join .allcheck{background: #fff; color: #000;}
 
     /* 체크박스 UI 변경 */
     input[type=checkbox] + label::before {
