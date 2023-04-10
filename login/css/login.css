@@ -39,7 +39,7 @@ header a {width: 159px; height: 33px; background: url(../../common/images/logo_0
     margin: 130px auto 80px; padding-right: 20px;}
 h2 {font-size: 1.88em;}
 p{ color: #666;}
-#content { border-radius: 30px; background: #f7f7f7; box-shadow:  20px 20px 60px #d2d2d2, -20px -20px 60px #ffffff;
+#content { border-radius: 30px; background: #f7f7f7;
     display: flex; flex-flow: column; justify-content: space-between;
     width: 500px; height: 400px; margin: 0 auto; padding: 50px}
 

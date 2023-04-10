@@ -12,7 +12,7 @@
 #content section {display: flex;}
 #content section:nth-of-type(4) {margin-bottom: 180px;}
 #content section .img_area { flex: 1 1 0;}
-#content section .img_area h3 {font-size: 3em; margin-left: 160px;}
+#content section .img_area h3 {font-size: 3em; margin-left: 160px; width: 100%;}
 #content section .img_area h3.textFixed {position: fixed; top: 82px;}
 #content section .text_area { flex: 1 1 0;}
 #content section .text_area dl {display: flex; padding: 40px; align-items: center;}
