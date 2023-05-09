@@ -9,8 +9,11 @@ http://didwl214.cafe24.com/
 ## ⚒️ STACKS
 * HTML
 * CSS
-* JS
+* Js
   + Vanila JS 100% ( Jquery 100% - 주석처리 )
+* Js Plugin
+  + Chart.js
+* 그누보드 게시판
 
 ## 🪄 자바스크립트 구현 기능
 1. 이벤트리스너를 활용하여 이벤트(click, mouseover, mouseout, focus, blur)에 따른 메뉴/탭 여닫기
@@ -18,6 +21,6 @@ http://didwl214.cafe24.com/
 3. 클릭시 상단 이동
 4. 반복 실행,중지 / 페이지 이동 버튼을 활용한 메인 슬라이드 구현
 5. 특정 노드를 복사하여 무한 루프 슬라이드 구현
-6. aJax를 이용하여 JSON 데이터 불러오기 (비동기적 통신)
+6. aJax를 이용하여 JSON, 오픈API(카카오맵) 데이터 불러오기 (비동기적 통신)
 
 
