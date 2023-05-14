@@ -64,8 +64,8 @@ section.scroll_ani {animation: fadeIn 1s forwards;}
 #content .more_right:hover::after {width: 200px;}
 #content .more_right::after {content: ''; display: block; width: 0; height: 60px;
   position: absolute; bottom: 0; right: 28px; transition: all .5s;}
-#content .more_left span, .more_right span {visibility: hidden; opacity: 0; width: 80px; position: absolute; transition: all .5s;}
-#content .more_left:hover span, .more_right:hover span {visibility: visible; opacity: 1; width: 80px; position: absolute; cursor: default;}
+#content .more_left span, .more_right span { opacity: 0; width: 80px; position: absolute; transition: all .5s;}
+#content .more_left:hover span, .more_right:hover span { opacity: 1; width: 80px; position: absolute; cursor: default;}
 
 #content .QA_more {width: 150px; height: 40px; float: right; transition: all .5s;
   background: #f7f7f7; text-align: center; line-height: 40px; position: relative; top: -80px; right: 40px;}
