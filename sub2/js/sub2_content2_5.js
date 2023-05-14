@@ -1,29 +1,29 @@
-var key, value;
+let key, value;
 
 function getParams() {
-    var url = decodeURIComponent(location.href);
+    let url = decodeURIComponent(location.href);
     url = decodeURIComponent(url); // http://127.0.0.1:5500/sub2/sub2_2.htm
 
-    var params = '';
+    let params = '';
     params = url.substring(url.indexOf("_")+1, url.indexOf("_")+2)
 
     return params;
 }
 
-var pageNum = getParams(); // 페이지 수 뽑기 
-var products = new XMLHttpRequest();
+let pageNum = getParams(); // 페이지 수 뽑기 
+let products = new XMLHttpRequest();
 
 products.onload = function() {
-    var productsJson = JSON.parse(products.responseText);
-    var currentKey = Object.entries(productsJson); // 객체 => 배열
+    let productsJson = JSON.parse(products.responseText);
+    let currentKey = Object.entries(productsJson); // 객체 => 배열
     
-    var creatHtml = '';
-    var modalimg = '';
-    var modalText = '';
-    var modalTable = '';
+    let creatHtml = '';
+    let modalimg = '';
+    let modalText = '';
+    let modalTable = '';
 
     //pageNum과 일치하는 데이터를 찾아옴
-    for (var i=0; i<currentKey[pageNum-2][1].length; i++) {
+    for (let i=0; i<currentKey[pageNum-2][1].length; i++) {
         creatHtml += `<li>
                         <a href="#" id="click">
                             <img src="./images/content${pageNum}/${currentKey[pageNum-2][1][i].img}" alt="제품이미지">
@@ -36,10 +36,10 @@ products.onload = function() {
     document.getElementById('product_list').innerHTML = creatHtml;
 
     
-    var thisClick = document.querySelectorAll('#click');
-    var modal_box = document.querySelector('.modal_box');
-    var modal_content = document.querySelector('.modal_content');
-    var close_btn = document.getElementById('close_btn');
+    const thisClick = document.querySelectorAll('#click');
+    const modal_box = document.querySelector('.modal_box');
+    const modal_content = document.querySelector('.modal_content');
+    const close_btn = document.getElementById('close_btn');
 
     thisClick.forEach(function(a, i){
         
@@ -72,14 +72,14 @@ products.onload = function() {
                 modalTable += `
                             <thead>
                             <tr>
-                                <th>구분</th>
-                                <th>단위</th>
-                                <th>규격</th>
+                                <th scope="col">구분</th>
+                                <th scope="col">단위</th>
+                                <th scope="col">규격</th>
                             </tr>
                             </thead>
                             <tbody>`
 
-                for(var j=0; j<currentKey[pageNum-2][1][i].spec_1.length; j++) {
+                for(let j=0; j<currentKey[pageNum-2][1][i].spec_1.length; j++) {
 
                     modalTable +=
                             `<tr>
