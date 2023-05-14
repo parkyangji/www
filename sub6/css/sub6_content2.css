@@ -21,20 +21,3 @@
 #content .customer2 dl {width: 800px; margin: 30px auto; position: relative;}
 #content .customer2 dd.call {position: absolute; right: 0; top: 0;}
 #content .customer2 dd.mail {position: absolute; right: 0; top: 40px;}
-
-/* 폼 */
-form {width: 800px; box-sizing: border-box; padding: 20px; margin: 0 auto 100px;}
-.control-group {margin: 20px 0;}
-.control-group .form-group {display: table; table-layout: fixed; width: 100%; padding: 20px; border-bottom: 1px solid #d9d9d9;}
-.form-control {width: 80%; display: table-cell; border: none;}
-label {display: table-cell; font-size: 1.13em; font-weight: 500; width: 20%; vertical-align: top; position: relative;}
-label::before {content: '\002A'; position: absolute; top: -18px; left: -10px; color: #D82723; }
-.send {text-align: center;}
-.send button {border: 0 none; cursor: pointer; background: #1f296f; color: #fff; padding: 10px 30px; font-size: 1.13em;}
-.help-block li, .text-danger li {font-size: 0.9em; color: #D82723; margin: 10px;}
-form input, form textarea, form button {font-size: 1rem; font-family: none;}
-form input:focus, form textarea:focus {outline: none;}
-.control-group .form-group:focus-within  {border-bottom: 1px solid #1f296f;}
-
-.alert-success {position: absolute;}
-.alert-success .close {cursor: pointer; border: 0 none; background: none; font-size: 1.13em;}
