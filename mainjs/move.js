@@ -13,21 +13,21 @@ mbutton[0].style.width = '130px';
 
 
 function current_img() {
-  for (let i=0; i<imageCount; i++) {
+  for (let i = 0; i < imageCount; i++) {
     gallery_list[i].style.display = 'none'
   }
 
-  gallery_list[cnt-1].style.display = 'block'
+  gallery_list[cnt - 1].style.display = 'block'
 }
 
 function current_txt() {
-  for (let j=0; j<imageCount; j++) {
+  for (let j = 0; j < imageCount; j++) {
     mbutton[j].style.background = 'rgba(255, 255, 255, .5)';
     mbutton[j].style.width = '50px';
   }
 
-  mbutton[cnt-1].style.background = 'rgba(255, 255, 255, 1)';
-  mbutton[cnt-1].style.width = '130px';
+  mbutton[cnt - 1].style.background = 'rgba(255, 255, 255, 1)';
+  mbutton[cnt - 1].style.width = '130px';
 }
 
 function onoff_re() {
@@ -88,17 +88,17 @@ timeonoff = setInterval(move, 4000);
 
 // 재생, 정지
 
-ps.addEventListener('click', function(e) {
+ps.addEventListener('click', function (e) {
   e.preventDefault();
 
-  if(onoff == true) {
+  if (onoff == true) {
     clearInterval(timeonoff);
     this.style.background = 'url(./images/play.png)';
     onoff = false;
   } else {
     timeonoff = setInterval(move, 4000);
     this.style.background = 'url(./images/stop.png)';
-    onoff = true; 
+    onoff = true;
   }
 })
  
@@ -123,20 +123,23 @@ ps.addEventListener('click', function(e) {
 
 // 슬라이드 버튼
 
-mbutton.forEach(function(a, i) {
-  a.addEventListener('click', function(e) {
+mbutton.forEach(function (a, i) {
+  a.addEventListener('click', function (e) {
     e.preventDefault();
     clearInterval(timeonoff);
 
     switch (i) {
-      case 0 : cnt = 1;
+      case 0:
+        cnt = 1;
         break;
-      case 1 : cnt = 2;
+      case 1:
+        cnt = 2;
         break;
-      case 2 : cnt = 3;
+      case 2:
+        cnt = 3;
         break;
     }
-  
+
     current_img();
     current_txt();
 
@@ -145,7 +148,7 @@ mbutton.forEach(function(a, i) {
     timeonoff = setInterval(move, 4000);
 
     onoff_re();
-    
+
   })
 })
 
@@ -184,17 +187,17 @@ mbutton.forEach(function(a, i) {
 
 // 이동
 
-arrow.forEach(function(a, i) {
-  a.addEventListener('click', function(e) {
+arrow.forEach(function (a, i) {
+  a.addEventListener('click', function (e) {
     e.preventDefault();
     clearInterval(timeonoff);
 
     if (arrow[i].classList.contains('visual_right')) {
-      if(cnt==imageCount)cnt=0;
-      cnt++; 
+      if (cnt == imageCount) cnt = 0;
+      cnt++;
     } else if (arrow[i].classList.contains('visual_left')) {
-      if(cnt==1)cnt=imageCount+1;
-      if(cnt==0)cnt=imageCount;
+      if (cnt == 1) cnt = imageCount + 1;
+      if (cnt == 0) cnt = imageCount;
       cnt--;
     }
 

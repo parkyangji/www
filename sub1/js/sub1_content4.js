@@ -13,33 +13,36 @@ let history4 = contArr[3].offsetTop-72;
 //탭 클릭시
 
 
-tabArr.forEach(function(a, i) {
-    a.addEventListener('click', function(e) {
-        e.preventDefault();
+tabArr.forEach(function (a, i) {
+  a.addEventListener('click', function (e) {
+    e.preventDefault();
 
-        for (let j=0; j<tabArr.length; j++) {
-            tabArr[j].classList.remove('current');
-        }
+    for (let j = 0; j < tabArr.length; j++) {
+      tabArr[j].classList.remove('current');
+    }
 
-        tabArr[i].classList.add('current');
+    tabArr[i].classList.add('current');
 
-        let value = 0;
-        
+    let value = 0;
 
-        if (i==0) {
-            value = history1;
-        } else if (i==1) {
-            value = history2;
+    if (i == 0) {
+      value = history1;
+    } else if (i == 1) {
+      value = history2;
 
-        } else if (i==2) {
-            value = history3;
-        } else if (i==3) {
-            value = history4;
-        }
+    } else if (i == 2) {
+      value = history3;
+    } else if (i == 3) {
+      value = history4;
+    }
 
-        window.scrollTo({top:value, left:0, behavior:"smooth"});
+    window.scrollTo({
+      top: value,
+      left: 0,
+      behavior: "smooth"
+    });
 
-    })
+  })
 })
 
 
@@ -76,47 +79,44 @@ $("html,body").stop().animate({"scrollTop":value},1000);
 
 */
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
 
-    //네비 고정
+  //네비 고정
 
-    if(navTop-200<scroll) {
-        headerArea.style.display = 'none';
-        tabs.classList.add('navOn');
-        contArr[0].style.marginTop = '352px'
+  if (navTop - 200 < scroll) {
+    headerArea.style.display = 'none';
+    tabs.classList.add('navOn');
+    contArr[0].style.marginTop = '352px'
 
-    } else {
-        headerArea.style.display = 'block';
-        tabs.classList.remove('navOn');
-        contArr[0].style.marginTop = '0'
-    }
-
-
-    //탭 스크롤시
-
-    for(let i=0; i<tabArr.length; i++) {
-        tabArr[i].classList.remove('current');
-        contArr[i].children[0].children[0].classList.remove('textFixed');
-    }
+  } else {
+    headerArea.style.display = 'block';
+    tabs.classList.remove('navOn');
+    contArr[0].style.marginTop = '0'
+  }
 
 
-    if (scroll>=history1 && scroll<history2) {
-        tabArr[0].classList.add('current');
-        contArr[0].children[0].children[0].classList.add('textFixed');
-    } else if (scroll>=history2 && scroll<history3) {
-        tabArr[1].classList.add('current');
-        contArr[1].children[0].children[0].classList.add('textFixed');
-    } else if (scroll>=history3 && scroll<history4) {
-        tabArr[2].classList.add('current');
-        contArr[2].children[0].children[0].classList.add('textFixed');
-    } else if (scroll>=history4) {
-        tabArr[3].classList.add('current');
-        contArr[3].children[0].children[0].classList.add('textFixed');
-    } else if (scroll<history1) {
-        tabArr[0].classList.add('current');
-    }
+  //탭 스크롤시
 
+  for (let i = 0; i < tabArr.length; i++) {
+    tabArr[i].classList.remove('current');
+    contArr[i].children[0].children[0].classList.remove('textFixed');
+  }
 
+  if (scroll >= history1 && scroll < history2) {
+    tabArr[0].classList.add('current');
+    contArr[0].children[0].children[0].classList.add('textFixed');
+  } else if (scroll >= history2 && scroll < history3) {
+    tabArr[1].classList.add('current');
+    contArr[1].children[0].children[0].classList.add('textFixed');
+  } else if (scroll >= history3 && scroll < history4) {
+    tabArr[2].classList.add('current');
+    contArr[2].children[0].children[0].classList.add('textFixed');
+  } else if (scroll >= history4) {
+    tabArr[3].classList.add('current');
+    contArr[3].children[0].children[0].classList.add('textFixed');
+  } else if (scroll < history1) {
+    tabArr[0].classList.add('current');
+  }
 
 })
 

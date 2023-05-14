@@ -5,37 +5,37 @@ const depth = document.querySelectorAll('.menu');
 const tab_first = document.querySelectorAll('.depth1')[0];
 const tab_last = document.querySelector('.m6').lastElementChild.children[1].children[0];
 
-    // 2depth 여닫기
+// 2depth 여닫기
 function header_open() {
 
-    for(let i=0; i<depth.length; i++) {
-        depth[i].children[1].classList.add('fadeIn');
-        depth[i].children[1].style.display = 'block';
-    }
+  for (let i = 0; i < depth.length; i++) {
+    depth[i].children[1].classList.add('fadeIn');
+    depth[i].children[1].style.display = 'block';
+  }
 
-    headerArea.classList.add('line');
-    headerArea.style.height = "350px";
+  headerArea.classList.add('line');
+  headerArea.style.height = "350px";
 
 }
 
 function header_close() {
 
-    for(let i=0; i<depth.length; i++) {
-        depth[i].children[1].classList.remove('fadeIn');
-        depth[i].children[1].style.display = 'none';
-    }
+  for (let i = 0; i < depth.length; i++) {
+    depth[i].children[1].classList.remove('fadeIn');
+    depth[i].children[1].style.display = 'none';
+  }
 
-    headerArea.classList.remove('line');
-    headerArea.style.height = "90px";
+  headerArea.classList.remove('line');
+  headerArea.style.height = "90px";
 
 }
 
 dropdownmenu.addEventListener('mouseover', header_open);
 dropdownmenu.addEventListener('mouseout', header_close);
 
-        // tab키로 접근시 2depth 여닫기
-    tab_first.addEventListener('focus', header_open);
-    tab_last.addEventListener('blur', header_close);
+// tab키로 접근시 2depth 여닫기
+tab_first.addEventListener('focus', header_open);
+tab_last.addEventListener('blur', header_close);
 
 
 /* JQUREY 버전
@@ -77,16 +77,16 @@ dropdownmenu.addEventListener('mouseout', header_close);
 const smh = document.querySelector('.visual').clientHeight;
 
 
-window.addEventListener('scroll', function() {
-    let scroll = window.scrollY;
+window.addEventListener('scroll', function () {
+  let scroll = window.scrollY;
 
-    /*if(scroll<smh-90) {
-        headerArea.style.boxShadow = "none"
-    } else {
-        headerArea.style.boxShadow = "0 0 5px rgba(0,0,0,.6)"
-    }*/
+  /*if(scroll<smh-90) {
+      headerArea.style.boxShadow = "none"
+  } else {
+      headerArea.style.boxShadow = "0 0 5px rgba(0,0,0,.6)"
+  }*/
 
-    headerArea.style.boxShadow = (scroll<smh-90) ? 'none' : '0 0 5px rgba(0,0,0,.6)';
+  headerArea.style.boxShadow = (scroll < smh - 90) ? 'none' : '0 0 5px rgba(0,0,0,.6)';
 })
 
 
@@ -113,34 +113,34 @@ const family_list = document.querySelector('.open').nextElementSibling;
 const family_last = family_list.lastElementChild.children[0]
 
 let click = false; // click, focus 이벤트시 focus 이벤트 우선순위 적용으로 toggle 적용 불가
-               // 메뉴가 열릴때(true), 닫힐때(false)
+
+// 메뉴가 열릴때(true), 닫힐때(false)
 
 function family_open() {
-    family.classList.add('on');
-    family_list.classList.add('on');
+  family.classList.add('on');
+  family_list.classList.add('on');
 }
 
 function family_close() {
-    family.classList.remove('on');
-    family_list.classList.remove('on');
+  family.classList.remove('on');
+  family_list.classList.remove('on');
 }
 
-family.addEventListener('click', function(e) {
-    e.preventDefault();
+family.addEventListener('click', function (e) {
+  e.preventDefault();
 
-    if (click) {
-        family_close()
-        click=false;
-    } else  {
-        family_open()
-        click=true;
-    }
+  if (click) {
+    family_close()
+    click = false;
+  } else {
+    family_open()
+    click = true;
+  }
 
 })
-    // tab키로 접근시 family_list 여닫기
-    family.addEventListener('focus', family_open);
-    family_last.addEventListener('blur', family_close);
-
+// tab키로 접근시 family_list 여닫기
+family.addEventListener('focus', family_open);
+family_last.addEventListener('blur', family_close);
 
 
 /* JQUREY 버전
@@ -168,30 +168,30 @@ $('.family .open').toggle(family_open, family_close);
 const topMove = document.querySelector('.topMove');
 let scroll = ''
 
-window.addEventListener('scroll', function() {
-    let wint = window.innerHeight/5;
+window.addEventListener('scroll', function () {
+  let wint = window.innerHeight / 5;
 
-    scroll = window.scrollY;
-    topMove.style.opacity = (scroll>wint) ? '1' : '0';
+  scroll = window.scrollY;
+  topMove.style.opacity = (scroll > wint) ? '1' : '0';
 
 })
 
 
 
-topMove.addEventListener('click', function(e){
-    e.preventDefault();
-    scrollToTop();
+topMove.addEventListener('click', function (e) {
+  e.preventDefault();
+  scrollToTop();
 })
 
 
 function scrollToTop() {
-    let scrollInterval = setInterval(function(){
-        if(scroll != 0) {
-            window.scrollBy(0, -85);
-        }else {
-            clearInterval(scrollInterval);
-        }
-    },10);
+  let scrollInterval = setInterval(function () {
+    if (scroll != 0) {
+      window.scrollBy(0, -85);
+    } else {
+      clearInterval(scrollInterval);
+    }
+  }, 10);
 }
 
 /* JQUREY 버전

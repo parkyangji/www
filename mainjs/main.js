@@ -1,14 +1,14 @@
 // 컨텐츠 스크롤 이벤트
 
-window.addEventListener('scroll', function() {
-   let scroll = window.scrollY;
-   const section = document.querySelectorAll('section');
-   
-   for (var i=0; i<section.length; i++) {
-       if (scroll > section[i].offsetTop - 700) {
-           section[i].classList.add('scroll_ani');
-       }
-   }
+window.addEventListener('scroll', function () {
+  let scroll = window.scrollY;
+  const section = document.querySelectorAll('section');
+
+  for (var i = 0; i < section.length; i++) {
+    if (scroll > section[i].offsetTop - 700) {
+      section[i].classList.add('scroll_ani');
+    }
+  }
 })
 
 /* JQUREY 버전
@@ -36,57 +36,57 @@ const infoArr = document.querySelectorAll('.info');
 
 function active_class(num) {
 
-   for (j=0; j<productsArr.length; j++) {
-      productsArr[j].firstElementChild.classList.remove('active');
-   }
-   productsArr[num].firstElementChild.classList.add('active');
+  for (j = 0; j < productsArr.length; j++) {
+    productsArr[j].firstElementChild.classList.remove('active');
+  }
+  productsArr[num].firstElementChild.classList.add('active');
 
-   for (k=0; k<infoArr.length; k++) {
-      if (k==(num)) {
-         for (j=0; j<infoArr[num].children.length; j++) {
-            infoArr[num].children[j].classList.add('active');
-         }
-      } else {
-         for (j=0; j<infoArr[k].children.length; j++) {
-            infoArr[k].children[j].classList.remove('active');
-         }
+  for (k = 0; k < infoArr.length; k++) {
+    if (k == (num)) {
+      for (j = 0; j < infoArr[num].children.length; j++) {
+        infoArr[num].children[j].classList.add('active');
       }
-   }
+    } else {
+      for (j = 0; j < infoArr[k].children.length; j++) {
+        infoArr[k].children[j].classList.remove('active');
+      }
+    }
+  }
 
 }
 
 
-open_btn.forEach(function(a, i) {
+open_btn.forEach(function (a, i) {
 
-   a.addEventListener('mouseover', function() {
+  a.addEventListener('mouseover', function () {
 
-      if (i==0) {
-         productsArr[1].style.left = '600px';
-         productsArr[2].style.left = '700px';
-         productsArr[3].style.left = '800px';
-         active_class(0);
+    if (i == 0) {
+      productsArr[1].style.left = '600px';
+      productsArr[2].style.left = '700px';
+      productsArr[3].style.left = '800px';
+      active_class(0);
 
-      } else if (i==1) {
-         productsArr[1].style.left = '100px';
-         productsArr[2].style.left = '700px';
-         productsArr[3].style.left = '800px';
-         active_class(1);
+    } else if (i == 1) {
+      productsArr[1].style.left = '100px';
+      productsArr[2].style.left = '700px';
+      productsArr[3].style.left = '800px';
+      active_class(1);
 
-      } else if (i==2) {
-         productsArr[1].style.left = '100px';
-         productsArr[2].style.left = '200px';
-         productsArr[3].style.left = '800px';
-         active_class(2);
+    } else if (i == 2) {
+      productsArr[1].style.left = '100px';
+      productsArr[2].style.left = '200px';
+      productsArr[3].style.left = '800px';
+      active_class(2);
 
-      } else if (i==3) {
-         productsArr[1].style.left = '100px';
-         productsArr[2].style.left = '200px';
-         productsArr[3].style.left = '300px';
-         active_class(3);
+    } else if (i == 3) {
+      productsArr[1].style.left = '100px';
+      productsArr[2].style.left = '200px';
+      productsArr[3].style.left = '300px';
+      active_class(3);
 
-      }
-   })
-}) 
+    }
+  })
+})
 
 /* JQUREY 버전
    
@@ -145,83 +145,88 @@ open_btn.forEach(function(a, i) {
  const imgArr = document.querySelectorAll('.esg_img');
 
 
-function First_add(num) {
+ function First_add(num) {
    imgArr[num].classList.add('First');
    imgArr[num].children[0].classList.add('First');
-}
+ }
 
-First_add(0);
+ First_add(0);
 
 
- arrow_esg.forEach(function(a, i) {
-   a.addEventListener('click', function(e) {
-      e.preventDefault();
+ arrow_esg.forEach(function (a, i) {
+   a.addEventListener('click', function (e) {
+     e.preventDefault();
 
-      for (let i=0; i<imgArr.length; i++) {
-         imgArr[i].classList.remove('First');
-         imgArr[i].children[0].classList.remove('First');
-      }
+     for (let i = 0; i < imgArr.length; i++) {
+       imgArr[i].classList.remove('First');
+       imgArr[i].children[0].classList.remove('First');
+     }
 
-      if (i==0) {
-         
-         if (position == 0) {
-            position=-2520;
-            Move=-2520;
+     if (i == 0) {
+
+       if (position == 0) {
+         position = -2520;
+         Move = -2520;
+       }
+
+       position += list_width;
+
+       let leftinterval = setInterval(function () {
+         Move += 10;
+         box_list_esg.style.left = Move + 'px';
+
+         if (Move >= position) {
+           clearInterval(leftinterval);
+           if (position == 0) {
+             position = -2520;
+             Move = -2520;
+           }
          }
-
-         position+=list_width;
-
-         let leftinterval = setInterval(function() {
-            Move+=10;
-            box_list_esg.style.left = Move+'px';
-
-            if (Move >= position) {
-               clearInterval(leftinterval);
-               if (position == 0) {
-                  position=-2520;
-                  Move=-2520;
-               }
-            }
-         }, 1);
+       }, 1);
 
 
-      } else if (i==1) {
+     } else if (i == 1) {
 
-         if (position == -2520) {
-            position=0;
-            Move=0;
+       if (position == -2520) {
+         position = 0;
+         Move = 0;
+       }
+
+       position -= list_width;
+
+
+       let rightinterval = setInterval(function () {
+         Move -= 10;
+         box_list_esg.style.left = Move + 'px';
+
+         if (Move <= position) {
+           clearInterval(rightinterval);
+           if (position == -2520) {
+             position = 0;
+             Move = 0;
+           }
          }
+       }, 1);
 
-         position-=list_width;
+     }
 
-
-         let rightinterval = setInterval(function() {
-            Move-=10;
-            box_list_esg.style.left = Move+'px';
-            
-            if (Move <= position) { 
-               clearInterval(rightinterval);
-               if (position == -2520) {
-                  position=0;
-                  Move=0;
-               }
-            }
-         }, 1);
-
-         }
-
-      switch(position) {
-         case 0 : First_add(0);
-            break;
-         case -630 : First_add(1);
-            break;
-         case -1260 : First_add(2);
-            break;
-         case -1890 : First_add(3);
-            break;
-         case -2520 : First_add(4);
-            break;
-      }
+     switch (position) {
+       case 0:
+         First_add(0);
+         break;
+       case -630:
+         First_add(1);
+         break;
+       case -1260:
+         First_add(2);
+         break;
+       case -1890:
+         First_add(3);
+         break;
+       case -2520:
+         First_add(4);
+         break;
+     }
 
    })
  })

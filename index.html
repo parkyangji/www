@@ -255,13 +255,13 @@
   <div id="showimage" style="z-index:90;position:absolute;width:322px;right:10%;top:300px; margin-left: -700px;">
   <script>
     function closeWin(){
-       var chk = document.getElementById('Notice')
+       var chk = document.getElementById('Notice'); // 체크 인풋
        if ( chk.checked ) {
-             setCookie( "Notice", "done" , 1); //1이란 숫자는 1일간 안보임을 뜻합니다. 날짜는 자신에 맞게 수정하세요
+             setCookie( "Notice", "done" , 1); //1일간
         }
     }
 
-    if ( getCookie( "Notice" ) == "done" ) {
+    if ( getCookie( "Notice" ) == "done" ) { // 위 함수로 쿠키 설정시 팝업 닫기
         hidebox();
     }
  </script>
@@ -270,7 +270,7 @@
     </div>
      <div style="font-size:12px;text-align:center;color:#666;">
        <input type="checkbox" name="Notice" id="Notice" value=""><label for="Notice">오늘은 이창을 열지 않음.</label>
-     <a href="#"  onclick="closeWin();hidebox();return false;"> [close] </a>
+     <a href="#"  onclick="closeWin();hidebox();return false;"> [close] </a> 
   </div>
 </div>
 

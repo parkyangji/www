@@ -1,16 +1,16 @@
-//탭 초기 화면//
+//탭 초기 화면 - 카카오 지도 api 사용시 첫 화면에서 탭적용 안됨 이슈.//
+let eventstop = false;
 
-var eventstop = false;
-
-window.onscroll = function() {
-    var scroll_top = window.scrollY;
-    if (scroll_top>0 && eventstop == false) {
-        document.querySelectorAll('.cont')[1].style.display = "none"
-        eventstop = true;
-        }
+window.onscroll = function () {
+  var scroll_top = window.scrollY;
+  if (scroll_top > 0 && eventstop == false) {
+    document.querySelectorAll('.cont')[1].style.display = "none"
+    eventstop = true;
+  }
 }
 
-// 지도 //
+// 카카오 지도 api //
+
  // 공장
  window.onload = function() {
     var container = document.getElementById('map1');

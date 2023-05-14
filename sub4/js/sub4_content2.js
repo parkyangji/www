@@ -1,45 +1,45 @@
 const chapterAll = document.querySelectorAll('.chapter');
-const titleArr = Object.values(chapterAll).map(function(el){
-    return el.previousElementSibling
+const titleArr = Object.values(chapterAll).map(function (el) {
+  return el.previousElementSibling
 })
 const all_btn = document.querySelector('.all');
 
-titleArr.forEach((a, i ) => {
-    a.addEventListener('click', (e) => {
-        const target = e.target;
-        e.preventDefault();
+titleArr.forEach((a, i) => {
+  a.addEventListener('click', (e) => {
+    const target = e.target;
+    e.preventDefault();
 
-        chapterAll[i].style.display = (chapterAll[i].style.display == 'block') ? 'none' : 'block';
+    chapterAll[i].style.display = (chapterAll[i].style.display == 'block') ? 'none' : 'block';
 
-        if (target.className == 'rotate') {
-            target.classList.remove('rotate');
-        } else {
-            target.classList.add('rotate');
-        }
-        
-    })
+    if (target.className == 'rotate') {
+      target.classList.remove('rotate');
+    } else {
+      target.classList.add('rotate');
+    }
+
+  })
 })
 
 let all = false;
 
 all_btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    
-    if (all) {
-        for (let i=0; i<chapterAll.length; i++) {
-            chapterAll[i].style.display = 'none';
-            titleArr[i].classList.remove('rotate');
-        }
-        all_btn.innerHTML = '모두 열기';
-        all = false;
-    } else {
-        for (let i=0; i<chapterAll.length; i++) {
-            chapterAll[i].style.display = 'block';
-            titleArr[i].classList.add('rotate');
-        }
-        all_btn.innerHTML = '모두 닫기';
-        all = true;
+  e.preventDefault();
+
+  if (all) {
+    for (let i = 0; i < chapterAll.length; i++) {
+      chapterAll[i].style.display = 'none';
+      titleArr[i].classList.remove('rotate');
     }
+    all_btn.innerHTML = '모두 열기';
+    all = false;
+  } else {
+    for (let i = 0; i < chapterAll.length; i++) {
+      chapterAll[i].style.display = 'block';
+      titleArr[i].classList.add('rotate');
+    }
+    all_btn.innerHTML = '모두 닫기';
+    all = true;
+  }
 })
 
 
