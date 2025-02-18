@@ -4,7 +4,7 @@
 **ALL page** (로그인, 회원가입 백엔드 구현X)
 
 ## 🔗 URL
-http://didwl214.cafe24.com/
+http://didwl214.mycafe24.com/
 
 ## ⚒️ STACKS
 * HTML
